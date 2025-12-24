@@ -1,0 +1,31 @@
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="300" fill="#1e293b"/>
+  <text x="250" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Chat Assistant</text>
+  
+  <!-- Chat Window -->
+  <rect x="20" y="50" width="460" height="200" fill="white" rx="5"/>
+  
+  <!-- User Message -->
+  <rect x="250" y="70" width="210" height="30" fill="#667eea" rx="15"/>
+  <text x="355" y="90" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">How can I improve my writing?</text>
+  
+  <!-- AI Response -->
+  <rect x="40" y="110" width="300" height="50" fill="#f1f5f9" rx="15"/>
+  <text x="50" y="130" font-family="Arial, sans-serif" font-size="10" fill="#334155">Here are some tips to improve your writing:</text>
+  <text x="50" y="145" font-family="Arial, sans-serif" font-size="10" fill="#334155">1. Read regularly to expand vocabulary</text>
+  <text x="50" y="160" font-family="Arial, sans-serif" font-size="10" fill="#334155">2. Practice writing daily...</text>
+  
+  <!-- User Message 2 -->
+  <rect x="220" y="180" width="240" height="30" fill="#667eea" rx="15"/>
+  <text x="340" y="200" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">Can you help me write a blog post?</text>
+  
+  <!-- AI Response 2 -->
+  <rect x="40" y="220" width="280" height="20" fill="#f1f5f9" rx="10"/>
+  <text x="50" y="235" font-family="Arial, sans-serif" font-size="10" fill="#334155">Absolutely! What topic would you like to write about?</text>
+  
+  <!-- Input Area -->
+  <rect x="30" y="260" width="380" height="25" fill="#f8fafc" stroke="#d1d5db" rx="12"/>
+  <text x="40" y="277" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af">Type your message...</text>
+  <rect x="420" y="263" width="50" height="19" fill="#667eea" rx="9"/>
+  <text x="445" y="276" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Send</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#f8fafc"/>
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">AI Writer Interface</text>
+  
+  <!-- Header -->
+  <rect x="20" y="50" width="560" height="40" fill="white" stroke="#e2e8f0" rx="5"/>
+  <text x="30" y="75" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#334155">AI Content Writer</text>
+  
+  <!-- Input Area -->
+  <text x="30" y="115" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#475569">What would you like to write about?</text>
+  <rect x="20" y="125" width="560" height="80" fill="white" stroke="#d1d5db" rx="5"/>
+  <text x="30" y="145" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">Write a blog post about sustainable living tips...</text>
+  
+  <!-- Generate Button -->
+  <rect x="20" y="220" width="120" height="35" fill="#667eea" rx="5"/>
+  <text x="80" y="242" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Generate</text>
+  
+  <!-- Output Area -->
+  <text x="30" y="280" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#475569">Generated Content:</text>
+  <rect x="20" y="290" width="560" height="90" fill="white" stroke="#d1d5db" rx="5"/>
+  <text x="30" y="310" font-family="Arial, sans-serif" font-size="10" fill="#374151"># 10 Essential Sustainable Living Tips</text>
+  <text x="30" y="325" font-family="Arial, sans-serif" font-size="10" fill="#374151">Living sustainably doesn't have to be overwhelming.</text>
+  <text x="30" y="340" font-family="Arial, sans-serif" font-size="10" fill="#374151">Here are practical tips you can implement today...</text>
+  <text x="30" y="355" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">[Content continues...]</text>
+</svg>

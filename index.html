@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FierceAI Help Center</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Comprehensive FierceAI user documentation and help guides">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Custom FierceAI Styling -->
+  <style>
+    :root {
+      --primary: 220 38% 20%;
+      --primary-foreground: 220 9% 98%;
+      --secondary: 220 8% 94%;
+      --accent: 220 14% 93%;
+      --background: 0 0% 100%;
+      --foreground: 224 71% 4%;
+      --border: 220 13% 91%;
+      --heading-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-from: 220 38% 20%;
+      --gradient-to: 259 83% 51%;
+    }
+
+    * {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .app-name-link img {
+      max-height: 50px !important;
+    }
+
+    .sidebar {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      color: white !important;
+      border-right: none !important;
+      padding: 20px 0 !important;
+    }
+
+    .sidebar-nav {
+      padding: 0 15px !important;
+    }
+
+    .sidebar-nav > ul > li > a {
+      color: white !important;
+      font-weight: 600 !important;
+      font-size: 0.95rem !important;
+      border-radius: 8px !important;
+      padding: 12px 16px !important;
+      margin: 4px 0 !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      display: flex !important;
+      align-items: center !important;
+      border-left: 3px solid transparent !important;
+      letter-spacing: 0.02em !important;
+    }
+
+    .sidebar-nav > ul > li > a:hover {
+      background: rgba(255, 255, 255, 0.15) !important;
+      border-left-color: rgba(255, 255, 255, 0.8) !important;
+      padding-left: 20px !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .sidebar-nav > ul > li > a.active,
+    .sidebar-nav .active {
+      background: rgba(255, 255, 255, 0.25) !important;
+      border-left-color: white !important;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    /* Nested menu items */
+    .sidebar-nav ul ul li a {
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-weight: 400 !important;
+      font-size: 0.875rem !important;
+      border-radius: 6px !important;
+      padding: 8px 16px 8px 32px !important;
+      margin: 2px 0 !important;
+      transition: all 0.2s ease !important;
+      border-left: 2px solid transparent !important;
+    }
+
+    .sidebar-nav ul ul li a:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+      padding-left: 36px !important;
+      border-left-color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .sidebar-nav ul ul li a.active {
+      background: rgba(255, 255, 255, 0.15) !important;
+      border-left-color: rgba(255, 255, 255, 0.8) !important;
+      font-weight: 500 !important;
+    }
+
+    /* Section dividers */
+    .sidebar-nav > ul > li {
+      margin-bottom: 8px !important;
+    }
+
+    .sidebar-nav > ul > li:not(:last-child) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+      padding-bottom: 8px !important;
+    }
+
+    .content {
+      padding-top: 0 !important;
+    }
+
+    .markdown-section {
+      max-width: none !important;
+      padding: 2rem !important;
+    }
+
+    .markdown-section h1 {
+      background: var(--heading-background) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      font-size: 2.5rem !important;
+      font-weight: 700 !important;
+      margin-bottom: 2rem !important;
+    }
+
+    .markdown-section h2 {
+      color: hsl(var(--primary)) !important;
+      border-bottom: 2px solid hsl(var(--border)) !important;
+      padding-bottom: 0.5rem !important;
+      margin: 2rem 0 1rem 0 !important;
+      font-weight: 600 !important;
+    }
+
+    .markdown-section h3 {
+      color: hsl(var(--primary)) !important;
+      font-weight: 600 !important;
+      margin: 1.5rem 0 1rem 0 !important;
+    }
+
+    .markdown-section blockquote {
+      background: linear-gradient(135deg, #f6f9fc 0%, #e9f4ff 100%) !important;
+      border-left: 4px solid #667eea !important;
+      padding: 1rem 1.5rem !important;
+      border-radius: 8px !important;
+      margin: 1.5rem 0 !important;
+    }
+
+    .markdown-section code {
+      background: hsl(var(--secondary)) !important;
+      padding: 2px 6px !important;
+      border-radius: 4px !important;
+      font-size: 0.9rem !important;
+    }
+
+    .markdown-section pre {
+      background: hsl(var(--secondary)) !important;
+      border-radius: 8px !important;
+      padding: 1rem !important;
+    }
+
+    .cover-main {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      color: white !important;
+    }
+
+    .search {
+      margin: 1rem 0 !important;
+    }
+
+    .search input {
+      background: rgba(255, 255, 255, 0.1) !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      color: white !important;
+      border-radius: 6px !important;
+      padding: 8px 12px !important;
+    }
+
+    .search input::placeholder {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    .token.title {
+      color: hsl(var(--primary)) !important;
+    }
+
+    /* Feature cards */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .feature-card {
+      background: white;
+      border: 1px solid hsl(var(--border));
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    /* Image styling */
+    .markdown-section img {
+      border-radius: 8px !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+      margin: 1rem 0 !important;
+    }
+
+    .screenshot {
+      border: 2px solid hsl(var(--border)) !important;
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
+    /* Custom badges */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin: 0 0.25rem 0.25rem 0;
+    }
+
+    .badge-new {
+      background: #10b981;
+      color: white;
+    }
+
+    .badge-updated {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .badge-popular {
+      background: #f59e0b;
+      color: white;
+    }
+  </style>
+  
+  <!-- Docsify Vue Theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '<i class="fas fa-bolt" style="color: #667eea; margin-right: 8px;"></i>FierceAI Help Center',
+      repo: '',
+      loadSidebar: true,
+      loadNavbar: false,
+      coverpage: false,
+      onlyCover: false,
+      auto2top: true,
+      maxLevel: 4,
+      subMaxLevel: 2,
+      homepage: 'README.md',
+      search: {
+        maxAge: 86400000, // Expire time, the default one day
+        paths: 'auto',
+        placeholder: 'Search documentation...',
+        noData: 'No results found.',
+        depth: 4,
+        hideOtherSidebarContent: false
+      },
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'english'
+      },
+      pagination: {
+        previousText: 'Previous',
+        nextText: 'Next',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      tabs: {
+        persist: true,
+        sync: true,
+        theme: 'classic',
+        tabComments: true,
+        tabHeadings: true
+      },
+      copyCode: {
+        buttonText: 'Copy to clipboard',
+        errorText: 'Error',
+        successText: 'Copied'
+      }
+    }
+  </script>
+  
+  <!-- Docsify core -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+</body>
+</html>
