@@ -377,7 +377,11 @@
             { featureKey: 'image_editor_freepik', divId: 'image-editor-freepik-rate-info' },
             { featureKey: 'image_editor_clipdrop', divId: 'image-editor-clipdrop-rate-info' },
             { featureKey: 'image_editor_novita', divId: 'image-editor-novita-rate-info' }
-          ]
+          ],
+          'ai-tools/chat-settings': {
+            featureKey: 'chatbot_training',
+            divId: 'chatbot-training-rate-info'
+          }
         };
         
         // Check which page we're on and load appropriate rate
@@ -473,6 +477,50 @@
               providerSpans.forEach(span => {
                 if (span.textContent === 'Loading...') {
                   span.textContent = 'Multiple Providers';
+                }
+              });
+            });
+        }
+        
+        // Load AI Engine Config on chat settings page
+        if (window.location.hash.includes('ai-tools/chat-settings')) {
+          fetch('https://fierceai.io/api/ai-engine-config')
+            .then(response => response.json())
+            .then(result => {
+              if (result.success && result.data && result.data.openai) {
+                const openaiConfig = result.data.openai;
+                
+                // Update word model spans
+                const wordModelSpans = document.querySelectorAll('#ai-engine-word-model');
+                wordModelSpans.forEach(span => {
+                  span.textContent = openaiConfig.word_model_display;
+                  span.style.fontWeight = '600';
+                  span.style.color = '#667eea';
+                });
+                
+                // Update word model display spans
+                const wordModelDisplaySpans = document.querySelectorAll('#ai-engine-word-model-display');
+                wordModelDisplaySpans.forEach(span => {
+                  span.textContent = openaiConfig.word_model_display;
+                  span.style.fontWeight = '600';
+                  span.style.color = '#667eea';
+                });
+                
+                // Update image model display spans
+                const imageModelDisplaySpans = document.querySelectorAll('#ai-engine-image-model-display');
+                imageModelDisplaySpans.forEach(span => {
+                  span.textContent = openaiConfig.image_model_display;
+                  span.style.fontWeight = '600';
+                  span.style.color = '#667eea';
+                });
+              }
+            })
+            .catch(error => {
+              console.error('Error loading AI engine config:', error);
+              // Set default fallback text
+              document.querySelectorAll('[id^="ai-engine-"]').forEach(span => {
+                if (span.textContent === 'Loading...') {
+                  span.textContent = 'GPT-5 Nano';
                 }
               });
             });
