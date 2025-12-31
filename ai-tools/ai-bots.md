@@ -28,6 +28,13 @@ This model provides a balance of:
 
 ## Token Usage
 
+### Current Token Rates
+
+<div id="ai-bots-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 ### How Tokens Work
 
 AI Bots consume **WORD tokens** for every interaction. The token consumption is calculated as:
@@ -35,8 +42,6 @@ AI Bots consume **WORD tokens** for every interaction. The token consumption is 
 ```
 Tokens Used = Number of Words Generated × Token Rate
 ```
-
-**Default Token Rate**: 1 token per word
 
 ### Example Calculation
 
