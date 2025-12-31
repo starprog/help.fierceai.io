@@ -60,6 +60,54 @@ Choose from various tones:
 - **High**: Better coherence and flow (2 credits)
 - **Premium**: Highest quality, publication-ready (5 credits)
 
+## Token Usage
+
+<span id="ai-writer-rate-info">Loading rate information...</span>
+
+### What You're Charged For
+
+AI Writer consumes tokens based on:
+
+1. **Input tokens**: Your prompts and template fields (minimal)
+2. **Output tokens**: The generated content (primary usage)
+3. **Creativity level**: Higher creativity may use slightly more tokens
+4. **Length setting**: Longer content = more tokens
+
+### Token Consumption Examples
+
+| Content Type | Typical Length | Approximate Tokens |
+|--------------|---------------|-------------------|
+| Social media post | 50-100 words | 100-200 tokens |
+| Blog intro paragraph | 150 words | 250-350 tokens |
+| Product description | 100-200 words | 200-400 tokens |
+| Blog post (full) | 800 words | 1,200-1,600 tokens |
+| Email template | 200 words | 300-500 tokens |
+| Video script | 500 words | 750-1,000 tokens |
+
+*Actual usage varies based on prompt complexity and output quality.*
+
+### Token-Saving Tips
+
+**Use Shorter Length Settings**
+- Generate only what you need
+- Expand later if necessary
+
+**Generate One Result First**
+- Review before generating multiple variations
+- Only generate more if the first isn't perfect
+
+**Be Specific with Prompts**
+- Clear prompts = better results on first try
+- Reduces need for regeneration
+
+**Choose Appropriate Creativity**
+- Lower creativity for factual content (uses fewer tokens)
+- Reserve high creativity for marketing/creative content
+
+**Edit Instead of Regenerating**
+- Minor tweaks can be done manually
+- Full regeneration costs more tokens
+
 ## Writing Effective Prompts
 
 ### ✅ Good Prompt Examples
