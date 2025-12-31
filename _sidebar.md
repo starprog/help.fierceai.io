@@ -17,6 +17,7 @@
   * [AI Chat](ai-tools/ai-chat.md)
   * [AI Chat Image](ai-tools/ai-chat-image.md)
   * [AI Chat Pro](ai-tools/ai-chat-pro.md)
+  * [AI Code Generator](ai-tools/ai-code-generator.md)
   * [AI Editor](ai-tools/ai-editor.md)
   * [AI File Chat](ai-tools/ai-file-chat.md)
   * [AI Image Editor](ai-tools/ai-image-editor.md)
