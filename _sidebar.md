@@ -22,6 +22,8 @@
   * [Image Generator](ai-tools/image-generator.md)
   * [Code Helper](ai-tools/code-helper.md)
   * [Document Processor](ai-tools/document-processor.md)
+* [**Social Media**](social-media/)
+  * [AccelePosts](social-media/acceleposts.md)
 * [**Account Management**](account/)
   * [Profile Settings](account/profile.md)
   * [Billing & Plans](account/billing.md)

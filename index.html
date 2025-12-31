@@ -385,7 +385,21 @@
           'ai-tools/ai-voice-bots': {
             featureKey: 'ai_voice_bots',
             divId: 'ai-voice-bots-rate-info'
-          }
+          },
+          'social-media/acceleposts': [
+            {
+              featureKey: 'acceleposts_text',
+              divId: 'acceleposts-text-rate-info'
+            },
+            {
+              featureKey: 'acceleposts_image',
+              divId: 'acceleposts-image-rate-info'
+            },
+            {
+              featureKey: 'acceleposts_video',
+              divId: 'acceleposts-video-rate-info'
+            }
+          ]
         };
         
         // Check which page we're on and load appropriate rate
@@ -432,6 +446,8 @@
                     tokenTypeLabel = 'tokens per image';
                   } else if (data.token_type === 'CHARACTER') {
                     tokenTypeLabel = 'tokens per character';
+                  } else if (data.token_type === 'VIDEO') {
+                    tokenTypeLabel = 'tokens per video';
                   } else if (data.token_type === 'WORD') {
                     tokenTypeLabel = 'tokens per word';
                   }
