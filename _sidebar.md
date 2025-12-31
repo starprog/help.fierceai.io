@@ -28,6 +28,7 @@
   * [AI Realtime Image](ai-tools/ai-realtime-image.md)
   * [AI Realtime Voice Chat](ai-tools/ai-realtime-voice-chat.md)
   * [AI Rewriter](ai-tools/ai-rewriter.md)
+  * [AI RSS](ai-tools/ai-rss.md)
   * [AI Speech to Text](ai-tools/ai-speech-to-text.md)
   * [AI Video](ai-tools/ai-video.md)
   * [AI Video Pro](ai-tools/ai-video-pro.md)
