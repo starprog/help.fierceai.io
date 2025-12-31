@@ -165,43 +165,34 @@ Review the generated article:
 
 ## Token Usage
 
-### Text Generation
+### Current Token Rates
 
-<span id="ai-article-wizard-text-rate-info">Loading rate information...</span>
+AI Article Wizard uses two types of tokens with adjustable rates:
 
-**What You're Charged For:**
+<div id="ai-article-wizard-text-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0 10px 0;">
+  <h4 style="margin-top: 0;">📊 Text Generation Rate</h4>
+  <p style="color: #666;">Loading...</p>
+</div>
 
-1. **Keyword Generation**: Tokens for AI analysis and keyword suggestions
-2. **Title Generation**: Tokens for multiple title options
-3. **Outline Creation**: Tokens for structuring your article
-4. **Article Writing**: Tokens for the full article content (largest consumption)
+<div id="ai-article-wizard-image-rate-info" style="padding: 20px; border: 2px solid #10b981; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">🖼️ Image Generation Rate</h4>
+  <p style="color: #666;">Loading...</p>
+</div>
 
-**Token consumption by step:**
+### How Tokens Work
 
-| Step | Approximate Tokens |
-|------|-------------------|
-| Keyword generation (10 keywords) | 100-300 tokens |
-| Title generation (5 options) | 200-400 tokens |
-| Outline creation (6 sections) | 300-500 tokens |
-| Full article (1000 words) | 1,500-2,500 tokens |
-| **Total for complete article** | **2,100-3,700 tokens** |
+AI Article Wizard uses **two token types** depending on the feature:
 
-*Note: Longer articles consume proportionally more tokens.*
+**WORD Tokens** - Used for:
+- Keyword generation and analysis
+- Title suggestions and optimization  
+- Article outline creation
+- Full article content generation
 
-### Image Generation/Selection
-
-<span id="ai-article-wizard-image-rate-info">Loading rate information...</span>
-
-**What You're Charged For:**
-
-- **Pexels/Unsplash**: Credits per image retrieved
-- **AI Generation**: Full image generation credits (higher cost)
-
-| Source | Credits per Image |
-|--------|------------------|
-| Pexels | 1 image credit |
-| Unsplash | 1 image credit |
-| DALL-E 3 (AI) | Standard image generation credits |
+**IMAGE Tokens** - Used for:
+- Pexels/Unsplash image selection
+- AI image generation integration
+- Visual content enhancement
 
 ### Token-Saving Tips
 

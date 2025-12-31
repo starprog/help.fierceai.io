@@ -12,7 +12,14 @@ AI Music is a cutting-edge tool that uses ElevenLabs' Music API to generate orig
 
 ## Token Usage
 
-<span id="ai-music-rate-info"></span>
+### Current Token Rates
+
+<div id="ai-music-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
+### How Tokens Work
 
 AI Music operations consume a fixed number of tokens per music generation request, regardless of the output duration or complexity.
 

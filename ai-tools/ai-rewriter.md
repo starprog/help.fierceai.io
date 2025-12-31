@@ -37,9 +37,14 @@ AI Rewriter is a powerful content transformation tool that reimagines your exist
 
 ## Token Usage
 
-<div id="ai-rewriter-rate-info">Loading token rate information...</div>
+### Current Token Rates
 
-### How Tokens Are Consumed
+<div id="ai-rewriter-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
+### How Tokens Work
 
 AI Rewriter uses token-based billing calculated on the output (rewritten) text:
 

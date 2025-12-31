@@ -103,9 +103,14 @@ How does this compare to [another URL]?
 
 ## Token Usage
 
-<span id="ai-web-chat-rate-info">Loading rate information...</span>
+### Current Token Rates
 
-### What You're Charged For
+<div id="ai-web-chat-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
+### How Tokens Work
 
 Tokens are consumed based on:
 

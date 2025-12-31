@@ -131,9 +131,16 @@ Great: "I'd like a peaceful mountain landscape at sunset, with vibrant purple an
 
 ## Token Usage
 
-AI Chat Image uses an image-based token calculation system. Tokens are consumed per generated image:
+### Current Token Rates
 
-<span id="ai-chat-image-rate-info"></span>
+<div id="ai-chat-image-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
+### How Tokens Work
+
+AI Chat Image uses an image-based token calculation system. Tokens are consumed per generated image:
 
 **Token Calculation:**
 - Each generated image consumes tokens based on your feature rate

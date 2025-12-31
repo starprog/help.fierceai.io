@@ -13,26 +13,18 @@ AI Realtime Image revolutionizes the image generation workflow by providing:
 - **Gallery Management**: Save and organize your creations
 - **High Quality Output**: Fast speed without compromising quality
 
-## Token Rates
+## Token Usage
 
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>Rate</th>
-<th>Rate Span ID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>AI Realtime Image</td>
-<td><span id="ai-realtime-image-rate-info">Loading...</span></td>
-<td>ai-realtime-image-rate-info</td>
-</tr>
-</tbody>
-</table>
+### Current Token Rates
 
-**Token Usage**: Each generated image consumes tokens based on your plan's IMAGE token rate, multiplied by the AI Realtime Image feature rate.
+<div id="ai-realtime-image-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
+### How Tokens Work
+
+Each generated image consumes tokens based on your plan's IMAGE token rate, multiplied by the AI Realtime Image feature rate.
 
 ## Getting Started
 

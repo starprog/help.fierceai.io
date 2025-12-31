@@ -12,7 +12,14 @@ AI Voiceover converts written text into high-quality spoken audio using cutting-
 
 ## Token Usage
 
-<span id="ai-voiceover-rate-info"></span>
+### Current Token Rates
+
+<div id="ai-voiceover-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
+### How Tokens Work
 
 AI Voiceover consumes tokens based on the number of characters in the input text, providing predictable and transparent pricing for your voice generation needs.
 

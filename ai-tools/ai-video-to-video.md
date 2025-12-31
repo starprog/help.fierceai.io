@@ -14,7 +14,11 @@ AI Video to Video is FierceAI's advanced video transformation and enhancement pl
 ## Available Models
 
 ### Video Upscaler
-<div id="video-to-video-upscaler-rate-info">Loading Video Upscaler token rate information...</div>
+
+<div id="video-to-video-upscaler-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
 
 **Enhance video resolution with AI super-resolution technology**
 
@@ -51,7 +55,11 @@ Increase your video resolution and quality using advanced AI upscaling. Perfect 
 - 8x scaling recommended only for very low-resolution sources
 
 ### Cogvideox 5B
-<div id="video-to-video-cogvideox-5b-rate-info">Loading Cogvideox 5B token rate information...</div>
+
+<div id="video-to-video-cogvideox-5b-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
 
 **Advanced video-to-video transformation with prompt guidance**
 
@@ -104,7 +112,11 @@ anime, manga style, photorealistic, sharp edges
 ```
 
 ### Animatediff V2V
-<div id="video-to-video-animatediff-v2v-rate-info">Loading Animatediff V2V token rate information...</div>
+
+<div id="video-to-video-animatediff-v2v-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
 
 **Smooth animation transformation with frame-by-frame consistency**
 
@@ -156,7 +168,11 @@ informative visual elements, presentation-ready"
 ```
 
 ### Fast Animatediff Turbo
-<div id="video-to-video-fast-animatediff-turbo-rate-info">Loading Fast Animatediff Turbo token rate information...</div>
+
+<div id="video-to-video-fast-animatediff-turbo-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
 
 **Rapid video transformation with turbo-speed processing**
 

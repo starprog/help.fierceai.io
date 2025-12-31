@@ -125,9 +125,16 @@ AI File Chat transforms static documents into interactive conversations. Instead
 
 ## Token Usage
 
-AI File Chat uses a word-based token calculation system. Tokens are consumed based on the AI's response length:
+### Current Token Rates
 
-<span id="ai-file-chat-rate-info"></span>
+<div id="ai-file-chat-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
+### How Tokens Work
+
+AI File Chat uses a word-based token calculation system. Tokens are consumed based on the AI's response length:
 
 **Token Calculation:**
 - Tokens are counted based on the AI's text response

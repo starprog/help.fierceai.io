@@ -345,6 +345,10 @@
             featureKey: 'ai_code_generator',
             divId: 'ai-code-generator-rate-info'
           },
+          'ai-tools/ai-detector': {
+            featureKey: 'ai_content_detect',
+            divId: 'ai-detector-rate-info'
+          },
           'ai-tools/ai-editor': {
             featureKey: 'ai_editor',
             divId: 'ai-editor-rate-info'
@@ -458,6 +462,10 @@
           'ai-tools/ai-music-pro': {
             featureKey: 'ai_music_pro',
             divId: 'ai-music-pro-rate-info'
+          },
+          'ai-tools/ai-plagiarism': {
+            featureKey: 'ai_plagiarism',
+            divId: 'ai-plagiarism-rate-info'
           },
           'ai-tools/ai-photo-studio': [
             {
@@ -651,6 +659,32 @@
               });
           });
         });
+        
+        // Global loadFeatureRate function for individual page scripts
+        window.loadFeatureRate = function(featureKey, callback) {
+          fetch('https://fierceai.io/api/feature-rates/' + featureKey)
+            .then(response => response.json())
+            .then(result => {
+              if (result.success && result.data) {
+                const rate = parseFloat(result.data.tokens_per_unit);
+                if (typeof callback === 'function') {
+                  callback(rate, result.data);
+                }
+              } else {
+                // Fallback to default rate
+                if (typeof callback === 'function') {
+                  callback(1.0, { tokens_per_unit: 1.0, token_type: 'word' });
+                }
+              }
+            })
+            .catch(error => {
+              console.error('Error loading feature rate:', error);
+              // Fallback to default rate
+              if (typeof callback === 'function') {
+                callback(1.0, { tokens_per_unit: 1.0, token_type: 'word' });
+              }
+            });
+        };
         
         // Load AI Image Editor providers dynamically
         if (window.location.hash.includes('ai-tools/ai-image-editor')) {
