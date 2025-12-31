@@ -427,7 +427,14 @@
                   rateInfoDiv.style.borderColor = borderColor;
                   
                   // Format rate display based on token type
-                  const tokenTypeLabel = data.token_type === 'IMAGE' ? 'tokens per image' : 'tokens per word';
+                  let tokenTypeLabel = 'tokens per word';
+                  if (data.token_type === 'IMAGE') {
+                    tokenTypeLabel = 'tokens per image';
+                  } else if (data.token_type === 'CHARACTER') {
+                    tokenTypeLabel = 'tokens per character';
+                  } else if (data.token_type === 'WORD') {
+                    tokenTypeLabel = 'tokens per word';
+                  }
                   
                   rateInfoDiv.innerHTML = `
                     <h4 style="margin-top: 0;">${icon} ${data.feature_name}</h4>
