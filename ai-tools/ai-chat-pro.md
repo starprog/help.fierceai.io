@@ -23,84 +23,10 @@
 
 ### Current Token Rates
 
-<div id="rate-info" class="loading">
-  <p>⏳ Loading current rates...</p>
+<div id="ai-chat-pro-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
-
-<script>
-(function() {
-  const rateInfoDiv = document.getElementById('rate-info');
-  
-  fetch('https://fierceai.io/api/feature-rates/ai_chat_pro')
-    .then(response => response.json())
-    .then(result => {
-      if (result.success && result.data) {
-        const data = result.data;
-        const rate = data.tokens_per_unit;
-        
-        let rateClass = 'standard';
-        let rateIcon = '📊';
-        if (rate < 1.0) {
-          rateClass = 'discount';
-          rateIcon = '🎉';
-        } else if (rate > 1.0) {
-          rateClass = 'premium';
-          rateIcon = '⭐';
-        }
-        
-        rateInfoDiv.innerHTML = `
-          <div class="rate-box ${rateClass}">
-            <h4>${rateIcon} ${data.feature_name} Rate</h4>
-            <p class="rate-value"><strong>${rate.toFixed(2)} tokens per word</strong></p>
-            <p class="rate-desc">${data.rate_description}</p>
-            <p class="token-type">Token Type: <strong>${data.token_type.toUpperCase()}</strong></p>
-          </div>
-        `;
-      } else {
-        rateInfoDiv.innerHTML = '<p>⚠️ Unable to load current rates. Please contact support.</p>';
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching rates:', error);
-      rateInfoDiv.innerHTML = '<p>⚠️ Unable to load current rates. Default: 1.0 tokens per word.</p>';
-    });
-})();
-</script>
-
-<style>
-.rate-box {
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px 0;
-  border: 2px solid #e0e0e0;
-}
-.rate-box.standard {
-  background: #f5f5f5;
-  border-color: #2196F3;
-}
-.rate-box.discount {
-  background: #e8f5e9;
-  border-color: #4CAF50;
-}
-.rate-box.premium {
-  background: #fff3e0;
-  border-color: #FF9800;
-}
-.rate-value {
-  font-size: 1.2em;
-  color: #333;
-  margin: 10px 0;
-}
-.rate-desc {
-  color: #666;
-  margin: 5px 0;
-}
-.token-type {
-  color: #888;
-  font-size: 0.9em;
-  margin-top: 10px;
-}
-</style>
 
 ### What You Need
 

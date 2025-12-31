@@ -329,5 +329,69 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+  
+  <!-- Feature Rate Loader -->
+  <script>
+    window.$docsify = window.$docsify || {};
+    window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook, vm) {
+      hook.doneEach(function() {
+        // Only run on AI Chat Pro page
+        if (!window.location.hash.includes('ai-chat-pro')) return;
+        
+        const rateInfoDiv = document.getElementById('ai-chat-pro-rate-info');
+        if (!rateInfoDiv) return;
+        
+        // Fetch rate from API
+        fetch('https://fierceai.io/api/feature-rates/ai_chat_pro')
+          .then(response => response.json())
+          .then(result => {
+            if (result.success && result.data) {
+              const data = result.data;
+              const rate = parseFloat(data.tokens_per_unit);
+              
+              let bgColor = '#f5f5f5';
+              let borderColor = '#2196F3';
+              let icon = '📊';
+              
+              if (rate < 1.0) {
+                bgColor = '#e8f5e9';
+                borderColor = '#4CAF50';
+                icon = '🎉';
+              } else if (rate > 1.0) {
+                bgColor = '#fff3e0';
+                borderColor = '#FF9800';
+                icon = '⭐';
+              }
+              
+              rateInfoDiv.style.background = bgColor;
+              rateInfoDiv.style.borderColor = borderColor;
+              rateInfoDiv.innerHTML = `
+                <h4 style="margin-top: 0;">${icon} ${data.feature_name} Rate</h4>
+                <p style="font-size: 1.2em; color: #333; font-weight: 600; margin: 10px 0;">
+                  ${rate.toFixed(2)} tokens per word
+                </p>
+                <p style="color: #666; margin: 5px 0;">${data.rate_description}</p>
+                <p style="color: #888; font-size: 0.9em; margin-top: 10px;">
+                  Token Type: <strong>${data.token_type.toUpperCase()}</strong>
+                </p>
+              `;
+            } else {
+              throw new Error('Invalid response');
+            }
+          })
+          .catch(error => {
+            console.error('Error loading rate:', error);
+            rateInfoDiv.innerHTML = `
+              <h4 style="margin-top: 0;">📊 AI Chat Pro Rate</h4>
+              <p style="font-size: 1.2em; color: #333; font-weight: 600;">1.0 tokens per word</p>
+              <p style="color: #666;">Standard rate (Default)</p>
+              <p style="color: #888; font-size: 0.9em; margin-top: 10px;">
+                💡 For live rates, visit <a href="https://fierceai.io/dashboard/user/token-management/store" target="_blank">AI Store</a>
+              </p>
+            `;
+          });
+      });
+    });
+  </script>
 </body>
 </html>
