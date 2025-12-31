@@ -354,6 +354,29 @@
               featureKey: 'creative_suite_text',
               divId: 'creative-suite-text-rate-info'
             }
+          ],
+          'ai-tools/ai-image-editor': [
+            // Editing Tools
+            { featureKey: 'image_editor_merge_face', divId: 'image-editor-merge-face-rate-info' },
+            { featureKey: 'image_editor_generative_fill', divId: 'image-editor-generative-fill-rate-info' },
+            { featureKey: 'image_editor_reimagine', divId: 'image-editor-reimagine-rate-info' },
+            { featureKey: 'image_editor_remove_background', divId: 'image-editor-remove-background-rate-info' },
+            { featureKey: 'image_editor_cleanup', divId: 'image-editor-cleanup-rate-info' },
+            { featureKey: 'image_editor_upscale', divId: 'image-editor-upscale-rate-info' },
+            { featureKey: 'image_editor_replace_background', divId: 'image-editor-replace-background-rate-info' },
+            { featureKey: 'image_editor_sketch_to_image', divId: 'image-editor-sketch-to-image-rate-info' },
+            { featureKey: 'image_editor_remove_text', divId: 'image-editor-remove-text-rate-info' },
+            { featureKey: 'image_editor_inpainting', divId: 'image-editor-inpainting-rate-info' },
+            { featureKey: 'image_editor_style_transfer', divId: 'image-editor-style-transfer-rate-info' },
+            { featureKey: 'image_editor_image_relight', divId: 'image-editor-image-relight-rate-info' },
+            // AI Models
+            { featureKey: 'image_editor_gpt_image_1', divId: 'image-editor-gpt-image-1-rate-info' },
+            { featureKey: 'image_editor_flux_pro', divId: 'image-editor-flux-pro-rate-info' },
+            { featureKey: 'image_editor_nano_banana', divId: 'image-editor-nano-banana-rate-info' },
+            { featureKey: 'image_editor_nano_banana_pro', divId: 'image-editor-nano-banana-pro-rate-info' },
+            { featureKey: 'image_editor_freepik', divId: 'image-editor-freepik-rate-info' },
+            { featureKey: 'image_editor_clipdrop', divId: 'image-editor-clipdrop-rate-info' },
+            { featureKey: 'image_editor_novita', divId: 'image-editor-novita-rate-info' }
           ]
         };
         
@@ -425,6 +448,35 @@
               });
           });
         });
+        
+        // Load AI Image Editor providers dynamically
+        if (window.location.hash.includes('ai-tools/ai-image-editor')) {
+          fetch('https://fierceai.io/api/image-editor-providers')
+            .then(response => response.json())
+            .then(result => {
+              if (result.success && result.data) {
+                // Map through all provider data and update spans
+                Object.keys(result.data).forEach(toolKey => {
+                  const providerSpan = document.getElementById('provider-' + toolKey.replace(/_/g, '-'));
+                  if (providerSpan) {
+                    providerSpan.textContent = result.data[toolKey].provider;
+                    providerSpan.style.fontWeight = '600';
+                    providerSpan.style.color = '#667eea';
+                  }
+                });
+              }
+            })
+            .catch(error => {
+              console.error('Error loading providers:', error);
+              // Set default fallback text
+              const providerSpans = document.querySelectorAll('[id^="provider-"]');
+              providerSpans.forEach(span => {
+                if (span.textContent === 'Loading...') {
+                  span.textContent = 'Multiple Providers';
+                }
+              });
+            });
+        }
         
         // Load pricing plans on pricing page
         if (window.location.hash.includes('pricing-and-plans')) {

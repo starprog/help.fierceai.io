@@ -14,6 +14,7 @@
 * [**AI Tools**](ai-tools/)
   * [AI Bots](ai-tools/ai-bots.md)
   * [AI Chat Pro](ai-tools/ai-chat-pro.md)
+  * [AI Image Editor](ai-tools/ai-image-editor.md)
   * [Creative Suite](ai-tools/creative-suite.md)
   * [Writing Assistant](ai-tools/writing-assistant.md)
   * [Image Generator](ai-tools/image-generator.md)
