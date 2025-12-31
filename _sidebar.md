@@ -15,6 +15,7 @@
   * [AI Bots](ai-tools/ai-bots.md)
   * [AI Chat](ai-tools/ai-chat.md)
   * [AI Chat Pro](ai-tools/ai-chat-pro.md)
+  * [AI File Chat](ai-tools/ai-file-chat.md)
   * [AI Image Editor](ai-tools/ai-image-editor.md)
   * [AI Presentation](ai-tools/ai-presentation.md)
   * [AI Realtime Voice Chat](ai-tools/ai-realtime-voice-chat.md)
