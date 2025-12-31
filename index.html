@@ -526,6 +526,33 @@
             });
         }
         
+        // Load AI Engine Config on ai-bots page
+        if (window.location.hash.includes('ai-tools/ai-bots')) {
+          fetch('https://fierceai.io/api/ai-engine-config')
+            .then(response => response.json())
+            .then(result => {
+              if (result.success && result.data && result.data.openai) {
+                const openaiConfig = result.data.openai;
+                
+                // Update word model display spans
+                const wordModelDisplaySpans = document.querySelectorAll('#ai-engine-word-model-display');
+                wordModelDisplaySpans.forEach(span => {
+                  span.textContent = openaiConfig.word_model_display;
+                  span.style.fontWeight = '600';
+                  span.style.color = '#667eea';
+                });
+              }
+            })
+            .catch(error => {
+              console.error('Error loading AI engine config:', error);
+              document.querySelectorAll('#ai-engine-word-model-display').forEach(span => {
+                if (span.textContent === 'Loading...') {
+                  span.textContent = 'GPT-5 Nano';
+                }
+              });
+            });
+        }
+        
         // Load pricing plans on pricing page
         if (window.location.hash.includes('pricing-and-plans')) {
           const loadingEl = document.getElementById('pricing-plans-loading');

@@ -16,15 +16,17 @@ AI Bots (also called External Chatbots) are AI-powered conversational agents tha
 
 ## AI Model Used
 
-AI Bots use the **default AI chat model** configured in your system settings. Currently, the default model is:
+AI Bots use the **default AI chat model** configured by system administrators. The current system-wide default model is:
 
-**`gpt-5-nano` (OpenAI)**
+**<span id="ai-engine-word-model-display">Loading...</span>**
 
 This model provides a balance of:
 - ⚡ Fast response times
 - 💰 Cost-effective token usage
 - 🧠 Intelligent conversation capabilities
 - 🌐 Multi-language support
+
+> **Note**: The AI model is configured at the system level by administrators and applies to all AI Bots. Individual users cannot change this setting.
 
 ## Token Usage
 
