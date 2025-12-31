@@ -12,6 +12,7 @@
   * [Chat Assistant](content-creation/chat.md)
   * [Templates](content-creation/templates.md)
 * [**AI Tools**](ai-tools/)
+  * [AI Article Wizard](ai-tools/ai-article-wizard.md)
   * [AI Bots](ai-tools/ai-bots.md)
   * [AI Chat](ai-tools/ai-chat.md)
   * [AI Chat Image](ai-tools/ai-chat-image.md)
