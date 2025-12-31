@@ -44,6 +44,7 @@
   * [AI Voiceover](ai-tools/ai-voiceover.md)
   * [AI Web Chat](ai-tools/ai-web-chat.md)
   * [AI Writer](ai-tools/ai-writer.md)
+  * [AI YouTube](ai-tools/ai-youtube.md)
   * [Chat Settings](ai-tools/chat-settings.md)
   * [Creative Suite](ai-tools/creative-suite.md)
   * [Writing Assistant](ai-tools/writing-assistant.md)

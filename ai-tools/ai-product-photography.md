@@ -18,16 +18,11 @@ This feature is ideal for creating consistent, professional product imagery with
 
 ## Pricing
 
-<div class="feature-rate-container">
-  <div class="feature-rate-label">Current Rate:</div>
-  <div id="ai_product_shot-rate" class="feature-rate-loading">Loading rate...</div>
+<div id="ai-product-shot-rate-info" class="feature-rate-info">
+  <h4 style="margin-top: 0;">📊 Token Rate</h4>
+  <p style="font-size: 1.2em; color: #333; font-weight: 600;">Loading rate...</p>
+  <p style="color: #666;">Please wait while we fetch the current rate.</p>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  loadFeatureRate('ai_product_shot', 'ai_product_shot-rate');
-});
-</script>
 
 **Token Type:** IMAGE tokens  
 **Billing:** Per product image created  
