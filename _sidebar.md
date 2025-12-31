@@ -13,6 +13,7 @@
   * [Templates](content-creation/templates.md)
 * [**AI Tools**](ai-tools/)
   * [AI Bots](ai-tools/ai-bots.md)
+  * [AI Chat](ai-tools/ai-chat.md)
   * [AI Chat Pro](ai-tools/ai-chat-pro.md)
   * [AI Image Editor](ai-tools/ai-image-editor.md)
   * [AI Presentation](ai-tools/ai-presentation.md)
