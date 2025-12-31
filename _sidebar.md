@@ -49,8 +49,6 @@
   * [Creative Suite](ai-tools/creative-suite.md)
   * [Writing Assistant](ai-tools/writing-assistant.md)
   * [Image Generator](ai-tools/image-generator.md)
-  * [Code Helper](ai-tools/code-helper.md)
-  * [Document Processor](ai-tools/document-processor.md)
 * [**Social Media**](social-media/)
   * [AccelePosts](social-media/acceleposts.md)
 * [**Account Management**](account/)
