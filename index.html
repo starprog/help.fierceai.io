@@ -381,6 +381,10 @@
           'ai-tools/chat-settings': {
             featureKey: 'chatbot_training',
             divId: 'chatbot-training-rate-info'
+          },
+          'ai-tools/ai-voice-bots': {
+            featureKey: 'ai_voice_bots',
+            divId: 'ai-voice-bots-rate-info'
           }
         };
         
@@ -551,6 +555,25 @@
                 }
               });
             });
+        }
+        
+        // Load ElevenLabs Engine Display on ai-voice-bots page
+        if (window.location.hash.includes('ai-tools/ai-voice-bots')) {
+          // For now, display static ElevenLabs info
+          // In the future, this could be made dynamic via an API endpoint
+          const voiceEngineSpans = document.querySelectorAll('#ai-voice-engine-display');
+          voiceEngineSpans.forEach(span => {
+            span.textContent = 'ElevenLabs Conversational AI';
+            span.style.fontWeight = '600';
+            span.style.color = '#667eea';
+          });
+          
+          const voiceModelSpans = document.querySelectorAll('#ai-voice-model-display');
+          voiceModelSpans.forEach(span => {
+            span.textContent = 'eleven_flash_v2_5';
+            span.style.fontWeight = '600';
+            span.style.color = '#667eea';
+          });
         }
         
         // Load pricing plans on pricing page
