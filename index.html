@@ -330,18 +330,18 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
   
-  <!-- Feature Rate Loader -->
+  <!-- Feature Rate Loader & Pricing Plans Loader -->
   <script>
     window.$docsify = window.$docsify || {};
     window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook, vm) {
       hook.doneEach(function() {
         // Configuration for different features
         const featureConfigs = {
-          'ai-chat-pro': {
+          'ai-tools/ai-chat-pro': {
             featureKey: 'ai_chat_pro',
             divId: 'ai-chat-pro-rate-info'
           },
-          'ai-bots': {
+          'ai-tools/ai-bots': {
             featureKey: 'ai_bots',
             divId: 'ai-bots-rate-info'
           }
@@ -405,6 +405,99 @@
               `;
             });
         });
+        
+        // Load pricing plans on pricing page
+        if (window.location.hash.includes('pricing-and-plans')) {
+          const loadingEl = document.getElementById('pricing-plans-loading');
+          const containerEl = document.getElementById('pricing-plans-container');
+          
+          if (loadingEl && containerEl) {
+            fetch('https://fierceai.io/api/pricing-plans')
+              .then(response => response.json())
+              .then(data => {
+                if (data.success) {
+                  loadingEl.style.display = 'none';
+                  containerEl.style.display = 'block';
+                  
+                  renderPlans('monthly', data.data.monthly);
+                  renderPlans('yearly', data.data.yearly);
+                  renderPlans('lifetime', data.data.lifetime);
+                }
+              })
+              .catch(error => {
+                console.error('Error loading pricing:', error);
+                loadingEl.innerHTML = '<p style="color: #ef4444;">Failed to load pricing information. Please try again later.</p>';
+              });
+          }
+        }
+        
+        function renderPlans(frequency, plans) {
+          const container = document.getElementById(frequency + '-plans');
+          if (!container) return;
+          
+          if (!plans || plans.length === 0) {
+            container.innerHTML = '<div class="empty-section">No ' + frequency + ' plans available at this time.</div>';
+            return;
+          }
+          
+          container.innerHTML = plans.map(plan => {
+            const featuredClass = plan.is_featured ? 'featured' : '';
+            const frequencyLabel = frequency === 'monthly' ? '/month' : 
+                                  frequency === 'yearly' ? '/year' : '';
+            
+            let featuresHTML = '';
+            if (plan.features) {
+              featuresHTML = '<div class="plan-features-html">' + plan.features + '</div>';
+            } else {
+              featuresHTML = '<ul class="plan-features"><li>All basic features included</li></ul>';
+            }
+            
+            let extraInfo = [];
+            if (plan.max_tokens) {
+              extraInfo.push(formatNumber(plan.max_tokens) + ' tokens/month');
+            }
+            if (plan.storage_limit_mb) {
+              extraInfo.push(formatStorage(plan.storage_limit_mb) + ' storage');
+            }
+            
+            const tokensHTML = extraInfo.length > 0 ? 
+              '<div class="plan-tokens">' + extraInfo.join(' • ') + '</div>' : '';
+            
+            return `
+              <div class="pricing-card ${featuredClass}">
+                <div class="plan-name">${escapeHtml(plan.name)}</div>
+                <div class="plan-price">
+                  <span class="currency">$</span>${plan.price.toFixed(0)}<span class="period">${frequencyLabel}</span>
+                </div>
+                ${tokensHTML}
+                ${featuresHTML}
+                <a href="https://fierceai.io/register" class="plan-cta">Get Started</a>
+              </div>
+            `;
+          }).join('');
+        }
+        
+        function formatNumber(num) {
+          if (num >= 1000000) {
+            return (num / 1000000).toFixed(1) + 'M';
+          } else if (num >= 1000) {
+            return (num / 1000).toFixed(0) + 'K';
+          }
+          return num.toString();
+        }
+        
+        function formatStorage(mb) {
+          if (mb >= 1024) {
+            return (mb / 1024).toFixed(0) + ' GB';
+          }
+          return mb + ' MB';
+        }
+        
+        function escapeHtml(text) {
+          const div = document.createElement('div');
+          div.textContent = text;
+          return div.innerHTML;
+        }
       });
     });
   </script>

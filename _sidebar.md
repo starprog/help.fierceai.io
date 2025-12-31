@@ -5,6 +5,7 @@
   * [Quick Start Guide](getting-started/quick-start.md)
   * [First Steps](getting-started/first-steps.md)
   * [Account Setup](getting-started/account-setup.md)
+* [**💰 Pricing & Plans**](pricing-and-plans.md)
 * [**AI Content Creation**](content-creation/)
   * [Text Generation](content-creation/text-generation.md)
   * [Image Creation](content-creation/image-creation.md)

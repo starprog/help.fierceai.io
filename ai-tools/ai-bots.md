@@ -253,19 +253,6 @@ Connect to your CRM, helpdesk, or other tools.
 ### Scheduled Messages
 Send proactive messages based on user behavior.
 
-## Pricing & Plans
-
-Token costs depend on your subscription plan:
-
-| Plan | Word Token Price | Monthly Allocation |
-|------|-----------------|-------------------|
-| Free | Purchase required | 0 |
-| Basic | Lower rate | 10,000 tokens |
-| Pro | Best rate | 50,000 tokens |
-| Enterprise | Custom pricing | Unlimited |
-
-> Visit **Dashboard → Billing** to see your plan details
-
 ## Support
 
 Need help with AI Bots?
@@ -275,12 +262,17 @@ Need help with AI Bots?
 - 🐛 [Report Issues](../troubleshooting/common-issues.md)
 - 👥 [Community Forum](../support/community.md)
 
+## Pricing Information
+
+For current pricing, token packages, and subscription plans, please visit our [Pricing & Plans](../pricing-and-plans.md) page.
+
 ## Related Topics
 
 - [AI Web Chat](../content-creation/chat.md)
 - [Token Management](../account/billing.md)
 - [API Integration](../account/api-keys.md)
 - [Best Practices](../tips/best-practices.md)
+- [Pricing & Plans](../pricing-and-plans.md)
 
 ---
 
