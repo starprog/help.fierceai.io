@@ -24,6 +24,7 @@
   * [AI Image Generator](ai-tools/ai-image-generator.md)
   * [AI Photo Studio](ai-tools/ai-photo-studio.md)
   * [AI Presentation](ai-tools/ai-presentation.md)
+  * [AI Realtime Image](ai-tools/ai-realtime-image.md)
   * [AI Realtime Voice Chat](ai-tools/ai-realtime-voice-chat.md)
   * [AI Rewriter](ai-tools/ai-rewriter.md)
   * [AI Vision](ai-tools/ai-vision.md)
