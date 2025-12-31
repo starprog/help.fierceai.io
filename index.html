@@ -386,6 +386,10 @@
             featureKey: 'ai_voice_bots',
             divId: 'ai-voice-bots-rate-info'
           },
+          'ai-tools/ai-presentation': {
+            featureKey: 'ai_presentation',
+            divId: 'ai-presentation-rate-info'
+          },
           'ai-tools/ai-realtime-voice-chat': {
             featureKey: 'ai_realtime_voice_chat',
             divId: 'ai-realtime-voice-chat-rate-info'
@@ -452,6 +456,8 @@
                     tokenTypeLabel = 'tokens per character';
                   } else if (data.token_type === 'VIDEO') {
                     tokenTypeLabel = 'tokens per video';
+                  } else if (data.token_type === 'PRESENTATION') {
+                    tokenTypeLabel = 'tokens per presentation';
                   } else if (data.token_type === 'WORD') {
                     tokenTypeLabel = 'tokens per word';
                   }
