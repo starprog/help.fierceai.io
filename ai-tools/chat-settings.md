@@ -105,13 +105,6 @@ Trained chatbots can be accessed via REST API, allowing integration with:
 - **FierceFiles**: Document analysis and summarization
 - **Custom Applications**: Build your own integrations using our API
 
-### API Endpoints:
-```
-GET /api/chatbot/{id}           - Get chatbot details
-POST /api/chatbot/{id}/chat     - Send message to chatbot
-GET /api/chatbot/{id}/history   - Retrieve conversation history
-```
-
 ### Token Usage:
 
 Chatbot training consumes tokens based on the amount of text processed:
