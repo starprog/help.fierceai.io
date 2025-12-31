@@ -17,42 +17,78 @@ The AI Image Editor uses a **two-tier pricing system**:
 
 These tools perform specific image editing operations. Each consumes IMAGE tokens based on its individual rate.
 
-### <span id="image-editor-merge-face-rate-info"></span> Merge Face
+### Merge Face
+
+<div id="image-editor-merge-face-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-merge-face">Loading...</span>  
 **Use Case**: Replace faces in source images with a target face image.  
 **Example**: Swap a person's face in a photo with another person's face while maintaining natural lighting and angles.
 
 ---
 
-### <span id="image-editor-generative-fill-rate-info"></span> Generative Fill
+### Generative Fill
+
+<div id="image-editor-generative-fill-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-generative-fill">Loading...</span>  
 **Use Case**: Fill missing or damaged parts of images with AI-generated content that matches the surrounding area.  
 **Example**: Remove unwanted objects and let AI intelligently fill the space, or extend image borders naturally.
 
 ---
 
-### <span id="image-editor-reimagine-rate-info"></span> Reimagine Beta
+### Reimagine Beta
+
+<div id="image-editor-reimagine-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-reimagine">Loading...</span>  
 **Use Case**: Transform existing images with creative AI-driven variations while maintaining the core concept.  
 **Example**: Take a photo and generate artistic variations with different styles, lighting, or interpretations.
 
 ---
 
-### <span id="image-editor-remove-background-rate-info"></span> Remove Background
+### Remove Background
+
+<div id="image-editor-remove-background-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-remove-background">Loading...</span>  
 **Use Case**: Instantly remove backgrounds to create transparent PNG images.  
 **Example**: Extract product photos from their backgrounds for e-commerce listings or create profile cutouts.
 
 ---
 
-### <span id="image-editor-cleanup-rate-info"></span> Cleanup
+### Cleanup
+
+<div id="image-editor-cleanup-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-cleanup">Loading...</span>  
 **Use Case**: Remove unwanted objects, blemishes, or imperfections from images.  
 **Example**: Erase text watermarks, remove photo bombers, or clean up distracting background elements.
 
 ---
 
-### <span id="image-editor-upscale-rate-info"></span> Upscaler
+### Upscaler
+
+<div id="image-editor-upscale-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-upscale">Loading...</span>  
 **Use Case**: Enhance image resolution up to 4x without losing detail or introducing artifacts.  
 **Example**: Convert low-resolution images into high-quality prints or enlarge thumbnails for full-size use.
@@ -61,14 +97,26 @@ These tools perform specific image editing operations. Each consumes IMAGE token
 
 ---
 
-### <span id="image-editor-replace-background-rate-info"></span> Replace Background
+### Replace Background
+
+<div id="image-editor-replace-background-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-replace-background">Loading...</span>  
 **Use Case**: Change or replace image backgrounds with AI-generated or custom environments.  
 **Example**: Place products in professional studio settings or change portrait backgrounds from indoor to outdoor scenes.
 
 ---
 
-### <span id="image-editor-sketch-to-image-rate-info"></span> Sketch to Image
+### Sketch to Image
+
+<div id="image-editor-sketch-to-image-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-sketch-to-image">Loading...</span>  
 **Use Case**: Transform simple sketches or line drawings into detailed, realistic images.  
 **Example**: Convert rough product sketches into photorealistic renderings or turn doodles into artwork.
@@ -77,28 +125,52 @@ These tools perform specific image editing operations. Each consumes IMAGE token
 
 ---
 
-### <span id="image-editor-remove-text-rate-info"></span> Remove Text
+### Remove Text
+
+<div id="image-editor-remove-text-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-remove-text">Loading...</span>  
 **Use Case**: Eliminate unwanted text overlays, captions, or watermarks while preserving the underlying image.  
 **Example**: Remove date stamps from photos, erase text from memes, or clean up signage in architectural photos.
 
 ---
 
-### <span id="image-editor-inpainting-rate-info"></span> Inpainting
+### Inpainting
+
+<div id="image-editor-inpainting-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-inpainting">Loading...</span>  
 **Use Case**: Selectively edit specific regions of images by adding, removing, or modifying elements with AI assistance.  
 **Example**: Change clothing colors, add accessories, or modify specific objects while keeping the rest untouched.
 
 ---
 
-### <span id="image-editor-style-transfer-rate-info"></span> Style Transfer
+### Style Transfer
+
+<div id="image-editor-style-transfer-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-style-transfer">Loading...</span>  
 **Use Case**: Apply artistic styles from reference images to your photos for consistent visual aesthetics.  
 **Example**: Make photos look like oil paintings, apply Instagram-style filters, or match brand visual guidelines.
 
 ---
 
-### <span id="image-editor-image-relight-rate-info"></span> Image Relight
+### Image Relight
+
+<div id="image-editor-image-relight-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
 **API**: <span id="provider-image-relight">Loading...</span>  
 **Use Case**: Intelligently adjust lighting, shadows, and highlights to improve or completely change image illumination.  
 **Example**: Fix underexposed photos, create dramatic lighting effects, or match lighting across product images.
@@ -109,14 +181,24 @@ These tools perform specific image editing operations. Each consumes IMAGE token
 
 When creating new images or using tools that support multiple models, the model you select determines the token rate.
 
-### <span id="image-editor-gpt-image-1-rate-info"></span> GPT Image 1 (DALL-E)
+### GPT Image 1 (DALL-E)
+
+<div id="image-editor-gpt-image-1-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
 **Provider**: OpenAI  
 **Capabilities**: High-quality image generation from text prompts with excellent prompt understanding.  
 **Best For**: Creative concept art, illustrations, and abstract designs.
 
 ---
 
-### <span id="image-editor-flux-pro-rate-info"></span> Flux Pro / Kontext
+### Flux Pro / Kontext
+
+<div id="image-editor-flux-pro-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
 **Provider**: Flux  
 **Capabilities**: Premium image generation with exceptional quality and detail.  
 **Best For**: Professional-grade images, complex scenes, and photorealistic results.
@@ -125,14 +207,24 @@ When creating new images or using tools that support multiple models, the model 
 
 ---
 
-### <span id="image-editor-nano-banana-rate-info"></span> Nano Banana Edit
+### Nano Banana Edit
+
+<div id="image-editor-nano-banana-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
 **Provider**: Banana  
 **Capabilities**: Fast, efficient image editing optimized for quick iterations.  
 **Best For**: Rapid prototyping and batch editing operations.
 
 ---
 
-### <span id="image-editor-nano-banana-pro-rate-info"></span> Nano Banana Pro Edit
+### Nano Banana Pro Edit
+
+<div id="image-editor-nano-banana-pro-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
 **Provider**: Banana  
 **Capabilities**: Enhanced version with better quality and more advanced features.  
 **Best For**: Production-quality edits requiring higher fidelity.
@@ -141,21 +233,36 @@ When creating new images or using tools that support multiple models, the model 
 
 ---
 
-### <span id="image-editor-freepik-rate-info"></span> FreePik
+### FreePik
+
+<div id="image-editor-freepik-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
 **Provider**: FreePik  
 **Capabilities**: Balanced quality and speed for general-purpose image processing.  
 **Best For**: Stock-style images and commercial graphics.
 
 ---
 
-### <span id="image-editor-clipdrop-rate-info"></span> ClipDrop
+### ClipDrop
+
+<div id="image-editor-clipdrop-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
 **Provider**: ClipDrop  
 **Capabilities**: Specialized in object extraction and image composition.  
 **Best For**: Background removal, object isolation, and image compositing.
 
 ---
 
-### <span id="image-editor-novita-rate-info"></span> Novita
+### Novita
+
+<div id="image-editor-novita-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
 **Provider**: Novita  
 **Capabilities**: Versatile API supporting multiple editing operations.  
 **Best For**: Face swapping, cleanup, and general editing tasks.
