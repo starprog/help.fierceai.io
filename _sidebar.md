@@ -21,6 +21,7 @@
   * [AI Editor](ai-tools/ai-editor.md)
   * [AI File Chat](ai-tools/ai-file-chat.md)
   * [AI Image Editor](ai-tools/ai-image-editor.md)
+  * [AI Image Generator](ai-tools/ai-image-generator.md)
   * [AI Photo Studio](ai-tools/ai-photo-studio.md)
   * [AI Presentation](ai-tools/ai-presentation.md)
   * [AI Realtime Voice Chat](ai-tools/ai-realtime-voice-chat.md)
