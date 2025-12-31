@@ -32,6 +32,10 @@ All AI Video Pro models use **VIDEO** type tokens. Rates are multiplied by base 
 | Sora 2 | `video_pro_sora_2` | 3.0x | High-quality cinematic videos |
 | Sora 2 Pro | `video_pro_sora_2_pro` | 4.0x | Premium cinematic content, highest quality |
 
+<div id="video-pro-sora-2-rate-info">Loading Sora 2 token rate information...</div>
+
+<div id="video-pro-sora-2-pro-rate-info">Loading Sora 2 Pro token rate information...</div>
+
 **Duration Pricing:** Sora models charge per second (4s, 8s, or 12s options). Longer durations consume proportionally more credits.
 
 ### Google Veo Models
@@ -49,6 +53,26 @@ All AI Video Pro models use **VIDEO** type tokens. Rates are multiplied by base 
 | Veo 3.1 First Last Frame Fast | `video_pro_veo_3_1_first_last_frame_fast` | 3.5x | Quick frame interpolation |
 | Veo 3.1 Reference to Video | `video_pro_veo_3_1_reference_to_video` | 4.0x | Style transfer with reference images |
 
+<div id="video-pro-veo-2-rate-info">Loading Veo 2 token rate information...</div>
+
+<div id="video-pro-veo-3-rate-info">Loading Veo 3 token rate information...</div>
+
+<div id="video-pro-veo-3-fast-rate-info">Loading Veo 3 Fast token rate information...</div>
+
+<div id="video-pro-veo-3-1-text-to-video-rate-info">Loading Veo 3.1 Text to Video token rate information...</div>
+
+<div id="video-pro-veo-3-1-text-to-video-fast-rate-info">Loading Veo 3.1 Text to Video Fast token rate information...</div>
+
+<div id="video-pro-veo-3-1-image-to-video-rate-info">Loading Veo 3.1 Image to Video token rate information...</div>
+
+<div id="video-pro-veo-3-1-image-to-video-fast-rate-info">Loading Veo 3.1 Image to Video Fast token rate information...</div>
+
+<div id="video-pro-veo-3-1-first-last-frame-rate-info">Loading Veo 3.1 First Last Frame token rate information...</div>
+
+<div id="video-pro-veo-3-1-first-last-frame-fast-rate-info">Loading Veo 3.1 First Last Frame Fast token rate information...</div>
+
+<div id="video-pro-veo-3-1-reference-to-video-rate-info">Loading Veo 3.1 Reference to Video token rate information...</div>
+
 **Resolution Options:** Most Veo 3.1 models support 720p (lower cost) and 1080p (higher quality).
 **Audio Generation:** Can be disabled to save 33% of credits on Veo 3.1 models.
 
@@ -57,6 +81,8 @@ All AI Video Pro models use **VIDEO** type tokens. Rates are multiplied by base 
 | Model | Feature Key | Rate | Best For |
 |-------|-------------|------|----------|
 | Luma Dream Machine | `video_pro_luma` | 2.0x | Fast, artistic video generation |
+
+<div id="video-pro-luma-rate-info">Loading Luma Dream Machine token rate information...</div>
 
 **Characteristics:** Simple prompt-based generation with dream-like aesthetics, ideal for creative and surreal content.
 
@@ -72,6 +98,20 @@ All AI Video Pro models use **VIDEO** type tokens. Rates are multiplied by base 
 | Kling 2.5 Turbo Pro ITV | `video_pro_kling_2_5_turbo_pro_itv` | 3.5x | Premium image-to-video |
 | Kling 2.5 Turbo Standard ITV | `video_pro_kling_2_5_turbo_standard_itv` | 3.0x | Standard image-to-video |
 
+<div id="video-pro-kling-1-rate-info">Loading Kling v1 token rate information...</div>
+
+<div id="video-pro-kling-1-6-image-rate-info">Loading Kling v1.6 Image token rate information...</div>
+
+<div id="video-pro-kling-2-1-rate-info">Loading Kling v2.1 token rate information...</div>
+
+<div id="video-pro-kling-video-rate-info">Loading Kling Video token rate information...</div>
+
+<div id="video-pro-kling-2-5-turbo-pro-ttv-rate-info">Loading Kling 2.5 Turbo Pro TTV token rate information...</div>
+
+<div id="video-pro-kling-2-5-turbo-pro-itv-rate-info">Loading Kling 2.5 Turbo Pro ITV token rate information...</div>
+
+<div id="video-pro-kling-2-5-turbo-standard-itv-rate-info">Loading Kling 2.5 Turbo Standard ITV token rate information...</div>
+
 **Advanced Controls:** Kling 2.5 models offer camera movement, CFG scale, seed control, negative prompts, and loop options.
 
 ### MiniMax Model
@@ -79,6 +119,8 @@ All AI Video Pro models use **VIDEO** type tokens. Rates are multiplied by base 
 | Model | Feature Key | Rate | Best For |
 |-------|-------------|------|----------|
 | MiniMax | `video_pro_minimax` | 2.0x | Simple, efficient video generation |
+
+<div id="video-pro-minimax-rate-info">Loading MiniMax token rate information...</div>
 
 **Characteristics:** Straightforward prompt-based generation with negative prompt support.
 
