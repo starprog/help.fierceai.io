@@ -29,6 +29,7 @@
   * [AI Photo Studio](ai-tools/ai-photo-studio.md)
   * [AI Plagiarism](ai-tools/ai-plagiarism.md)
   * [AI Presentation](ai-tools/ai-presentation.md)
+  * [AI Product Photography](ai-tools/ai-product-photography.md)
   * [AI Realtime Image](ai-tools/ai-realtime-image.md)
   * [AI Realtime Voice Chat](ai-tools/ai-realtime-voice-chat.md)
   * [AI Rewriter](ai-tools/ai-rewriter.md)
