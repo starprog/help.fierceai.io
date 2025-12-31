@@ -20,6 +20,7 @@
   * [AI Image Editor](ai-tools/ai-image-editor.md)
   * [AI Presentation](ai-tools/ai-presentation.md)
   * [AI Realtime Voice Chat](ai-tools/ai-realtime-voice-chat.md)
+  * [AI Vision](ai-tools/ai-vision.md)
   * [AI Voice Bots](ai-tools/ai-voice-bots.md)
   * [AI Web Chat](ai-tools/ai-web-chat.md)
   * [Chat Settings](ai-tools/chat-settings.md)
