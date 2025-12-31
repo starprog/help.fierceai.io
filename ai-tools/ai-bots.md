@@ -16,7 +16,7 @@ AI Bots (also called External Chatbots) are AI-powered conversational agents tha
 
 ## AI Model Used
 
-AI Bots use the **default AI chat model** configured by system administrators. The current system-wide default model is:
+AI Bots use the **system-wide default AI chat model** set by administrators. The current default model is:
 
 **<span id="ai-engine-word-model-display">Loading...</span>**
 
