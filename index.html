@@ -913,6 +913,120 @@
           div.textContent = text;
           return div.innerHTML;
         }
+        
+        // Load limited time offers on AI Store page
+        if (window.location.hash.includes('ai-tools/ai-store')) {
+          const offersContainer = document.getElementById('ai-store-limited-offers');
+          
+          if (offersContainer) {
+            fetch('https://fierceai.io/api/token-packages/limited-offers')
+              .then(response => response.json())
+              .then(data => {
+                if (data.success && data.packages.length > 0) {
+                  const offersHTML = data.packages.map(pkg => {
+                    const badgeHTML = pkg.badge ? 
+                      `<span class="offer-badge" style="background-color: ${getBadgeColor(pkg.badge.color)}">
+                        ${pkg.badge.icon ? '<i class="' + pkg.badge.icon + '"></i>' : ''}
+                        ${escapeHtml(pkg.badge.text)}
+                      </span>` : '';
+                    
+                    const discountHTML = pkg.discount_percentage > 0 ?
+                      `<div class="offer-discount">
+                        <span class="original-price">$${pkg.original_price}</span>
+                        <span class="discount-badge">${pkg.discount_percentage}% OFF</span>
+                      </div>` : '';
+                    
+                    const bonusHTML = pkg.bonus_tokens > 0 ?
+                      `<div class="offer-bonus">+ ${formatNumber(pkg.bonus_tokens)} Bonus Tokens</div>` : '';
+                    
+                    const expiryHTML = pkg.sale_ends_at ?
+                      `<div class="offer-expiry">⏰ Ends: ${formatDate(pkg.sale_ends_at)}</div>` : '';
+                    
+                    return `
+                      <div class="limited-offer-card" style="border: 2px solid ${getBadgeColor(pkg.badge?.color || 'blue')}; border-radius: 12px; padding: 20px; margin: 15px 0; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);">
+                        ${badgeHTML}
+                        <h3 style="margin: 10px 0; color: #667eea;">${escapeHtml(pkg.name)}</h3>
+                        <p style="color: #666; margin: 8px 0;">${escapeHtml(pkg.description)}</p>
+                        <div style="display: flex; align-items: baseline; gap: 10px; margin: 12px 0;">
+                          <span style="font-size: 2em; font-weight: bold; color: #667eea;">$${pkg.price}</span>
+                          ${discountHTML}
+                        </div>
+                        <div style="font-size: 1.2em; color: #764ba2; font-weight: 600; margin: 10px 0;">
+                          ${formatNumber(pkg.token_amount)} Tokens
+                          ${bonusHTML}
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 15px; border-top: 1px solid #e5e7eb;">
+                          ${expiryHTML}
+                          <a href="https://fierceai.io/dashboard/user/token-packages" 
+                             style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block;">
+                            Get This Deal
+                          </a>
+                        </div>
+                      </div>
+                    `;
+                  }).join('');
+                  
+                  offersContainer.innerHTML = `
+                    <div style="background: #f8f9ff; border-left: 4px solid #667eea; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                      <h3 style="margin: 0 0 10px 0; color: #667eea;">🔥 Active Limited Time Offers</h3>
+                      <p style="margin: 0; color: #666;">Save big with these exclusive deals! Limited quantities available.</p>
+                    </div>
+                    ${offersHTML}
+                  `;
+                } else {
+                  offersContainer.innerHTML = `
+                    <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; text-align: center;">
+                      <p style="color: #6b7280; margin: 0;">
+                        <i class="fas fa-info-circle" style="color: #667eea; margin-right: 8px;"></i>
+                        No limited time offers available at the moment. Check back soon for exclusive deals!
+                      </p>
+                    </div>
+                  `;
+                }
+              })
+              .catch(error => {
+                console.error('Error loading limited offers:', error);
+                offersContainer.innerHTML = `
+                  <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 15px;">
+                    <p style="color: #dc2626; margin: 0;">
+                      <i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>
+                      Unable to load limited time offers. Please try refreshing the page.
+                    </p>
+                  </div>
+                `;
+              });
+          }
+        }
+        
+        function getBadgeColor(color) {
+          const colors = {
+            'red': '#ef4444',
+            'blue': '#3b82f6',
+            'green': '#10b981',
+            'purple': '#a855f7',
+            'orange': '#f97316',
+            'yellow': '#eab308'
+          };
+          return colors[color] || colors['blue'];
+        }
+        
+        function formatDate(dateString) {
+          const date = new Date(dateString);
+          const now = new Date();
+          const diffMs = date - now;
+          const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+          
+          if (diffDays < 1) {
+            const diffHours = Math.ceil(diffMs / (1000 * 60 * 60));
+            return diffHours > 0 ? `${diffHours} hours` : 'Soon';
+          } else if (diffDays === 1) {
+            return 'Tomorrow';
+          } else if (diffDays <= 7) {
+            return `${diffDays} days`;
+          } else {
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+          }
+        }
       });
     });
   </script>

@@ -31,6 +31,7 @@
   * [AI Rewriter](ai-tools/ai-rewriter.md)
   * [AI RSS](ai-tools/ai-rss.md)
   * [AI Speech to Text](ai-tools/ai-speech-to-text.md)
+  * [AI Store](ai-tools/ai-store.md)
   * [AI Video](ai-tools/ai-video.md)
   * [AI Video Pro](ai-tools/ai-video-pro.md)
   * [AI Video to Video](ai-tools/ai-video-to-video.md)
