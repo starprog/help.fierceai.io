@@ -129,44 +129,6 @@ When you're scrolled down and dragging files, a blue banner appears at the top:
 
 ---
 
-## Cloud Storage Integration
-
-### Supported Providers
-
-Content Manager integrates with multiple cloud storage providers:
-
-| Provider | Features | Setup |
-|----------|----------|-------|
-| **Digital Ocean Spaces** | Primary, S3-compatible, CDN | Admin configuration |
-| **AWS S3** | Standard buckets, global regions | AWS credentials required |
-| **Cloudflare R2** | Zero egress fees, S3-compatible | R2 API tokens |
-| **Local Storage** | Fallback, server filesystem | Automatic |
-
-### Storage Path Structure
-
-Files are organized by type and user:
-
-```
-uploads/media/
-├── images/
-│   └── u-{userId}/
-│       └── {timestamp}_{uniqid}.jpg
-├── videos/
-│   └── u-{userId}/
-│       └── {timestamp}_{uniqid}.mp4
-└── other/
-    └── u-{userId}/
-        └── {timestamp}_{uniqid}.pdf
-```
-
-**File Naming**:
-- Timestamp prefix for chronological sorting
-- Unique ID prevents overwrites
-- Original extension preserved
-- User-specific directories for security
-
----
-
 ## FierceFiles Integration
 
 ### What is FierceFiles?
