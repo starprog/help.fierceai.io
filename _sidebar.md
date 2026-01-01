@@ -12,6 +12,7 @@
 * [**AI Tools**](ai-tools/)
   * [AI Article Wizard](ai-tools/ai-article-wizard.md)
   * [AI Avatar](ai-tools/ai-avatar.md)
+  * [AI Bot Knowledge Base](ai-tools/ai-bot-knowledge-base.md)
   * [AI Bots](ai-tools/ai-bots.md)
   * [AI Chat](ai-tools/ai-chat.md)
   * [Brand Voice](ai-tools/brand-voice.md)
