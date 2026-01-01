@@ -1029,6 +1029,172 @@
           }
         }
         
+        // Load Affiliate Settings dynamically
+        const affiliateProgramOverview = document.getElementById('affiliate-program-overview');
+        const affiliateCommissionDetails = document.getElementById('affiliate-commission-details');
+        const affiliateWithdrawalInfo = document.getElementById('affiliate-withdrawal-info');
+        const affiliatePaymentMethods = document.getElementById('affiliate-payment-methods');
+        const affiliateCommissionStructure = document.getElementById('affiliate-commission-structure');
+        
+        if (affiliateProgramOverview || affiliateCommissionDetails || affiliateWithdrawalInfo || 
+            affiliatePaymentMethods || affiliateCommissionStructure) {
+          fetch('https://fierceai.io/api/affiliate-settings')
+            .then(response => response.json())
+            .then(data => {
+              if (data.success && data.data) {
+                const settings = data.data;
+                
+                // Program Overview Section
+                if (affiliateProgramOverview) {
+                  affiliateProgramOverview.innerHTML = `
+                    <h4 style="margin-top: 0; color: #667eea;">💰 Current Commission Structure</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #667eea;">
+                        <div style="font-size: 0.9em; color: #6b7280; margin-bottom: 5px;">Commission Rate</div>
+                        <div style="font-size: 2em; font-weight: 700; color: #667eea;">${settings.commission_percentage}%</div>
+                      </div>
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                        <div style="font-size: 0.9em; color: #6b7280; margin-bottom: 5px;">Program Type</div>
+                        <div style="font-size: 1.1em; font-weight: 600; color: #10b981;">${escapeHtml(settings.program_type)}</div>
+                      </div>
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <div style="font-size: 0.9em; color: #6b7280; margin-bottom: 5px;">Min. Withdrawal</div>
+                        <div style="font-size: 2em; font-weight: 700; color: #f59e0b;">${settings.currency_symbol}${settings.minimum_withdrawal}</div>
+                      </div>
+                    </div>
+                    <p style="margin-top: 15px; margin-bottom: 0;">
+                      ${settings.onetime_commission ? 
+                        `You earn a <strong>${settings.commission_percentage}% commission</strong> on your referral's <strong>first qualifying purchase</strong>.` :
+                        `You earn a <strong>${settings.commission_percentage}% recurring commission</strong> on <strong>all qualifying purchases</strong> made by your referrals as long as their subscription remains active.`
+                      }
+                    </p>
+                  `;
+                }
+                
+                // Commission Details Section
+                if (affiliateCommissionDetails) {
+                  affiliateCommissionDetails.innerHTML = `
+                    <h4 style="margin-top: 0; color: #10b981;">Commission Structure</h4>
+                    <p style="margin-bottom: 10px;">
+                      <strong style="font-size: 1.3em; color: #667eea;">${settings.commission_percentage}% Commission</strong>
+                    </p>
+                    <p style="margin: 0;">
+                      ${settings.onetime_commission ?
+                        `You will receive a <strong>${settings.commission_percentage}% commission</strong> on your referral's first purchase. For example, if they purchase a $100 plan, you earn $${(100 * settings.commission_percentage / 100).toFixed(2)}.` :
+                        `Your rewards will continue as long as their subscription remains active. You will receive a commission on each qualifying purchase at <strong>${settings.commission_percentage}%</strong>. For example, if they spend $100/month, you earn $${(100 * settings.commission_percentage / 100).toFixed(2)}/month for as long as they remain subscribed.`
+                      }
+                    </p>
+                  `;
+                }
+                
+                // Withdrawal Info Section
+                if (affiliateWithdrawalInfo) {
+                  affiliateWithdrawalInfo.innerHTML = `
+                    <h4 style="margin-top: 0; color: #f59e0b;">Withdrawal Requirements</h4>
+                    <p style="margin: 10px 0;">
+                      <strong>Minimum Withdrawal Amount:</strong> 
+                      <span style="font-size: 1.5em; font-weight: 700; color: #f59e0b;">${settings.currency_symbol}${settings.minimum_withdrawal}</span>
+                    </p>
+                    <p style="margin: 0;">
+                      You can request a withdrawal once your approved earnings reach <strong>${settings.currency_symbol}${settings.minimum_withdrawal}</strong>. 
+                      There is no maximum withdrawal limit - withdraw any amount above the minimum threshold.
+                    </p>
+                  `;
+                }
+                
+                // Payment Methods Section
+                if (affiliatePaymentMethods) {
+                  const paymentMethodsList = settings.payment_methods.split(',').map(method => method.trim());
+                  const paymentMethodsHTML = paymentMethodsList.map(method => {
+                    let icon = '💳';
+                    if (method.toLowerCase().includes('paypal')) icon = '💰';
+                    if (method.toLowerCase().includes('bank')) icon = '🏦';
+                    if (method.toLowerCase().includes('stripe')) icon = '💸';
+                    
+                    return `
+                      <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; border: 2px solid #e5e7eb;">
+                        <div style="font-size: 2em; margin-bottom: 8px;">${icon}</div>
+                        <div style="font-weight: 600; color: #374151;">${escapeHtml(method)}</div>
+                      </div>
+                    `;
+                  }).join('');
+                  
+                  affiliatePaymentMethods.innerHTML = `
+                    <h4 style="margin-top: 0; color: #667eea;">Accepted Payment Methods</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 15px;">
+                      ${paymentMethodsHTML}
+                    </div>
+                    <p style="margin-top: 15px; margin-bottom: 0; color: #6b7280; font-size: 0.95em;">
+                      Choose your preferred payment method when submitting a withdrawal request. Processing times vary by method.
+                    </p>
+                  `;
+                }
+                
+                // Commission Structure Detailed Section
+                if (affiliateCommissionStructure) {
+                  affiliateCommissionStructure.innerHTML = `
+                    <h4 style="margin-top: 0; color: #10b981;">How Commission Works</h4>
+                    <div style="background: white; padding: 20px; border-radius: 8px; border: 2px solid #e5e7eb; margin: 15px 0;">
+                      <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: 700; flex-shrink: 0;">
+                          ${settings.commission_percentage}%
+                        </div>
+                        <div>
+                          <div style="font-weight: 700; font-size: 1.2em; color: #374151; margin-bottom: 5px;">
+                            ${settings.onetime_commission ? 'One-Time Commission' : 'Recurring Commission'}
+                          </div>
+                          <div style="color: #6b7280; font-size: 0.95em;">
+                            ${settings.onetime_commission ? 
+                              'Commission earned on first purchase only' : 
+                              'Earn on every renewal and upgrade'
+                            }
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div style="background: #f9fafb; padding: 15px; border-radius: 6px; border-left: 4px solid #667eea;">
+                        <h5 style="margin: 0 0 10px 0; color: #667eea;">Example Calculation:</h5>
+                        <ul style="margin: 0; padding-left: 20px; color: #374151;">
+                          <li style="margin-bottom: 8px;">Your referral signs up using your link</li>
+                          <li style="margin-bottom: 8px;">They purchase a <strong>$100/month subscription</strong></li>
+                          <li style="margin-bottom: 8px;">You earn: <strong style="color: #10b981; font-size: 1.1em;">${settings.currency_symbol}${(100 * settings.commission_percentage / 100).toFixed(2)}</strong></li>
+                          ${!settings.onetime_commission ? 
+                            `<li style="margin-bottom: 8px;"><strong style="color: #667eea;">Recurring benefit:</strong> You continue earning ${settings.currency_symbol}${(100 * settings.commission_percentage / 100).toFixed(2)} every month they remain subscribed</li>` : 
+                            `<li style="margin-bottom: 8px;"><strong>One-time payment:</strong> You earn ${settings.currency_symbol}${(100 * settings.commission_percentage / 100).toFixed(2)} for their first purchase only</li>`
+                          }
+                        </ul>
+                      </div>
+                      
+                      ${!settings.onetime_commission ? `
+                        <div style="margin-top: 15px; padding: 12px; background: #ecfdf5; border-radius: 6px; border: 1px solid #d1fae5;">
+                          <strong style="color: #10b981;">💡 Pro Tip:</strong> 
+                          <span style="color: #047857;">With recurring commissions, one referral can generate ongoing passive income for years!</span>
+                        </div>
+                      ` : ''}
+                    </div>
+                  `;
+                }
+              }
+            })
+            .catch(error => {
+              console.error('Error loading affiliate settings:', error);
+              
+              // Show error in all affiliate containers
+              const errorHTML = `
+                <p style="color: #dc2626; background: #fef2f2; padding: 12px; border-radius: 6px; border: 1px solid #fecaca;">
+                  <i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>
+                  Unable to load current settings. Please refresh the page or contact support.
+                </p>
+              `;
+              
+              if (affiliateProgramOverview) affiliateProgramOverview.innerHTML = errorHTML;
+              if (affiliateCommissionDetails) affiliateCommissionDetails.innerHTML = errorHTML;
+              if (affiliateWithdrawalInfo) affiliateWithdrawalInfo.innerHTML = errorHTML;
+              if (affiliatePaymentMethods) affiliatePaymentMethods.innerHTML = errorHTML;
+              if (affiliateCommissionStructure) affiliateCommissionStructure.innerHTML = errorHTML;
+            });
+        }
+        
         function getBadgeColor(color) {
           const colors = {
             'red': '#ef4444',
