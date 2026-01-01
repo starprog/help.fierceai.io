@@ -2,6 +2,7 @@
 
 * [**Home**](/)
 * [**Getting Started**](getting-started/)
+  * [Dashboard](getting-started/dashboard.md)
   * [Quick Start Guide](getting-started/quick-start.md)
   * [First Steps](getting-started/first-steps.md)
   * [Account Setup](getting-started/account-setup.md)
