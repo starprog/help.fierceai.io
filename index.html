@@ -922,44 +922,75 @@
             fetch('https://fierceai.io/api/token-packages/limited-offers')
               .then(response => response.json())
               .then(data => {
-                if (data.success && data.packages.length > 0) {
-                  const offersHTML = data.packages.map(pkg => {
-                    const badgeHTML = pkg.badge ? 
-                      `<span class="offer-badge" style="background-color: ${getBadgeColor(pkg.badge.color)}">
-                        ${pkg.badge.icon ? '<i class="' + pkg.badge.icon + '"></i>' : ''}
-                        ${escapeHtml(pkg.badge.text)}
+                if (data.success && data.offers && data.offers.length > 0) {
+                  const offersHTML = data.offers.map(offer => {
+                    const badgeHTML = offer.badge ? 
+                      `<span class="offer-badge" style="background-color: ${getBadgeColor(offer.badge.color)}; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.75em; font-weight: 700; display: inline-block; margin-bottom: 10px;">
+                        ${escapeHtml(offer.badge.text)}
                       </span>` : '';
                     
-                    const discountHTML = pkg.discount_percentage > 0 ?
-                      `<div class="offer-discount">
-                        <span class="original-price">$${pkg.original_price}</span>
-                        <span class="discount-badge">${pkg.discount_percentage}% OFF</span>
+                    const discountBadge = offer.discount_percentage > 0 ?
+                      `<span style="background: #10b981; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: 600; display: inline-block; margin-left: 10px;">${offer.discount_percentage}% OFF</span>` : '';
+                    
+                    const expiryHTML = offer.sale_ends_at ?
+                      `<div class="offer-expiry" style="color: #ef4444; font-weight: 600; font-size: 0.9em; margin: 10px 0;">⏰ Ends: ${formatDate(offer.sale_ends_at)}</div>` : '';
+                    
+                    const featuresHTML = offer.features && offer.features.length > 0 ?
+                      `<ul style="margin: 12px 0; padding-left: 20px; color: #4b5563; font-size: 0.9em;">
+                        ${offer.features.slice(0, 3).map(f => `<li>${escapeHtml(f)}</li>`).join('')}
+                      </ul>` : '';
+                    
+                    // Get minimum price for prominent display
+                    const minPackage = offer.packages && offer.packages.length > 0 ? offer.packages[0] : null;
+                    const minPriceHTML = minPackage ? 
+                      `<div style="margin: 15px 0; padding: 15px; background: rgba(102, 126, 234, 0.1); border-radius: 8px;">
+                        <div style="font-size: 0.9em; color: #6b7280; margin-bottom: 5px;">Starting at</div>
+                        <div style="display: flex; align-items: baseline; gap: 10px;">
+                          <span style="font-size: 2.5em; font-weight: bold; color: #667eea;">$${minPackage.price.toFixed(2)}</span>
+                          ${minPackage.savings > 0 ? `<span style="text-decoration: line-through; color: #9ca3af; font-size: 1.2em;">$${minPackage.original_price.toFixed(2)}</span>` : ''}
+                        </div>
+                        <div style="font-size: 0.9em; color: #6b7280; margin-top: 5px;">For ${formatNumber(minPackage.tokens)} tokens</div>
                       </div>` : '';
                     
-                    const bonusHTML = pkg.bonus_tokens > 0 ?
-                      `<div class="offer-bonus">+ ${formatNumber(pkg.bonus_tokens)} Bonus Tokens</div>` : '';
-                    
-                    const expiryHTML = pkg.sale_ends_at ?
-                      `<div class="offer-expiry">⏰ Ends: ${formatDate(pkg.sale_ends_at)}</div>` : '';
+                    // Display package options
+                    const packagesHTML = offer.packages && offer.packages.length > 0 ?
+                      `<div style="margin: 15px 0;">
+                        <h4 style="font-size: 0.95em; color: #6b7280; margin-bottom: 10px; font-weight: 600;">Available Packages:</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px;">
+                          ${offer.packages.map(pkg => {
+                            const savingsHTML = pkg.savings > 0 ? 
+                              `<div style="font-size: 0.75em; color: #10b981; font-weight: 600;">Save $${pkg.savings.toFixed(2)}</div>` : '';
+                            const originalHTML = pkg.savings > 0 ?
+                              `<div style="font-size: 0.75em; color: #9ca3af; text-decoration: line-through;">$${pkg.original_price.toFixed(2)}</div>` : '';
+                            
+                            return `
+                              <div style="border: 2px solid #e5e7eb; border-radius: 8px; padding: 12px; text-align: center; background: white;">
+                                <div style="font-weight: 700; color: #667eea; font-size: 1.2em; margin-bottom: 4px;">$${pkg.price.toFixed(2)}</div>
+                                ${originalHTML}
+                                <div style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">${formatNumber(pkg.tokens)} tokens</div>
+                                ${savingsHTML}
+                              </div>
+                            `;
+                          }).join('')}
+                        </div>
+                      </div>` : '';
                     
                     return `
-                      <div class="limited-offer-card" style="border: 2px solid ${getBadgeColor(pkg.badge?.color || 'blue')}; border-radius: 12px; padding: 20px; margin: 15px 0; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);">
+                      <div class="limited-offer-card" style="border: 2px solid ${getBadgeColor(offer.badge?.color || 'blue')}; border-radius: 12px; padding: 20px; margin: 15px 0; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
                         ${badgeHTML}
-                        <h3 style="margin: 10px 0; color: #667eea;">${escapeHtml(pkg.name)}</h3>
-                        <p style="color: #666; margin: 8px 0;">${escapeHtml(pkg.description)}</p>
-                        <div style="display: flex; align-items: baseline; gap: 10px; margin: 12px 0;">
-                          <span style="font-size: 2em; font-weight: bold; color: #667eea;">$${pkg.price}</span>
-                          ${discountHTML}
-                        </div>
-                        <div style="font-size: 1.2em; color: #764ba2; font-weight: 600; margin: 10px 0;">
-                          ${formatNumber(pkg.token_amount)} Tokens
-                          ${bonusHTML}
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 15px; border-top: 1px solid #e5e7eb;">
-                          ${expiryHTML}
-                          <a href="https://fierceai.io/dashboard/user/token-packages" 
-                             style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block;">
-                            Get This Deal
+                        ${discountBadge}
+                        <h3 style="margin: 10px 0; color: #667eea; font-size: 1.5em;">${escapeHtml(offer.display_name || offer.name)}</h3>
+                        <p style="color: #666; margin: 8px 0;">${escapeHtml(offer.description || 'Premium AI tool tokens at a special price')}</p>
+                        ${expiryHTML}
+                        ${minPriceHTML}
+                        ${packagesHTML}
+                        ${featuresHTML}
+                        <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 15px; padding-top: 15px; border-top: 1px solid #e5e7eb;">
+                          <a href="https://fierceai.io/dashboard/user/token-management/store" 
+                             style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; transition: opacity 0.2s;" 
+                             onmouseover="this.style.opacity='0.9'" 
+                             onmouseout="this.style.opacity='1'">
+                            Get This Deal →
                           </a>
                         </div>
                       </div>
@@ -968,8 +999,8 @@
                   
                   offersContainer.innerHTML = `
                     <div style="background: #f8f9ff; border-left: 4px solid #667eea; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-                      <h3 style="margin: 0 0 10px 0; color: #667eea;">🔥 Active Limited Time Offers</h3>
-                      <p style="margin: 0; color: #666;">Save big with these exclusive deals! Limited quantities available.</p>
+                      <h3 style="margin: 0 0 10px 0; color: #667eea;">🔥 Active Limited Time Offers (${data.total})</h3>
+                      <p style="margin: 0; color: #666;">Save big with these exclusive deals on AI tool tokens!</p>
                     </div>
                     ${offersHTML}
                   `;
