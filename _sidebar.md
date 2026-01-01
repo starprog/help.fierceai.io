@@ -4,6 +4,7 @@
 * [**Getting Started**](getting-started/)
   * [Dashboard](getting-started/dashboard.md)
   * [Team Members](getting-started/team-members.md)
+  * [Integrations](getting-started/integrations.md)
   * [Affiliates Program](getting-started/affiliates.md)
   * [Quick Start Guide](getting-started/quick-start.md)
   * [First Steps](getting-started/first-steps.md)
