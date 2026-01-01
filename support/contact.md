@@ -67,7 +67,7 @@ Before contacting support, check these resources:
 
 **Social Media**
 - **Discord**: [Join our community](https://discord.gg/ZJFTDaFp)
-- **Facebook**: [FierceAI Facebook Group](https://www.facebook.com/groups/7492541014195584)
+- **Facebook**: [FierceAI](https://www.facebook.com/profile.php?id=61566928336854)
 - **YouTube**: [FierceAI Channel](https://www.youtube.com/@FierceAI-IM2)
 - **Instagram**: [@fierceai24](https://www.instagram.com/fierceai24/)
 

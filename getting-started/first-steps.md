@@ -188,7 +188,7 @@ Navigate to your [Dashboard](https://fierceai.io/dashboard) to see all available
 **Support Channels:**
 - 📧 **Email**: support@fierceai.io
 - 💬 **Discord Community**: [Join here](https://discord.gg/ZJFTDaFp)
-- 📘 **Facebook Group**: [Join here](https://www.facebook.com/groups/7492541014195584)
+- 📘 **Facebook**: [Follow us](https://www.facebook.com/profile.php?id=61566928336854)
 - 🎥 **YouTube Tutorials**: [Watch here](https://www.youtube.com/@FierceAI-IM2)
 - 📸 **Instagram**: [@fierceai24](https://www.instagram.com/fierceai24/)
 - 📚 **Documentation**: You're here!
