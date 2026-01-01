@@ -13,6 +13,7 @@
   * [AI Avatar](ai-tools/ai-avatar.md)
   * [AI Bots](ai-tools/ai-bots.md)
   * [AI Chat](ai-tools/ai-chat.md)
+  * [Brand Voice](ai-tools/brand-voice.md)
   * [AI Chat Image](ai-tools/ai-chat-image.md)
   * [AI Chat Pro](ai-tools/ai-chat-pro.md)
   * [AI Code Generator](ai-tools/ai-code-generator.md)
