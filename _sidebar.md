@@ -48,7 +48,7 @@
   * [Creative Suite](ai-tools/creative-suite.md)
   * [Writing Assistant](ai-tools/writing-assistant.md)
   * [Image Generator](ai-tools/image-generator.md)
-* [**📝 Content Creation**](content-creation/)
+* [**� Content Storage**](content-creation/)
   * [My Documents](content-creation/my-documents.md)
   * [Content Manager](content-creation/content-manager.md)
 * [**Social Media**](social-media/)
