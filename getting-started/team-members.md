@@ -483,10 +483,10 @@ You're reading it! Bookmark for future reference.
 support@fierceai.io for technical issues with team management.
 
 **Video Tutorials**
-Check our [YouTube channel](https://youtube.com/@fierceai) for team setup guides.
+Check our [YouTube channel](https://www.youtube.com/@FierceAI-IM2) for team setup guides.
 
-**Community Forum**
-Connect with other team owners to share strategies.
+**Community**
+Join our [Discord community](https://discord.gg/ZJFTDaFp) to connect with other team owners and share strategies.
 
 ### Quick Links
 

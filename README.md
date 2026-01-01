@@ -20,7 +20,7 @@
     </div>
     <h3>AI Content Creation</h3>
     <p>Discover the power of AI-generated text, images, and more. Learn how to create compelling content with our advanced AI tools.</p>
-    <a href="#/content-creation/" style="color: #667eea;">Explore Tools →</a>
+    <a href="#/ai-tools/" style="color: #667eea;">Explore Tools →</a>
   </div>
   
   <div class="feature-card">
@@ -29,7 +29,7 @@
     </div>
     <h3>Tips & Best Practices</h3>
     <p>Master FierceAI with expert tips and proven techniques. Boost your productivity and create better content faster.</p>
-    <a href="#/tips/best-practices" style="color: #667eea;">Learn More →</a>
+    <a href="#/getting-started/first-steps" style="color: #667eea;">Learn More →</a>
   </div>
 </div>
 
@@ -46,16 +46,24 @@
 - [📖 Quick Start Guide](getting-started/quick-start.md) <span class="badge badge-popular">Popular</span>
 - [⚙️ Account Setup](getting-started/account-setup.md)
 - [🎯 First Steps](getting-started/first-steps.md)
+- [👥 Team Members](getting-started/team-members.md)
+- [🔌 Integrations](getting-started/integrations.md)
 
 ### AI Tools
-- [✍️ Writing Assistant Guide](ai-tools/writing-assistant.md) <span class="badge badge-updated">Updated</span>
-- [🎨 Image Generator Tutorial](ai-tools/image-generator.md)
-- [💬 Chat Assistant Features](content-creation/chat.md)
+- [✍️ AI Writer](ai-tools/ai-writer.md) <span class="badge badge-updated">Updated</span>
+- [🎨 AI Image Generator](ai-tools/ai-image-generator.md)
+- [💬 AI Chat](ai-tools/ai-chat.md)
+- [📝 AI Editor](ai-tools/ai-editor.md)
+- [🗣️ Brand Voice](ai-tools/brand-voice.md)
+
+### Content Management
+- [📚 My Documents](content-creation/my-documents.md)
+- [📦 Content Manager](content-creation/content-manager.md)
 
 ### Common Questions
 - [❓ Frequently Asked Questions](support/faq.md)
 - [🔧 Troubleshooting Common Issues](troubleshooting/common-issues.md)
-- [📊 Understanding Your Usage](account/analytics.md)
+- [💰 Pricing & Plans](pricing-and-plans.md)
 
 ## Need Help?
 
@@ -64,8 +72,8 @@
   <p>Our support team is here to help! Reach out through any of these channels:</p>
   <ul>
     <li>📧 <a href="#/support/contact">Email Support</a> - Get detailed help from our team</li>
-    <li>💬 <a href="#/support/community">Community Forum</a> - Connect with other users</li>
-    <li>📚 <a href="#/support/faq">FAQ</a> - Quick answers to common questions</li>
+    <li>� <a href="#/support/faq">FAQ</a> - Quick answers to common questions</li>
+    <li>🔧 <a href="#/troubleshooting/common-issues">Troubleshooting</a> - Fix common issues</li>
   </ul>
 </div>
 
