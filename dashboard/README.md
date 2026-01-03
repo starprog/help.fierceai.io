@@ -13,6 +13,11 @@ The dashboard is organized into several key sections:
     <p>Track your content generation stats, credit usage, and performance metrics</p>
   </div>
   <div class="feature-card">
+    <i class="fas fa-coins"></i>
+    <h3>Token Management</h3>
+    <p>Monitor token usage, purchase additional tokens, and track consumption</p>
+  </div>
+  <div class="feature-card">
     <i class="fas fa-tools"></i>
     <h3>Quick Actions</h3>
     <p>Access frequently used AI tools and templates with one click</p>
