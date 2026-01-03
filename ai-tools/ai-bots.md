@@ -30,50 +30,93 @@ This model provides a balance of:
 
 ## Token Usage
 
-### Current Token Rates
+AI Bots require **TWO types of credits** to function fully:
+
+### 1. Chat Model Tokens (For Responses)
 
 <div id="ai-bots-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+  <h4 style="margin-top: 0;">💬 Chat Model Token Rate</h4>
+  <p id="ai-bots-chat-rate"><strong>Current Rate:</strong> <span id="ai-bots-rate-display">Loading...</span> tokens per word</p>
+  <p style="color: #666;">Used for generating chatbot responses during conversations.</p>
 </div>
 
-### How Tokens Work
-
-AI Bots consume **WORD tokens** for every interaction. The token consumption is calculated as:
+**Chat tokens** are consumed every time your AI Bot generates a response to user questions. The token consumption is calculated as:
 
 ```
 Tokens Used = Number of Words Generated × Token Rate
 ```
 
-### Example Calculation
+**Example**: If your bot generates a 50-word response at 0.0002 tokens/word:
+- **Tokens consumed**: 50 × 0.0002 = **0.01 tokens**
 
-If an AI Bot generates a 50-word response:
-- At 1.0 tokens/word: **50 tokens used**
-- At 0.5 tokens/word: **25 tokens used**
-- At 0.0002 tokens/word: **0.01 tokens used**
+### 2. Embedding Tokens (For Training)
+
+<div id="ai-bots-embedding-rate-info" style="padding: 20px; border: 2px solid #FF9800; border-radius: 8px; background: #fff3e0; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📚 Embedding Model Token Rate</h4>
+  <p id="ai-bots-embedding-rate"><strong>Current Rate:</strong> <span id="ai-bots-embedding-rate-display">Loading...</span> tokens per word</p>
+  <p style="color: #e65100;">Used for training your chatbot with documents, URLs, and text data.</p>
+</div>
+
+**Embedding tokens** are consumed when you train your AI Bot with:
+- 📄 Document uploads (PDF, DOCX, TXT)
+- 🌐 Website URLs (crawling pages)
+- ✍️ Custom text data
+- 📋 FAQ entries
+
+These tokens process and vectorize your content so the bot can understand and reference it during conversations.
+
+**Example**: Training with a 5,000-word document at the current embedding rate:
+- **Tokens consumed**: 5,000 × (current rate) = calculated dynamically
+
+### Why Two Types?
+
+AI Bots use different AI models for different purposes:
+
+| Purpose | Model Type | Token Type | When Used |
+|---------|------------|------------|-----------|
+| **Conversations** | Chat Model (GPT-5-Nano) | Chat Tokens | Every time bot responds to users |
+| **Training** | Embedding Model (text-embedding-3-small) | Embedding Tokens | When adding documents/URLs/text |
+
+> ⚠️ **Important**: You need BOTH token types to fully use AI Bots. Chat tokens alone won't allow training, and embedding tokens alone won't allow conversations.
 
 ## Purchasing Tokens
 
-To use AI Bots, you need to purchase **WORD tokens** from the AI Store.
+To use AI Bots, you need to purchase tokens from the AI Store.
 
 ### How to Purchase
 
 1. Go to **Dashboard → Token Management → Store**
 2. Browse available token packages
-3. Select a package that includes **Word Tokens**
+3. Purchase the tokens you need:
+   - **GPT-5-Nano** (Chat Model) - for conversations
+   - **text-embedding-3-small** (Embedding Model) - for training
 4. Complete the purchase
 5. Your tokens will be added to your account immediately
 
+### Token Purchase Options
+
+**Individual Entity Tokens**
+- Purchase chat model tokens separately
+- Purchase embedding model tokens separately
+- Full control over which credits to buy
+
+**Token Bundles & Packages** *(Recommended)*
+- Pre-configured bundles with both token types
+- Often include discounts
+- Convenient one-click purchase
+- Best value for comprehensive bot usage
+
 ### Which Tokens to Buy
 
-AI Bots use **WORD tokens**, which are the same tokens used by:
+For AI Bots, you need:
 
-- ✍️ AI Writer tools
-- 💬 AI Web Chat
-- 📝 Text generation features
-- 🤖 Content creation tools
+✅ **GPT-5-Nano** tokens (Chat Model)
+- Used for: Bot responses during conversations
+- Same tokens used by: AI Writer, AI Web Chat, Content Generation
 
-Any token package that includes "Word Tokens" or "Text Generation" will work for AI Bots.
+✅ **text-embedding-3-small** tokens (Embedding Model)
+- Used for: Training bot with documents/URLs/text
+- Specific to: AI Bot training and knowledge processing
 
 ## Creating Your First AI Bot
 
@@ -188,38 +231,73 @@ Works on any website with simple code snippet.
 
 ### Checking Your Balance
 
-View your current word token balance:
+View your current token balance for both models:
 1. Go to **Dashboard → Token Management**
-2. See "Word Tokens" balance
+2. Check two separate balances:
+   - **GPT-5-Nano** (Chat Model) - for conversations
+   - **text-embedding-3-small** (Embedding Model) - for training
 3. Monitor usage in real-time
 
 ### When You Run Low
 
-When tokens are running low:
-- Users see: "You have no credits left"
-- Bot stops responding until tokens are added
-- Purchase more tokens from AI Store
+**Low Chat Tokens:**
+- Bot stops responding to users
+- Error: "You have no credits left"
+- Solution: Purchase GPT-5-Nano tokens
+
+**Low Embedding Tokens:**
+- Cannot train bot with new documents/URLs
+- Error: "You need embedding credits to train AI Bots"
+- Solution: Purchase text-embedding-3-small tokens
 
 ### Usage Analytics
 
-Track token consumption:
+Track token consumption for both models:
 - **Per Bot**: See which bots use the most tokens
-- **Over Time**: Monthly usage trends
+- **By Type**: Chat vs. Embedding usage
+- **Over Time**: Monthly usage trends  
 - **By Conversation**: Tokens per chat session
+- **By Training**: Tokens per document processed
 
 ## Troubleshooting
 
 ### Bot Not Responding
 
 **Possible Causes:**
-- ❌ No word tokens remaining
+- ❌ No chat model tokens (GPT-5-Nano) remaining
 - ❌ Bot is set to inactive
 - ❌ Embed code not installed correctly
 
 **Solutions:**
-- ✅ Purchase word tokens
+- ✅ Purchase GPT-5-Nano tokens for conversations
 - ✅ Activate bot in dashboard
 - ✅ Verify embed code placement
+
+### Cannot Train Bot / Upload Documents
+
+**Possible Causes:**
+- ❌ No embedding model tokens (text-embedding-3-small) remaining
+- ❌ Document format not supported
+- ❌ File size exceeds limit
+
+**Solutions:**
+- ✅ Purchase text-embedding-3-small tokens for training
+- ✅ Use supported formats: PDF, DOCX, TXT
+- ✅ Split large documents into smaller files
+
+### "You have no credits left" Error
+
+This error can appear in two scenarios:
+
+**During Conversation:**
+- Need: GPT-5-Nano (chat model) tokens
+- Solution: Purchase chat model tokens
+
+**During Training:**
+- Need: text-embedding-3-small (embedding model) tokens  
+- Solution: Purchase embedding model tokens
+
+> 💡 **Tip**: Check your token balance at **Dashboard → Token Management** to see which type you need.
 
 ### Inaccurate Responses
 
@@ -278,6 +356,7 @@ For current pricing, token packages, and subscription plans, please visit our [P
 
 ---
 
-**Last Updated**: December 30, 2025
+**Last Updated**: January 2, 2026
 
 Have questions? [Contact our support team](../support/contact.md) for assistance.
+
