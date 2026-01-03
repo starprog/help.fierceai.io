@@ -42,6 +42,31 @@ Contacts are automatically generated when users:
 
 **No manual setup required** - your chatbot handles everything automatically!
 
+### 🤖 Intelligent Contact Information Extraction
+
+Your chatbot now features **smart automatic extraction** of contact details from natural conversation! The system intelligently detects and captures:
+
+**📧 Email Addresses**
+- Automatically recognized in any message format
+- Example: "You can reach me at john@example.com"
+
+**📱 Phone Numbers**
+- Captures various phone formats (with or without dashes, spaces, parentheses)
+- Handles international formats with country codes
+- Example: "My number is 555-123-4567" or "(555) 123-4567"
+
+**👤 Names**
+- Detects name introductions in natural language
+- Recognizes patterns like:
+  - "My name is Sarah Johnson"
+  - "I'm John Smith"
+  - "Hey, Mike Wilson here"
+  - "Call me Lisa"
+  - Even typos like "my is Robert Davis"
+
+**✨ How It Works:**
+The AI analyzes every message for contact information patterns and automatically updates the contact record when information is detected. If a user introduces themselves or shares their details naturally during conversation, their contact profile is enriched in real-time - no forms or explicit data collection needed!
+
 ---
 
 ## 📋 Contact List View
@@ -168,10 +193,17 @@ Compare conversion rates and satisfaction across different channels.
 
 ### Contact Data Quality
 
+**Leverage Automatic Extraction**
+- Let users share information naturally during conversation
+- The AI automatically captures names, emails, and phone numbers
+- No need for rigid forms - casual mentions like "I'm Sarah" or "email me at..." work perfectly
+- Users can introduce themselves at any point in the conversation
+
 **Encourage Information Sharing**
 - Design chatbot flows that naturally request contact details
 - Explain benefits of providing email (e.g., "Get instant email confirmations")
 - Offer incentives (discounts, early access) for complete profiles
+- Trust the automatic extraction to catch information shared conversationally
 
 **Verify Critical Information**
 - Use email validation during collection
