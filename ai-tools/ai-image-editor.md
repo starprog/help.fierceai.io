@@ -173,6 +173,30 @@ These tools perform specific image editing operations. Each consumes IMAGE token
 
 ---
 
+### Nano Banana Edit
+
+<div id="image-editor-nano-banana-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+**Provider**: Banana  
+**Capabilities**: Fast, efficient image editing optimized for quick iterations.  
+**Best For**: Rapid prototyping and batch editing operations.
+
+---
+
+### Nano Banana Pro Edit
+
+<div id="image-editor-nano-banana-pro-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+**Provider**: Banana  
+**Capabilities**: Enhanced version with better quality and more advanced features.  
+**Best For**: Production-quality edits requiring higher fidelity.
+
+---
+
 ## AI Generation Models
 
 When creating new images or using tools that support multiple models, the model you select determines the token rate.
@@ -198,30 +222,6 @@ When creating new images or using tools that support multiple models, the model 
 **Provider**: Flux  
 **Capabilities**: Premium image generation with exceptional quality and detail.  
 **Best For**: Professional-grade images, complex scenes, and photorealistic results.
-
----
-
-### Nano Banana Edit
-
-<div id="image-editor-nano-banana-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
-**Provider**: Banana  
-**Capabilities**: Fast, efficient image editing optimized for quick iterations.  
-**Best For**: Rapid prototyping and batch editing operations.
-
----
-
-### Nano Banana Pro Edit
-
-<div id="image-editor-nano-banana-pro-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
-**Provider**: Banana  
-**Capabilities**: Enhanced version with better quality and more advanced features.  
-**Best For**: Production-quality edits requiring higher fidelity.
 
 ---
 
