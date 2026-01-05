@@ -233,42 +233,6 @@ When creating new images or using tools that support multiple models, the model 
 
 ---
 
-### FreePik
-
-<div id="image-editor-freepik-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
-**Provider**: FreePik  
-**Capabilities**: Balanced quality and speed for general-purpose image processing.  
-**Best For**: Stock-style images and commercial graphics.
-
----
-
-### ClipDrop
-
-<div id="image-editor-clipdrop-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
-**Provider**: ClipDrop  
-**Capabilities**: Specialized in object extraction and image composition.  
-**Best For**: Background removal, object isolation, and image compositing.
-
----
-
-### Novita
-
-<div id="image-editor-novita-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
-**Provider**: Novita  
-**Capabilities**: Versatile API supporting multiple editing operations.  
-**Best For**: Face swapping, cleanup, and general editing tasks.
-
----
-
 ## Usage Examples
 
 ### Example 1: E-commerce Product Photos

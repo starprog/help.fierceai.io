@@ -16,8 +16,7 @@ AI Photo Studio is your professional image processing workspace powered by state
 - **Upscale** - Enhance resolution up to 4x
 
 ### ⚡ Powered by Leading AI
-- **ClipDrop AI** - Industry-leading image processing
-- **Novita AI** - Advanced creative transformations
+- **Fal.ai** - Industry-leading image processing with advanced AI models
 - **Automatic optimization** based on your image type
 - **High-quality outputs** in seconds
 
