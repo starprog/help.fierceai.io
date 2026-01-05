@@ -93,8 +93,6 @@ These tools perform specific image editing operations. Each consumes IMAGE token
 **Use Case**: Enhance image resolution up to 4x without losing detail or introducing artifacts.  
 **Example**: Convert low-resolution images into high-quality prints or enlarge thumbnails for full-size use.
 
-> **Note**: Upscaler uses **2.0 IMAGE tokens** per operation due to its computational intensity.
-
 ---
 
 ### Replace Background
@@ -120,8 +118,6 @@ These tools perform specific image editing operations. Each consumes IMAGE token
 **API**: <span id="provider-sketch-to-image">Loading...</span>  
 **Use Case**: Transform simple sketches or line drawings into detailed, realistic images.  
 **Example**: Convert rough product sketches into photorealistic renderings or turn doodles into artwork.
-
-> **Note**: Sketch to Image uses **1.5 IMAGE tokens** per operation.
 
 ---
 
@@ -203,8 +199,6 @@ When creating new images or using tools that support multiple models, the model 
 **Capabilities**: Premium image generation with exceptional quality and detail.  
 **Best For**: Professional-grade images, complex scenes, and photorealistic results.
 
-> **Note**: Flux Pro uses **1.5 IMAGE tokens** per operation due to its premium quality.
-
 ---
 
 ### Nano Banana Edit
@@ -229,7 +223,17 @@ When creating new images or using tools that support multiple models, the model 
 **Capabilities**: Enhanced version with better quality and more advanced features.  
 **Best For**: Production-quality edits requiring higher fidelity.
 
-> **Note**: Nano Banana Pro uses **1.25 IMAGE tokens** per operation.
+---
+
+### Seedream v4
+
+<div id="image-editor-seedream-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+**Provider**: Seedream  
+**Capabilities**: Advanced AI model optimized for creative image generation with balanced quality and performance.  
+**Best For**: Artistic content, creative designs, and stylized imagery.
 
 ---
 
