@@ -213,7 +213,7 @@ When creating new images or using tools that support multiple models, the model 
 
 ---
 
-### Flux Pro / Kontext
+### Flux Pro
 
 <div id="image-editor-flux-pro-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
   <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
@@ -222,6 +222,27 @@ When creating new images or using tools that support multiple models, the model 
 **Provider**: Flux  
 **Capabilities**: Premium image generation with exceptional quality and detail.  
 **Best For**: Professional-grade images, complex scenes, and photorealistic results.
+
+---
+
+### Flux Pro Kontext
+
+<div id="image-editor-flux-pro-kontext-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+**Provider**: Flux  
+**Capabilities**: Advanced contextual image generation with superior scene understanding and composition.  
+**Use Cases**:
+- **Text-to-Image**: Generate high-quality images from text descriptions within the editor
+- **Image-to-Image**: Transform and reimagine existing images with contextual awareness
+- **Multi-Image Operations**: Work with multiple reference images for complex compositions
+
+**Best For**: 
+- Complex scene generation requiring contextual understanding
+- Professional image creation directly in the editor interface
+- Advanced image transformations with multiple source images
+- Creative projects needing superior prompt interpretation
 
 ---
 

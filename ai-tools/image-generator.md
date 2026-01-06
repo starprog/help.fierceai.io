@@ -35,6 +35,64 @@ Select from various style presets:
 - Review the result and regenerate if needed
 - Download in your preferred format (PNG, JPG, SVG)
 
+## Available AI Models
+
+The AI Image Generator offers multiple state-of-the-art models, each with unique strengths:
+
+### DALL-E 3
+- **Best for**: Prompt accuracy and understanding complex descriptions
+- **Style**: Versatile, handles text in images well
+- **Resolution**: 1024x1024, 1024x1792, 1792x1024
+- **Quality Options**: Standard and HD
+
+### GPT-Image-1
+- **Best for**: Photo-realistic images with precise control
+- **Style**: Highly detailed, realistic outputs
+- **Resolution**: 1024x1024, 1024x1792, 1792x1024
+- **Features**: Advanced prompt understanding
+
+### Flux Pro
+- **Best for**: High-quality artistic and creative images
+- **Style**: Balanced between artistic and realistic
+- **Features**: Fast generation, consistent quality
+
+### Flux Pro Kontext
+- **Best for**: Image generation with contextual understanding
+- **Style**: Advanced composition and scene understanding  
+- **Use Cases**: 
+  - **Text-to-Image**: Generate images from descriptions
+  - **Image-to-Image**: Transform existing images
+  - **Multi-Image**: Work with multiple reference images
+- **Features**: Superior contextual awareness for complex scenes
+
+### Ideogram
+- **Best for**: Text rendering within images
+- **Style**: Excellent for logos, posters, and designs with text
+- **Features**: Best-in-class text generation in images
+
+### Midjourney
+- **Best for**: Artistic and creative visuals
+- **Style**: Signature artistic aesthetic
+- **Features**: Community-trained model with unique style
+
+### Nano Banana / Nano Banana Pro
+- **Best for**: Fast, efficient generation
+- **Style**: Versatile general-purpose models
+- **Pro Version**: Enhanced quality and detail
+
+### Seedream v4
+- **Best for**: High-detail fantasy and creative art
+- **Style**: Vibrant, detailed artistic outputs
+- **Features**: Excellent for concept art and illustrations
+
+> **💡 Model Selection Tip**
+>
+> - Use **DALL-E 3** for accurate prompt interpretation
+> - Choose **Flux Pro Kontext** for contextual scene generation
+> - Pick **Ideogram** when text is important in the image
+> - Select **Midjourney** for distinctive artistic style
+> - Try **GPT-Image-1** for photorealism
+
 ## Best Practices for Prompts
 
 > **🎨 Creating Better Images**
