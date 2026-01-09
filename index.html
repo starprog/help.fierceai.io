@@ -608,6 +608,28 @@
               featureKey: 'acceleposts_video',
               divId: 'acceleposts-video-rate-info'
             }
+          ],
+          'ai-tools/business-center': [
+            {
+              featureKey: 'business_center_business_plan',
+              divId: 'business-plan-rate-info'
+            },
+            {
+              featureKey: 'business_center_marketing_plan',
+              divId: 'marketing-plan-rate-info'
+            },
+            {
+              featureKey: 'business_center_pitch_deck',
+              divId: 'pitch-deck-rate-info'
+            },
+            {
+              featureKey: 'business_center_image',
+              divId: 'image-generation-rate-info'
+            },
+            {
+              featureKey: 'business_center_research',
+              divId: 'research-rate-info'
+            }
           ]
         };
         
@@ -834,6 +856,99 @@
             span.style.fontWeight = '600';
             span.style.color = '#667eea';
           });
+        }
+        
+        // Load Business Center Configuration on business-center page
+        if (window.location.hash.includes('ai-tools/business-center')) {
+          const loadingEl = document.getElementById('business-center-config-loading');
+          const businessPlanRateDiv = document.getElementById('business-plan-rate-info');
+          const marketingPlanRateDiv = document.getElementById('marketing-plan-rate-info');
+          const pitchDeckRateDiv = document.getElementById('pitch-deck-rate-info');
+          const imageGenerationRateDiv = document.getElementById('image-generation-rate-info');
+          const researchRateDiv = document.getElementById('research-rate-info');
+          
+          fetch('https://fierceai.io/api/business-center-config')
+            .then(response => response.json())
+            .then(result => {
+              if (result.success && result.data) {
+                const config = result.data;
+                
+                // Hide loading, show rate divs
+                if (loadingEl) loadingEl.style.display = 'none';
+                if (businessPlanRateDiv) businessPlanRateDiv.style.display = 'block';
+                if (marketingPlanRateDiv) marketingPlanRateDiv.style.display = 'block';
+                if (pitchDeckRateDiv) pitchDeckRateDiv.style.display = 'block';
+                if (imageGenerationRateDiv) imageGenerationRateDiv.style.display = 'block';
+                if (researchRateDiv) researchRateDiv.style.display = 'block';
+                
+                // Update AI Model display
+                const aiModelSpans = document.querySelectorAll('#business-center-ai-model');
+                aiModelSpans.forEach(span => {
+                  span.textContent = config.ai_model_display || config.ai_model || 'GPT-4o';
+                  span.style.fontWeight = '600';
+                  span.style.color = '#667eea';
+                });
+                
+                // Update Image Model display
+                const imageModelSpans = document.querySelectorAll('#business-center-image-model');
+                imageModelSpans.forEach(span => {
+                  span.textContent = config.image_model_display || config.image_generator || 'Nano Banana Pro';
+                  span.style.fontWeight = '600';
+                  span.style.color = '#667eea';
+                });
+                
+                // Update Internet Research display
+                const internetResearchSpans = document.querySelectorAll('#business-center-internet-research');
+                internetResearchSpans.forEach(span => {
+                  const status = config.enable_internet_research ? 'Enabled' : 'Disabled';
+                  const color = config.enable_internet_research ? '#10b981' : '#ef4444';
+                  span.textContent = status;
+                  span.style.fontWeight = '600';
+                  span.style.color = color;
+                });
+              } else {
+                throw new Error('Invalid response');
+              }
+            })
+            .catch(error => {
+              console.error('Error loading Business Center config:', error);
+              
+              // Show default values on error
+              if (loadingEl) {
+                loadingEl.innerHTML = `
+                  <h4 style="margin-top: 0;">⚙️ Business Center Configuration</h4>
+                  <p style="color: #666; margin: 10px 0;">
+                    <strong>Text Generation:</strong> <span style="color: #667eea; font-weight: 600;">GPT-4o</span><br>
+                    <strong>Image Generation:</strong> <span style="color: #667eea; font-weight: 600;">Nano Banana Pro</span><br>
+                    <strong>Internet Research:</strong> <span style="color: #10b981; font-weight: 600;">Enabled</span>
+                  </p>
+                  <p style="color: #888; font-size: 0.9em; margin-top: 10px;">
+                    💡 Configuration is managed by administrators and may vary.
+                  </p>
+                `;
+                loadingEl.style.background = '#fff3cd';
+                loadingEl.style.borderColor = '#ffc107';
+              }
+              
+              // Still show rate divs
+              if (businessPlanRateDiv) businessPlanRateDiv.style.display = 'block';
+              if (marketingPlanRateDiv) marketingPlanRateDiv.style.display = 'block';
+              if (pitchDeckRateDiv) pitchDeckRateDiv.style.display = 'block';
+              if (imageGenerationRateDiv) imageGenerationRateDiv.style.display = 'block';
+              if (researchRateDiv) researchRateDiv.style.display = 'block';
+              
+              // Set default model names
+              document.querySelectorAll('#business-center-ai-model').forEach(span => {
+                span.textContent = 'GPT-4o';
+              });
+              document.querySelectorAll('#business-center-image-model').forEach(span => {
+                span.textContent = 'Nano Banana Pro';
+              });
+              document.querySelectorAll('#business-center-internet-research').forEach(span => {
+                span.textContent = 'Enabled';
+                span.style.color = '#10b981';
+              });
+            });
         }
         
         // Load pricing plans on pricing page

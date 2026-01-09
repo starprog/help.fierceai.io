@@ -24,6 +24,7 @@
   * [Brand Voice](ai-tools/brand-voice.md)
   * [AI Chat Image](ai-tools/ai-chat-image.md)
   * [AI Chat Pro](ai-tools/ai-chat-pro.md)
+  * [Business Center](ai-tools/business-center.md)
   * [AI Code Generator](ai-tools/ai-code-generator.md)
   * [AI Detector](ai-tools/ai-detector.md)
   * [AI Editor](ai-tools/ai-editor.md)
