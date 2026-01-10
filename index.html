@@ -623,12 +623,38 @@
               divId: 'pitch-deck-rate-info'
             },
             {
+              featureKey: 'business_center_presentation',
+              divId: 'presentation-rate-info'
+            },
+            {
+              featureKey: 'business_center_proposal',
+              divId: 'proposal-rate-info'
+            },
+            {
+              featureKey: 'business_center_investor_optimizer',
+              divId: 'investor-optimizer-rate-info'
+            },
+            {
               featureKey: 'business_center_image',
               divId: 'image-generation-rate-info'
             },
             {
               featureKey: 'business_center_research',
               divId: 'research-rate-info'
+            }
+          ],
+          'ai-tools/accelemaillite': [
+            {
+              featureKey: 'accelemaillite_ai_subject',
+              divId: 'accelemaillite-subject-rate-info'
+            },
+            {
+              featureKey: 'accelemaillite_ai_content',
+              divId: 'accelemaillite-content-rate-info'
+            },
+            {
+              featureKey: 'accelemaillite_ai_image',
+              divId: 'accelemaillite-image-rate-info'
             }
           ]
         };
@@ -947,6 +973,90 @@
               document.querySelectorAll('#business-center-internet-research').forEach(span => {
                 span.textContent = 'Enabled';
                 span.style.color = '#10b981';
+              });
+            });
+        }
+        
+        // Load AcceleMail Lite Configuration on accelemaillite page
+        if (window.location.hash.includes('ai-tools/accelemaillite')) {
+          const loadingEl = document.getElementById('accelemaillite-config-loading');
+          const subjectRateDiv = document.getElementById('accelemaillite-subject-rate-info');
+          const contentRateDiv = document.getElementById('accelemaillite-content-rate-info');
+          const imageRateDiv = document.getElementById('accelemaillite-image-rate-info');
+          
+          fetch('https://fierceai.io/api/accelemaillite-config')
+            .then(response => response.json())
+            .then(result => {
+              if (result.success && result.data) {
+                const config = result.data;
+                
+                // Hide loading, show rate divs
+                if (loadingEl) loadingEl.style.display = 'none';
+                if (subjectRateDiv) subjectRateDiv.style.display = 'block';
+                if (contentRateDiv) contentRateDiv.style.display = 'block';
+                if (imageRateDiv) imageRateDiv.style.display = 'block';
+                
+                // Update AI Model display
+                const aiModelSpans = document.querySelectorAll('#accelemaillite-ai-model');
+                aiModelSpans.forEach(span => {
+                  span.textContent = config.ai_model_display || config.default_ai_model || 'GPT-4o-mini';
+                  span.style.fontWeight = '600';
+                  span.style.color = '#667eea';
+                });
+                
+                // Update Default Model display
+                const defaultModelSpans = document.querySelectorAll('#accelemaillite-default-model');
+                defaultModelSpans.forEach(span => {
+                  span.textContent = config.ai_model || 'gpt-4o-mini';
+                  span.style.fontWeight = '600';
+                  span.style.color = '#667eea';
+                });
+                
+                // Update Image Model display
+                const imageModelSpans = document.querySelectorAll('#accelemaillite-image-model');
+                imageModelSpans.forEach(span => {
+                  span.textContent = config.ai_image_model_display || config.ai_image_model || 'DALL-E 3';
+                  span.style.fontWeight = '600';
+                  span.style.color = '#667eea';
+                });
+              } else {
+                throw new Error('Invalid response');
+              }
+            })
+            .catch(error => {
+              console.error('Error loading AcceleMail Lite config:', error);
+              
+              // Show default values on error
+              if (loadingEl) {
+                loadingEl.innerHTML = `
+                  <h4 style="margin-top: 0;">⚙️ AcceleMail Lite Configuration</h4>
+                  <p style="color: #666; margin: 10px 0;">
+                    <strong>Text Generation:</strong> <span style="color: #667eea; font-weight: 600;">GPT-4o-mini</span><br>
+                    <strong>Image Generation:</strong> <span style="color: #667eea; font-weight: 600;">DALL-E 3</span><br>
+                    <strong>Default Model:</strong> <span style="color: #667eea; font-weight: 600;">gpt-4o-mini</span>
+                  </p>
+                  <p style="color: #888; font-size: 0.9em; margin-top: 10px;">
+                    💡 Configuration is managed by administrators and may vary.
+                  </p>
+                `;
+                loadingEl.style.background = '#fff3cd';
+                loadingEl.style.borderColor = '#ffc107';
+              }
+              
+              // Still show rate divs
+              if (subjectRateDiv) subjectRateDiv.style.display = 'block';
+              if (contentRateDiv) contentRateDiv.style.display = 'block';
+              if (imageRateDiv) imageRateDiv.style.display = 'block';
+              
+              // Set default model names
+              document.querySelectorAll('#accelemaillite-ai-model').forEach(span => {
+                span.textContent = 'GPT-4o-mini';
+              });
+              document.querySelectorAll('#accelemaillite-default-model').forEach(span => {
+                span.textContent = 'gpt-4o-mini';
+              });
+              document.querySelectorAll('#accelemaillite-image-model').forEach(span => {
+                span.textContent = 'DALL-E 3';
               });
             });
         }

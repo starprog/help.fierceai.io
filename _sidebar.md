@@ -15,6 +15,7 @@
   * [Overview](dashboard/overview.md)
   * [Token Management](dashboard/token-management.md)
 * [**AI Tools**](ai-tools/)
+  * [AcceleMail Lite](ai-tools/accelemaillite.md)
   * [AI Article Wizard](ai-tools/ai-article-wizard.md)
   * [AI Avatar](ai-tools/ai-avatar.md)
   * [AI Bot Contacts](ai-tools/ai-bot-contacts.md)

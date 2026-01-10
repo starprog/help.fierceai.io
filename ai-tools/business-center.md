@@ -111,6 +111,70 @@ Create investor-ready pitch decks with compelling slides.
 
 **Optional**: Base on existing Business Plan and/or Marketing Plan
 
+### Presentation Creator
+
+Create professional AI-powered presentations with customizable slide counts and themes.
+
+**What's Generated:**
+- 📊 **Title Slide**: Compelling presentation title and subtitle
+- 📊 **Overview Slides**: Introduction and key themes
+- 📊 **Content Slides**: Main presentation content (3-50 slides configurable)
+- 📊 **Conclusion Slides**: Summary and key takeaways
+- 📊 **Closing Slide**: Call-to-action and contact information
+
+**Inputs Required:**
+- Presentation Title
+- Presentation Subtitle (optional)
+- Topic/Subject
+- Target Audience
+- Purpose (inform, persuade, educate, inspire)
+- Number of Slides (3-50)
+- Key Points to Cover (JSON array)
+- Presentation Style (professional, creative, minimal, corporate)
+- Additional Notes
+
+**Features:**
+- ✅ **Customizable Slide Count**: Choose 3-50 slides based on your needs
+- ✅ **Multiple Themes**: Professional, creative, minimal, corporate
+- ✅ **PowerPoint Export**: Export as .pptx for editing
+- ✅ **Dynamic Styling**: Auto-styled slides with themes and formatting
+- ✅ **Token Efficiency**: ~1,500 tokens per presentation (varies by slide count)
+
+### Proposal Writer
+
+Generate comprehensive business proposals with 8 professional sections plus optional internet research.
+
+**What's Generated:**
+- ✅ **Executive Summary**: Compelling proposal overview
+- ✅ **Problem Statement**: Clear articulation of client's challenge
+- ✅ **Proposed Solution**: Detailed solution description
+- ✅ **Methodology**: Implementation approach and process
+- ✅ **Timeline**: Phased project schedule
+- ✅ **Budget**: Detailed cost breakdown
+- ✅ **Deliverables**: Specific outcomes and milestones
+- ✅ **Terms & Conditions**: Project terms and agreements
+
+**Inputs Required:**
+- Proposal Title
+- Client Name
+- Proposal Type (service, project, consulting, partnership, grant, other)
+- Project Name
+- Executive Summary (brief)
+- Problem Statement (brief)
+- Proposed Solution (brief)
+- Budget Amount (optional)
+- Timeline (optional)
+- Additional Sections (JSON array, optional)
+
+**Features:**
+- ✅ **Serper Research Integration**: Optional real-time internet research
+- ✅ **PDF Export**: Professional PDF generation
+- ✅ **8 Core Sections**: All essential proposal components
+- ✅ **Custom Sections**: Add additional sections as needed
+- ✅ **Token Efficiency**: ~3,500 tokens per proposal (more with research)
+
+**Optional**: Base on existing Business Plan and/or Marketing Plan
+
 ## Document Linking
 
 ### Why Link Documents?
@@ -153,6 +217,21 @@ Business Center uses a word-based token system with feature-specific rates that 
   <p style="color: #666;">Loading current rate...</p>
 </div>
 
+<div id="presentation-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0; display: none;">
+  <h4 style="margin-top: 0;">📊 Presentation Creator Token Rate</h4>
+  <p style="color: #666;">Loading current rate...</p>
+</div>
+
+<div id="proposal-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0; display: none;">
+  <h4 style="margin-top: 0;">📊 Proposal Writer Token Rate</h4>
+  <p style="color: #666;">Loading current rate...</p>
+</div>
+
+<div id="investor-optimizer-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0; display: none;">
+  <h4 style="margin-top: 0;">📊 Investor Optimizer Token Rate</h4>
+  <p style="color: #666;">Loading current rate...</p>
+</div>
+
 <div id="image-generation-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0; display: none;">
   <h4 style="margin-top: 0;">📊 Image Generation Token Rate</h4>
   <p style="color: #666;">Loading current rate...</p>
@@ -190,6 +269,41 @@ Business Center uses a word-based token system with feature-specific rates that 
     <strong>Token Calculation:</strong> Base Model Tokens × Feature Rate<br>
     <strong>Typical Document:</strong> 12 slides = 1,500-2,500 words = Variable tokens depending on model<br>
     <strong>Rate Type:</strong> Per word generated
+  </p>
+</div>
+
+### Presentation Creator Tokens
+
+<div style="background: #f9fafb; padding: 15px; border-radius: 8px; border-left: 4px solid #667eea; margin: 15px 0;">
+  <p style="margin: 0; color: #374151;">
+    <strong>Token Calculation:</strong> Base Model Tokens × 1,500 Feature Rate<br>
+    <strong>Typical Presentation:</strong> 3-50 slides (configurable)<br>
+    <strong>Rate Type:</strong> ~1,500 tokens per presentation<br>
+    <strong>Note:</strong> Token usage varies based on slide count. More slides = more tokens.<br>
+    <strong>Export Format:</strong> PowerPoint (.pptx) with themes
+  </p>
+</div>
+
+### Proposal Writer Tokens
+
+<div style="background: #f9fafb; padding: 15px; border-radius: 8px; border-left: 4px solid #667eea; margin: 15px 0;">
+  <p style="margin: 0; color: #374151;">
+    <strong>Token Calculation:</strong> Base Model Tokens × 3,500 Feature Rate<br>
+    <strong>Typical Proposal:</strong> 8 comprehensive sections<br>
+    <strong>Rate Type:</strong> ~3,500 tokens per proposal<br>
+    <strong>Optional Research:</strong> +additional tokens if Serper research enabled<br>
+    <strong>Export Format:</strong> PDF with professional formatting
+  </p>
+</div>
+
+### Investor Optimizer Tokens
+
+<div style="background: #f9fafb; padding: 15px; border-radius: 8px; border-left: 4px solid #667eea; margin: 15px 0;">
+  <p style="margin: 0; color: #374151;">
+    <strong>Token Calculation:</strong> Base Model Tokens × 2,000 Feature Rate<br>
+    <strong>Typical Optimization:</strong> Enhanced pitch deck with investor focus<br>
+    <strong>Rate Type:</strong> ~2,000 tokens per optimization<br>
+    <strong>Note:</strong> Investor-focused enhancements with financial projections and market analysis
   </p>
 </div>
 
