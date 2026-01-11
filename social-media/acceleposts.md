@@ -55,9 +55,13 @@ AccelePosts integrates with the following social media platforms:
 
 ### Text Generation
 
-<span id="acceleposts-text-rate-info"></span>
-
 Generate engaging social media captions and content using advanced AI models:
+
+**Token Usage**:
+<div id="acceleposts-text-rate-info" style="margin: 1rem 0;">
+  <h4 style="margin: 0.5rem 0; color: #64748b;">Loading rate information...</h4>
+  <p style="margin: 0; color: #94a3b8; font-size: 0.9rem;">Token rates are being fetched from Token Management.</p>
+</div>
 
 **Features**:
 - **Platform-Optimized**: Content tailored to each platform's style and character limits
@@ -82,9 +86,15 @@ Generate engaging social media captions and content using advanced AI models:
 
 ### Image Generation
 
-<span id="acceleposts-image-rate-info"></span>
-
 Create eye-catching visuals for your social media posts using AI image generation:
+
+**AI Model**: AccelePosts uses **DALL-E 3** by default for image generation. You need to purchase DALL-E 3 tokens from the Token Management store.
+
+**Token Usage**:
+<div id="acceleposts-image-rate-info" style="margin: 1rem 0;">
+  <h4 style="margin: 0.5rem 0; color: #64748b;">Loading rate information...</h4>
+  <p style="margin: 0; color: #94a3b8; font-size: 0.9rem;">Token rates are being fetched from Token Management.</p>
+</div>
 
 **Features**:
 - **Custom Prompts**: Describe what you want and AI creates it
@@ -106,9 +116,13 @@ Create eye-catching visuals for your social media posts using AI image generatio
 
 ### Video Generation
 
-<span id="acceleposts-video-rate-info"></span>
-
 Generate AI-powered videos using Google Veo 2 technology:
+
+**Token Usage**:
+<div id="acceleposts-video-rate-info" style="margin: 1rem 0;">
+  <h4 style="margin: 0.5rem 0; color: #64748b;">Loading rate information...</h4>
+  <p style="margin: 0; color: #94a3b8; font-size: 0.9rem;">Token rates are being fetched from Token Management.</p>
+</div>
 
 **Features**:
 - **Prompt-Based Creation**: Describe your video concept
@@ -488,6 +502,26 @@ AccelePosts integrates with other tools in the Fierce Ecosystem:
 - Use strong, unique passwords
 - Enable two-factor authentication on social accounts
 - Regularly review connected apps
+
+---
+
+## Purchasing Tokens
+
+AccelePosts requires tokens for AI-powered features. You can purchase tokens through the Token Management store:
+
+1. Navigate to [Token Management](https://fierceai.io/dashboard/user/token-management/store)
+2. Select the token package that meets your needs
+3. Complete the purchase
+4. Tokens are automatically added to your account
+
+**Token Types Required**:
+- **Text Generation**: Uses your default OpenAI model (GPT-4, GPT-3.5, etc.) - Charged per word of AI-generated content
+- **Image Generation**: Uses **DALL-E 3 tokens** - Charged per image created (default 1024x1024 standard quality)
+- **Video Generation**: Uses Google Veo 2 tokens - Charged per second of video generated
+
+> **Important**: For image generation, make sure you purchase **DALL-E 3 tokens** from the Token Management store. The system uses DALL-E 3 as the default image generation model.
+
+Token rates are dynamically managed by administrators and can be viewed in the Token Management section of your dashboard.
 
 ---
 
