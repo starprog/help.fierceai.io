@@ -1464,6 +1464,110 @@
             return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
           }
         }
+
+        // Load AcceleMail Lite configuration dynamically
+        function loadAcceleMailLiteConfig() {
+          const configLoading = document.getElementById('accelemaillite-config-loading');
+          const aiModelElement = document.getElementById('accelemaillite-ai-model');
+          const imageModelElement = document.getElementById('accelemaillite-image-model');
+          const defaultModelElement = document.getElementById('accelemaillite-default-model');
+          
+          // Only load if we're on the AcceleMail Lite page
+          if (!configLoading && !aiModelElement) {
+            return;
+          }
+
+          // Determine API base URL (use current origin for help site)
+          const apiBaseUrl = window.location.hostname.includes('help.fierceai.io') 
+            ? 'https://app.fierceai.io' 
+            : window.location.origin;
+
+          fetch(`${apiBaseUrl}/api/accelemaillite/config`)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+              }
+              return response.json();
+            })
+            .then(config => {
+              // Update config loading section
+              if (configLoading) {
+                configLoading.innerHTML = `
+                  <h4 style="margin-top: 0; color: #10b981;">✅ AcceleMail Lite Configuration Loaded</h4>
+                  <p style="color: #666; margin-bottom: 0;">
+                    Current AI Models: <strong style="color: #667eea;">${config.ai_text_model_display}</strong> (text) 
+                    | <strong style="color: #667eea;">${config.ai_image_model_display}</strong> (image)
+                  </p>
+                `;
+                configLoading.style.borderColor = '#10b981';
+                configLoading.style.background = '#f0fdf4';
+              }
+
+              // Update model name elements
+              if (aiModelElement) {
+                aiModelElement.textContent = config.ai_text_model_display;
+                aiModelElement.style.color = '#10b981';
+              }
+              
+              if (imageModelElement) {
+                imageModelElement.textContent = config.ai_image_model_display;
+                imageModelElement.style.color = '#10b981';
+              }
+              
+              if (defaultModelElement) {
+                defaultModelElement.textContent = config.default_model_display;
+                defaultModelElement.style.color = '#10b981';
+              }
+            })
+            .catch(error => {
+              console.error('Error loading AcceleMail Lite config:', error);
+              
+              // Show error state
+              if (configLoading) {
+                configLoading.innerHTML = `
+                  <h4 style="margin-top: 0; color: #dc2626;">⚠️ Configuration Load Failed</h4>
+                  <p style="color: #666; margin-bottom: 0;">
+                    Unable to fetch current AI model settings. Using default values.
+                  </p>
+                `;
+                configLoading.style.borderColor = '#dc2626';
+                configLoading.style.background = '#fef2f2';
+              }
+
+              // Set fallback values
+              const fallbackText = 'ChatGPT 5 Nano';
+              const fallbackImage = 'Nano Banana Pro';
+              
+              if (aiModelElement) {
+                aiModelElement.textContent = fallbackText;
+                aiModelElement.style.color = '#dc2626';
+              }
+              
+              if (imageModelElement) {
+                imageModelElement.textContent = fallbackImage;
+                imageModelElement.style.color = '#dc2626';
+              }
+              
+              if (defaultModelElement) {
+                defaultModelElement.textContent = fallbackText;
+                defaultModelElement.style.color = '#dc2626';
+              }
+            });
+        }
+
+        // Load AcceleMail Lite config when page loads or route changes
+        loadAcceleMailLiteConfig();
+        
+        // Re-run when Docsify finishes rendering (for route changes)
+        const originalAfterEach = window.$docsify?.plugins?.[0];
+        if (window.$docsify) {
+          window.$docsify.plugins = window.$docsify.plugins || [];
+          window.$docsify.plugins.push(function (hook) {
+            hook.doneEach(function () {
+              loadAcceleMailLiteConfig();
+            });
+          });
+        }
       });
     });
   </script>
