@@ -34,6 +34,37 @@ The AI Video Generator provides powerful image-to-video capabilities:
 
 **Token Usage**: Each generated video consumes tokens based on your plan's VIDEO token rate, multiplied by the AI Video feature rate. Video generation is more resource-intensive than image generation, reflected in the rate multiplier.
 
+## Credit Requirements
+
+The AI Video Generator uses **VIDEO** credits from your account.
+
+### Credit Types & Purchase
+
+**To generate videos**, you need **VIDEO** type credits:
+- Purchase from: [Store → AI Features → Add Video Credits](https://fierceai.io/dashboard/user/payment/prepaid#video)
+- Credit balance shown in top navigation bar
+- Separate from Image, Word, and Character credits
+
+**How Credits Work**:
+1. Each video generation requires VIDEO credits
+2. Cost = Base video cost × Feature rate (shown in Token Rates table above)
+3. Credits deducted when generation starts
+4. Failed generations may offer retry or refund options
+
+### AI Provider
+
+- **Stability AI**: Advanced Stable Video Diffusion (SVD) model for image-to-video
+- **API Integration**: Direct connection to Stability AI platform
+- **Processing**: Cloud-based video generation with professional quality
+
+### Storage
+
+All generated videos are securely stored in **Digital Ocean Spaces**, ensuring:
+- Fast global delivery
+- Reliable permanent storage
+- Direct download capability
+- High availability infrastructure
+
 ## Getting Started
 
 ### Basic Workflow
