@@ -14,20 +14,23 @@ AI Voice Clone allows you to create personalized AI voices by uploading audio re
 
 ### Current Token Rates
 
-<div id="ai-voice-clone-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
+**AI Voice Clone** uses a fixed-rate token system:
+
+- **Token Type**: Word Credits
+- **Rate**: **10 tokens per voice clone** (fixed cost)
+- **Billing Model**: One-time charge when creating each voice clone
+
+> 💡 **Important**: Voice cloning uses **Word credits**, not character credits. Make sure you have sufficient Word token balance before creating a voice clone.
 
 ### How Tokens Work
 
 AI Voice Clone operations consume a fixed number of tokens per voice creation, regardless of the audio file size or duration.
 
 ### How Tokens Are Calculated:
-- **Fixed Rate Billing**: Each voice clone creation consumes a predetermined number of tokens
+- **Fixed Rate Billing**: Each voice clone creation consumes exactly 10 Word tokens
 - **One-Time Cost**: Tokens are charged only when creating the voice clone, not when using it
 - **File Size Independent**: Cost remains the same regardless of audio file size or duration
-- **Instant Deduction**: Tokens are deducted immediately upon starting the voice cloning process
+- **Instant Deduction**: 10 Word tokens are deducted immediately upon starting the voice cloning process
 
 ### Example Usage Scenarios:
 
@@ -50,12 +53,20 @@ AI Voice Clone operations consume a fixed number of tokens per voice creation, r
 
 ## AI Engine & Voice Technology
 
-AI Voice Clone is powered by **ElevenLabs Voice Cloning**, which provides:
+AI Voice Clone is powered by **ElevenLabs Voice Cloning API**, which provides:
 
-- **Voice Engine**: ElevenLabs Voice Cloning API
+- **AI Provider**: ElevenLabs
+- **Technology**: Professional Voice Cloning API
+- **Voice Engine**: ElevenLabs' proprietary voice synthesis and cloning models
 - **Quality Analysis**: Automatic audio quality assessment and optimization
-- **Voice Synthesis**: High-fidelity voice model generation
-- **Cross-Platform**: Compatible with all ElevenLabs-powered features
+- **Voice Synthesis**: High-fidelity voice model generation with natural intonation
+- **Cross-Platform**: Compatible with all ElevenLabs-powered features (TTS, Voice Chatbots, etc.)
+
+> **Technical Details**: 
+> - Uses ElevenLabs' advanced neural voice cloning technology
+> - Supports multiple audio formats: MP3, WAV, OGG, FLAC, WebM, MP4
+> - Minimum 30 seconds of clear audio recommended for optimal results
+> - Processes audio server-side for enhanced security and quality
 
 > **Note**: The voice cloning engine is configured system-wide by administrators and cannot be changed by individual users.
 
