@@ -1,30 +1,53 @@
 # AI Realtime Image
 
-AI Realtime Image is FierceAI's lightning-fast image generation tool that creates stunning visuals in real-time as you type. Powered by the BLACK_FOREST_LABS_FLUX_1_SCHNELL model, it provides instant visual feedback, making it perfect for rapid prototyping, creative exploration, and interactive image creation.
+AI Realtime Image is FierceAI's lightning-fast image generation tool that creates stunning visuals in real-time as you type. Powered by Black Forest Labs Flux 1 Schnell via Together.ai, it provides instant visual feedback, making it perfect for rapid prototyping, creative exploration, and interactive image creation.
 
 ## Overview
 
 AI Realtime Image revolutionizes the image generation workflow by providing:
 
 - **Instant Generation**: See your images appear as you type your prompt
-- **Flux Schnell Model**: Ultra-fast image generation optimized for speed
+- **Flux Schnell Model**: Ultra-fast image generation optimized for speed (3 steps)
 - **Interactive Experience**: Real-time feedback lets you refine ideas quickly
 - **Style Variations**: 30+ artistic styles and filters
 - **Gallery Management**: Save and organize your creations
 - **High Quality Output**: Fast speed without compromising quality
 
-## Token Usage
+---
 
-### Current Token Rates
+## Credit Requirements
 
-<div id="ai-realtime-image-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+AI Realtime Image requires **IMAGE credits** for all generations.
+
+### What Credits Do I Need?
+
+<div style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #e3f2fd; margin: 20px 0;">
+  <h4 style="margin-top: 0;">🎨 IMAGE Credits Required</h4>
+  <p><strong>Purchase:</strong> IMAGE-type tokens/credits from your dashboard</p>
+  <p><strong>Used For:</strong> Real-time image generation with Flux Schnell</p>
+  <p><strong>Pricing:</strong> 1.0x rate (base image generation cost)</p>
 </div>
+
+### AI Provider Used
+
+<div id="ai-realtime-image-rate-info" style="padding: 20px; border: 2px solid #9C27B0; border-radius: 8px; background: #f3e5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">⚡ AI Realtime Image Technology</h4>
+  <p><strong>Model:</strong> Black Forest Labs Flux 1 Schnell (FLUX.1-schnell)</p>
+  <p><strong>Provider:</strong> Together.ai API</p>
+  <p><strong>Generation Speed:</strong> Ultra-fast (3-step generation, 1-3 seconds)</p>
+  <p><strong>Storage:</strong> Digital Ocean Spaces (automatic upload)</p>
+  <p id="ai-realtime-image-rate"><strong>Current Rate:</strong> <span id="ai-realtime-image-rate-display">Loading...</span> tokens per image</p>
+</div>
+
+> **Why Flux Schnell?** This model is specifically optimized for real-time generation, producing high-quality images in just 3 diffusion steps compared to 20-50 steps for standard models. This makes it perfect for interactive workflows where speed is essential.
+
+---
+
+## Token Usage
 
 ### How Tokens Work
 
-Each generated image consumes tokens based on your plan's IMAGE token rate, multiplied by the AI Realtime Image feature rate.
+Each generated image consumes tokens based on your plan's IMAGE token rate, multiplied by the AI Realtime Image feature rate (1.0x).
 
 ## Getting Started
 

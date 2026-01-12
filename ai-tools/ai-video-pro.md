@@ -11,6 +11,39 @@ AI Video Pro is FierceAI's most advanced and comprehensive video generation plat
 - 🎨 **Advanced Controls**: Duration, resolution, aspect ratio, camera movement, and audio generation
 - 💰 **Flexible Token Rates**: Pay-per-model pricing optimized for your budget
 
+---
+
+## Credit Requirements
+
+AI Video Pro requires **VIDEO credits** to generate videos. All models use the same token type but at different rates based on quality and features.
+
+### What Credits Do I Need?
+
+<div style="padding: 20px; border: 2px solid #9C27B0; border-radius: 8px; background: #f3e5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">🎬 VIDEO Credits Required</h4>
+  <p><strong>Purchase:</strong> VIDEO-type tokens/credits from your dashboard</p>
+  <p><strong>Used For:</strong> All AI Video Pro models (Sora, Veo, Luma, Kling, MiniMax)</p>
+  <p><strong>Pricing:</strong> Variable rates from 2.0x to 4.0x based on model selection</p>
+</div>
+
+> **Important**: Different models consume credits at different rates. Premium models like Sora 2 Pro (4.0x) cost more per video than budget options like Luma Dream Machine (2.0x). Choose models based on your quality needs and budget.
+
+### AI Providers Used
+
+AI Video Pro integrates with multiple cutting-edge video generation services:
+
+| Provider | Models Available | API Used |
+|----------|------------------|----------|
+| **OpenAI Sora** | Sora 2, Sora 2 Pro | Direct OpenAI API integration |
+| **Google Veo** | Veo 2, Veo 3, Veo 3.1 variants | Fal.AI API (Google models) |
+| **Luma Labs** | Dream Machine | Fal.AI API |
+| **Kling AI** | Kling v1, v1.6, v2.1, v2.5 variants | Fal.AI API |
+| **MiniMax** | MiniMax Video | Fal.AI API |
+
+All videos are automatically uploaded to **Digital Ocean Spaces** (S3-compatible storage) for fast, reliable access and playback.
+
+---
+
 ## Provider Comparison
 
 | Provider | Models | Best For | Speed | Quality | Cost Range |
