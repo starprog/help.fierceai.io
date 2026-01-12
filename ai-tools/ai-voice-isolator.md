@@ -14,10 +14,13 @@ AI Voice Isolator is a powerful tool that uses ElevenLabs' Audio Isolation API t
 
 ### Current Token Rates
 
-<div id="ai-voice-isolator-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
+**AI Voice Isolator** uses character-based billing:
+
+- **Token Type**: Character Credits
+- **Rate**: **1.0 tokens per character** (processed audio)
+- **Billing Model**: Characters processed × 1.0 = total tokens consumed
+
+> 💡 **Important**: AI Voice Isolator uses **CHARACTER credits** for audio processing via ElevenLabs. Make sure you have sufficient CHARACTER token balance before processing audio files.
 
 ### How Tokens Work
 
