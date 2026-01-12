@@ -11,6 +11,42 @@ AI Video to Video is FierceAI's advanced video transformation and enhancement pl
 - 🔄 **Video-to-Video Translation**: Convert content while preserving motion
 - 💰 **Efficient Token Usage**: Pay only for what you need with model-specific rates
 
+## Credit Requirements
+
+The AI Video to Video feature uses **VIDEO** credits from your account.
+
+### Credit Types & Purchase
+
+**To transform videos**, you need **VIDEO** type credits:
+- Purchase from: [Store → AI Features → Add Video Credits](https://fierceai.io/dashboard/user/payment/prepaid#video)
+- Credit balance shown in top navigation bar
+- Separate from Image, Word, and Character credits
+
+**How Credits Work**:
+1. Each video transformation requires VIDEO credits
+2. Cost = Base video cost × Feature rate (2.5x - 3.5x depending on model)
+3. Credits deducted when generation starts
+4. Failed generations may offer retry or refund options
+
+### AI Provider & Models
+
+All AI Video to Video models are powered by **Fal.AI** advanced video processing:
+
+- **Video Upscaler** (2.5x rate): AI super-resolution for quality enhancement
+- **Cogvideox 5B** (3.0x rate): Advanced prompt-guided video transformation
+- **Animatediff V2V** (2.5x rate): Smooth animation conversion with frame consistency
+- **Fast Animatediff Turbo** (3.5x rate): Rapid video transformation with premium speed
+
+**API Integration**: Direct connection to Fal.AI platform for professional-grade video processing
+
+### Storage
+
+All transformed videos are securely stored in **Digital Ocean Spaces**, ensuring:
+- Fast global delivery
+- Reliable permanent storage
+- Direct download capability
+- High availability infrastructure
+
 ## Available Models
 
 ### Video Upscaler
