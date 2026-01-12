@@ -9,7 +9,51 @@ Professional email marketing campaigns powered by AI. Create, send, and track em
 
 ## What is AcceleMail Lite?
 
-AcceleMail Lite is a lightweight yet powerful email marketing platform integrated into FierceAI. It enables you to create professional email campaigns, manage contact lists, track engagement metrics, and leverage AI to generate compelling email content—all with subscription-based usage limits.
+AcceleMail Lite is a streamlined email marketing platform integrated into FierceAI. It enables you to create professional email campaigns, manage contact lists, track engagement metrics, and leverage AI to generate compelling email content—all with subscription-based usage limits.
+
+### Why "Lite"?
+
+AcceleMail Lite focuses on the essential email marketing features you need without the complexity of enterprise-level functionality. It provides:
+
+- **Simplified Interface**: Easy-to-use 3-step campaign wizard
+- **AI-Powered Content**: Generate subject lines and email body content with AI
+- **Contact Management**: Organize and manage your email lists
+- **Performance Tracking**: Monitor opens, clicks, and engagement
+- **Subscription-Based**: Usage limits based on your FierceAI plan
+
+**Perfect for**: Small businesses, content creators, freelancers, and anyone who needs effective email marketing without complex automation workflows or advanced segmentation.
+
+### Key Differences from Full Email Marketing Platforms
+
+AcceleMail Lite is designed to be straightforward and integrated with your FierceAI workflow:
+
+**What's Included**:
+- ✅ Email campaign creation and sending
+- ✅ AI subject line generation
+- ✅ AI email content generation
+- ✅ AI image generation for emails
+- ✅ Contact list management
+- ✅ Merge tags for personalization
+- ✅ Open and click tracking
+- ✅ Campaign analytics
+- ✅ Email scheduling
+- ✅ Test email functionality
+
+**What's NOT Included** (compared to enterprise platforms):
+- ❌ Complex automation workflows
+- ❌ Advanced behavioral segmentation
+- ❌ A/B testing
+- ❌ Drip campaigns
+- ❌ Lead scoring
+- ❌ CRM integration
+- ❌ Landing page builders
+
+**Why Choose AcceleMail Lite**:
+- Integrated with your FierceAI subscription
+- AI-powered content generation included
+- No separate email marketing software needed
+- Simple pricing based on your plan
+- Quick campaign creation (minutes, not hours)
 
 ## How It Works
 

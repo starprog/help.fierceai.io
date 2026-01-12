@@ -8,6 +8,63 @@ Streamline your social media management with AI-powered content creation and sch
 
 AccelePosts is a comprehensive social media management tool that combines AI-powered content generation with intelligent scheduling and campaign management. Create, schedule, and publish engaging social media content across multiple platforms with automated workflows and performance tracking.
 
+### Product Editions
+
+AccelePosts is available in two editions:
+
+#### **AccelePosts Lite**
+The streamlined version of AccelePosts designed for users who want essential social media management without AI-powered content generation. AccelePosts Lite includes:
+
+- **Platform Connections**: Connect and post to Facebook, Instagram, X (Twitter), and LinkedIn
+- **Manual Post Creation**: Create and schedule posts with your own content
+- **Calendar Scheduling**: Visual calendar interface for planning and scheduling posts
+- **Basic Analytics**: Track post performance and engagement metrics
+- **Multi-Platform Publishing**: Post to multiple platforms simultaneously
+- **Draft Management**: Save drafts and return to them later
+
+**What's NOT Included in Lite**:
+- ❌ AI Text Generation (requires tokens)
+- ❌ AI Image Generation with DALL-E 3 (requires tokens)
+- ❌ AI Video Generation with Google Veo 2 (requires tokens)
+- ❌ Campaign Management
+- ❌ Advanced Analytics
+
+**Perfect for**: Users who already have their content ready and just need a scheduling and posting tool, or those who want to manage their social media without AI assistance.
+
+#### **AccelePosts (Full Version)**
+The complete social media management suite with all AI-powered features, campaign management, and advanced analytics. This is the full-featured version described in the rest of this documentation.
+
+**Includes Everything in Lite PLUS**:
+- ✅ AI Text Generation for captions and content
+- ✅ AI Image Generation with DALL-E 3
+- ✅ AI Video Generation with Google Veo 2
+- ✅ Campaign Management and organization
+- ✅ Advanced Analytics and reporting
+- ✅ Bulk scheduling and operations
+
+**Perfect for**: Marketing teams, agencies, content creators, and businesses that want AI-powered content generation and comprehensive campaign management.
+
+---
+
+## Choosing Between Lite and Full Version
+
+Use **AccelePosts Lite** if you:
+- Have your own content creators or designers
+- Don't need AI-generated content
+- Want to save on token costs
+- Need basic scheduling and posting only
+- Are just starting with social media management
+
+Upgrade to **AccelePosts (Full)** if you:
+- Want AI to help generate captions and content ideas
+- Need AI-generated images for your posts
+- Want to create video content with AI
+- Manage multiple campaigns simultaneously
+- Need detailed analytics and reporting
+- Want to scale your content production
+
+> **Note**: You can start with AccelePosts Lite and upgrade to the full version at any time to access AI features. Token purchases are only required for AI generation features in the full version.
+
 ---
 
 ## Supported Platforms
