@@ -14,14 +14,12 @@ AI Music is a cutting-edge tool that uses ElevenLabs' Music API to generate orig
 
 ### Current Token Rates
 
-<div id="ai-music-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
+**Token Type**: Generation Credits  
+**Rate**: 5.0 tokens per music generation (default rate applied to base entity cost)
 
 ### How Tokens Work
 
-AI Music operations consume a fixed number of tokens per music generation request, regardless of the output duration or complexity.
+AI Music operations consume **GENERATION credits** per music creation request. The system uses a fixed token rate that's applied to the base cost of the configured music generation entity (Music 01 by default).
 
 ### How Tokens Are Calculated:
 - **Fixed Rate Billing**: Each music generation consumes a predetermined number of tokens
