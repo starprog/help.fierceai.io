@@ -64,18 +64,67 @@ AI Realtime Voice Chat provides a hands-free, conversational AI experience power
 
 ## Token Usage
 
-AI Realtime Voice Chat uses a word-based token calculation system. Tokens are consumed based on the AI's responses:
+AI Realtime Voice Chat uses **OpenAI's GPT-4o Realtime Preview** model with word-based token calculation:
 
-<span id="ai-realtime-voice-chat-rate-info"></span>
+<div id="ai-realtime-voice-chat-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Token Rate</h4>
+  <p style="font-size: 1.2em; color: #333; font-weight: 600;">Loading...</p>
+  <p style="color: #666;">Fetching current rate from API...</p>
+</div>
 
-**Token Calculation:**
-- Tokens are counted based on the AI's spoken response
-- Each word in the AI's response consumes tokens
-- Your speech input does not directly consume tokens
+**How Token Calculation Works:**
+- Tokens are counted based on the **AI's spoken response words**
+- Each word in the AI's response consumes tokens according to the rate above
+- Your speech input does **not** directly consume tokens (only AI responses)
 - Longer AI responses will use more tokens
 
-**Example:**
-If the AI responds with a 100-word answer and your feature rate is 1.0, you'll be charged 100 tokens.
+**Example Calculation:**
+If the AI responds with a 100-word answer at 1.0 tokens/word:
+- **Tokens consumed**: 100 × 1.0 = **100 tokens**
+
+**Important Notes:**
+- Only the AI's response text is counted, not your questions
+- Real-time transcription is included (no separate charge)
+- Voice synthesis (text-to-speech) is included
+- The rate is dynamically loaded from your Token Management settings
+
+---
+
+## Purchasing Tokens
+
+To use AI Realtime Voice Chat, you need to purchase tokens from the AI Store.
+
+### How to Purchase
+
+1. Go to **Dashboard → Token Management → Store**
+2. Browse available token packages
+3. Purchase **GPT-4o Realtime Preview** tokens for voice conversations
+4. Complete the purchase
+5. Your tokens will be added to your account immediately
+
+### Token Purchase Options
+
+**Individual Entity Tokens**
+- Purchase GPT-4o Realtime Preview tokens specifically
+- Full control over the exact amount you need
+- Pay only for what you'll use
+
+**Token Bundles & Packages** *(Recommended)*
+- Pre-configured bundles with multiple token types
+- Often include discounts
+- Convenient one-click purchase
+- Best value for comprehensive AI usage
+
+### Which Tokens to Buy
+
+For AI Realtime Voice Chat, you need:
+
+✅ **GPT-4o Realtime Preview** tokens
+- Used for: Real-time voice conversations
+- Word-based billing (counted from AI responses)
+- Same tokens used by: Real-time audio features
+
+> **Note**: This is a single-token feature - you only need GPT-4o Realtime Preview tokens. Unlike AI Voice Bots which require two types (voice + embeddings), Realtime Voice Chat uses one model for everything.
 
 ---
 

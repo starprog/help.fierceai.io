@@ -16,7 +16,7 @@ AI Photo Studio is your professional image processing workspace powered by state
 - **Upscale** - Enhance resolution up to 4x
 
 ### ⚡ Powered by Leading AI
-- **Fal.ai** - Industry-leading image processing with advanced AI models
+- **Nano Banana Pro Edit** - State-of-the-art AI model via Fal.ai for professional image processing
 - **Automatic optimization** based on your image type
 - **High-quality outputs** in seconds
 
@@ -551,8 +551,8 @@ A: You can regenerate using the same settings. Original files are always preserv
 **Q: How many images can I process?**  
 A: No limit on number of images, only token balance limits individual operations.
 
-**Q: Is there a quality difference between ClipDrop and Novita?**  
-A: Both are professional quality. Your admin can set the default based on specific needs.
+**Q: What AI model powers Photo Studio?**  
+A: All operations use Nano Banana Pro Edit, a premium AI model optimized for professional image processing and editing tasks.
 
 **Q: Can I use generated images commercially?**  
 A: Yes, generated images are yours to use. Check terms for specific third-party integrations.

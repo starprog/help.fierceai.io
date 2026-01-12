@@ -8,38 +8,144 @@ Real-time conversational AI voice chatbots powered by ElevenLabs that can engage
 
 AI Voice Bots provide human-like voice conversations with your users, offering a more engaging and accessible alternative to text-based chatbots. These bots can understand natural speech, process requests, and respond with realistic AI-generated voices in real-time.
 
+### Credit Requirements
+
+AI Voice Bots require **two types of credits** to function properly:
+
+1. **ElevenLabs Voice Credits** (Character-based)
+   - Used for voice generation during conversations
+   - Consumed based on character count of bot responses
+   - Required for all voice interactions
+
+2. **Text Embedding Credits** (Word-based)
+   - Used for training the bot on your custom data
+   - Consumed when uploading documents and FAQs
+   - Required to create new voice bots with custom knowledge
+
+> **Important**: You must purchase **both credit types** before creating a new AI Voice Bot. Once created, you'll only need voice credits for ongoing conversations.
+
 ---
 
 ## Token Usage
 
-<span id="ai-voice-bots-rate-info"></span>
+AI Voice Bots require **TWO types of credits** to function fully:
 
-AI Voice Bots consume tokens based on the character count of the conversation. The cost is calculated from ElevenLabs API and multiplied by the feature rate to determine the final token consumption.
+### 1. Voice Generation Tokens (ElevenLabs)
 
-### How Tokens Are Calculated:
-- **Character-Based Billing**: Tokens are consumed based on the number of characters in the voice conversation
-- **ElevenLabs API Cost**: The base cost is provided by ElevenLabs for each conversation
-- **Feature Rate Multiplier**: Your token consumption = ElevenLabs cost × Feature Rate
-- **Real-Time Tracking**: Costs are calculated and deducted after each conversation session
+<div id="ai-voice-bots-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">🎤 ElevenLabs Voice Generation Rate</h4>
+  <p id="ai-voice-bots-rate"><strong>Current Rate:</strong> <span id="ai-voice-bots-rate-display">Loading...</span> tokens per character</p>
+  <p style="color: #666;">Used for generating realistic voice responses during conversations.</p>
+</div>
 
-### Example Usage Scenarios:
+**Voice generation tokens** are consumed every time your AI Voice Bot speaks to users. The token consumption is calculated as:
 
-**Short Customer Inquiry** (500 characters):
-- Base ElevenLabs cost: ~0.5 tokens
-- With 1.0x feature rate: 0.5 tokens consumed
-- Typical use: Quick product question, appointment confirmation
+```
+Tokens Used = Number of Characters in Response × Token Rate
+```
 
-**Medium Support Call** (2,000 characters):
-- Base ElevenLabs cost: ~2.0 tokens
-- With 1.0x feature rate: 2.0 tokens consumed
-- Typical use: Troubleshooting session, order assistance
+**Example**: If your bot generates a 500-character voice response at 1.5 tokens/character:
+- **Tokens consumed**: 500 × 1.5 = **750 tokens**
 
-**Extended Consultation** (5,000 characters):
-- Base ElevenLabs cost: ~5.0 tokens
-- With 1.0x feature rate: 5.0 tokens consumed
-- Typical use: Detailed product consultation, complex support issue
+**Character-Based Billing Details:**
+- ✅ Includes voice synthesis (text-to-speech)
+- ✅ Includes speech recognition (user input)
+- ✅ Real-time processing with minimal latency
+- ✅ High-quality, natural-sounding voices
 
-> **Note**: Token rates are configurable by administrators and may vary based on your plan. Visit the [AI Store](https://fierceai.io/dashboard/user/token-management/store) to see current rates for your account.
+### 2. Training & Embedding Tokens (OpenAI)
+
+<div id="ai-voice-bots-embedding-rate-info" style="padding: 20px; border: 2px solid #FF9800; border-radius: 8px; background: #fff3e0; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📚 Training & Embedding Model Rate</h4>
+  <p id="ai-voice-bots-embedding-rate"><strong>Current Rate:</strong> <span id="ai-voice-bots-embedding-rate-display">Loading...</span> tokens per word</p>
+  <p style="color: #e65100;">Used for training your voice bot with documents, knowledge bases, and custom data.</p>
+</div>
+
+**Embedding tokens** are consumed when you train your AI Voice Bot with:
+- 📄 Document uploads (PDF, DOCX, TXT)
+- 🌐 Website URLs (crawling pages)
+- ✍️ Custom training data
+- 📋 FAQ entries and scripts
+
+These tokens process and vectorize your content so the bot can understand your business and provide accurate responses.
+
+**Example**: Training with a 5,000-word knowledge base at 2.0 tokens/word:
+- **Tokens consumed**: 5,000 × 2.0 = **10,000 tokens**
+
+### Why Two Types?
+
+AI Voice Bots use different services for different purposes:
+
+| Purpose | Service | Token Type | When Used |
+|---------|---------|------------|-----------|
+| **Voice Conversations** | ElevenLabs Voice AI | Voice Generation Tokens | Every time bot speaks to users |
+| **Training** | OpenAI Embeddings (text-embedding-3-small) | Embedding Tokens | When adding documents/URLs/knowledge |
+
+> ⚠️ **Important**: You need BOTH token types to create and use AI Voice Bots. Voice tokens handle conversations, while embedding tokens enable the bot to learn from your training data.
+
+### Cost Optimization Tips:
+1. **Concise Responses**: Train bots to give clear, brief answers to reduce character count
+2. **Smart Routing**: Direct complex issues to human agents
+3. **Cache Common Answers**: Pre-define frequent responses as templates
+4. **Session Limits**: Set maximum conversation durations
+5. **Selective Features**: Enable only needed capabilities
+6. **Efficient Training**: Only upload essential training documents to minimize embedding costs
+7. **Reuse Knowledge Bases**: Share training data across multiple voice bots
+
+### Example Voice Generation Usage (Character-Based):
+- **Short Inquiry** (30 seconds): ~500 characters = 750 tokens (500 × 1.5)
+- **Standard Conversation** (2 minutes): ~2,000 characters = 3,000 tokens (2,000 × 1.5)
+- **Extended Support** (5 minutes): ~5,000 characters = 7,500 tokens (5,000 × 1.5)
+- **Complex Issue** (10 minutes): ~10,000 characters = 15,000 tokens (10,000 × 1.5)
+
+### Example Training/Embedding Usage (Word-Based):
+- **Small Knowledge Base** (~5,000 words): 10,000 tokens (5,000 × 2.0)
+- **Medium Knowledge Base** (~20,000 words): 40,000 tokens (20,000 × 2.0)
+- **Large Knowledge Base** (~50,000 words): 100,000 tokens (50,000 × 2.0)
+- **Enterprise Knowledge Base** (~100,000 words): 200,000 tokens (100,000 × 2.0)
+
+> **Note**: Voice generation is consumed during conversations, while training/embedding credits are consumed once when you upload and process training documents.
+
+## Purchasing Tokens
+
+To use AI Voice Bots, you need to purchase tokens from the AI Store.
+
+### How to Purchase
+
+1. Go to **Dashboard → Token Management → Store**
+2. Browse available token packages
+3. Purchase the tokens you need:
+   - **ElevenLabs Voice Generation** - for voice conversations
+   - **text-embedding-3-small** (Embedding Model) - for training
+4. Complete the purchase
+5. Your tokens will be added to your account immediately
+
+### Token Purchase Options
+
+**Individual Entity Tokens**
+- Purchase voice generation tokens separately
+- Purchase embedding model tokens separately
+- Full control over which credits to buy
+
+**Token Bundles & Packages** *(Recommended)*
+- Pre-configured bundles with both token types
+- Often include discounts
+- Convenient one-click purchase
+- Best value for comprehensive voice bot usage
+
+### Which Tokens to Buy
+
+For AI Voice Bots, you need:
+
+✅ **ElevenLabs Voice Generation** tokens
+- Used for: Voice responses during conversations
+- Character-based billing
+- High-quality realistic voices
+
+✅ **text-embedding-3-small** tokens (Embedding Model)
+- Used for: Training bot with documents/URLs/text
+- Word-based billing
+- Same tokens used for AI Bots training
 
 ---
 
@@ -143,28 +249,52 @@ AI Voice Bots are powered by **ElevenLabs Conversational AI**, which provides:
 
 ## Token Usage
 
-Voice Bot conversations consume tokens based on usage duration and complexity:
+AI Voice Bots require **two types of credits** to function:
 
-### How Tokens Are Calculated:
-- Tokens are charged based on the **character count** of conversations
-- Both incoming (user speech) and outgoing (bot response) are counted
-- ElevenLabs processes and charges based on actual usage
-- Real-time transcription and voice synthesis are included
+### 1. Voice Generation Credits (ElevenLabs)
+AI Voice Bots use ElevenLabs for realistic voice responses. These credits are consumed based on **character count**:
+
+- **Character-Based Billing**: Charged per character in bot responses
+- **Voice Synthesis**: Converting text responses to natural-sounding speech
+- **Both incoming and outgoing**: User speech transcription and bot voice responses
+- **Real-time Processing**: Live conversation with minimal latency
+
+**Feature Rate**: 1.5 tokens per character
+
+### 2. Training & Embedding Credits (OpenAI)
+To train your voice bot on custom data, you need **text embedding credits**:
+
+- **Word-Based Billing**: Charged per word in training documents
+- **Text Embeddings**: Uses OpenAI's text-embedding-3-small model
+- **Knowledge Base**: Process documents, FAQs, and training materials
+- **Context Understanding**: Enable bot to understand your specific domain
+
+**Feature Rate**: 2.0 tokens per word
+
+> **Important**: You must have **both** credit types to create and use AI Voice Bots. Voice generation handles conversations, while embeddings enable the bot to learn from your training data.
 
 ### Cost Optimization Tips:
-1. **Concise Responses**: Train bots to give clear, brief answers
+1. **Concise Responses**: Train bots to give clear, brief answers to reduce character count
 2. **Smart Routing**: Direct complex issues to human agents
-3. **Cache Common Answers**: Pre-define frequent responses
+3. **Cache Common Answers**: Pre-define frequent responses as templates
 4. **Session Limits**: Set maximum conversation durations
 5. **Selective Features**: Enable only needed capabilities
+6. **Efficient Training**: Only upload essential training documents to minimize embedding costs
+7. **Reuse Knowledge Bases**: Share training data across multiple voice bots
 
-### Example Usage:
-- **Short Inquiry** (30 seconds): ~150-300 characters = 0.15-0.3 tokens
-- **Standard Conversation** (2 minutes): ~600-1200 characters = 0.6-1.2 tokens
-- **Extended Support** (5 minutes): ~1500-3000 characters = 1.5-3.0 tokens
-- **Complex Issue** (10 minutes): ~3000-6000 characters = 3.0-6.0 tokens
+### Example Voice Generation Usage (Character-Based):
+- **Short Inquiry** (30 seconds): ~500 characters = 750 tokens (500 × 1.5)
+- **Standard Conversation** (2 minutes): ~2,000 characters = 3,000 tokens (2,000 × 1.5)
+- **Extended Support** (5 minutes): ~5,000 characters = 7,500 tokens (5,000 × 1.5)
+- **Complex Issue** (10 minutes): ~10,000 characters = 15,000 tokens (10,000 × 1.5)
 
-> **Note**: Actual token usage may vary based on conversation complexity, language, and user speaking patterns.
+### Example Training/Embedding Usage (Word-Based):
+- **Small Knowledge Base** (~5,000 words): 10,000 tokens (5,000 × 2.0)
+- **Medium Knowledge Base** (~20,000 words): 40,000 tokens (20,000 × 2.0)
+- **Large Knowledge Base** (~50,000 words): 100,000 tokens (50,000 × 2.0)
+- **Enterprise Knowledge Base** (~100,000 words): 200,000 tokens (100,000 × 2.0)
+
+> **Note**: Voice generation is consumed during conversations, while training/embedding credits are consumed once when you upload and process training documents.
 
 ---
 
@@ -320,6 +450,14 @@ FierceAI.VoiceBot.init({
 - Set appropriate timeouts
 - Train for concise responses
 - Use response templates
+- Optimize training documents - remove redundant content
+- Check credit balance for both voice and embedding credits
+
+**Insufficient Credits Error**
+- Purchase ElevenLabs Voice credits for voice generation
+- Purchase Text Embedding credits for training/knowledge base
+- Both credit types are required to create new voice bots
+- Existing bots only need voice credits for conversations
 
 ---
 
