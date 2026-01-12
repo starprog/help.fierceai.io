@@ -14,14 +14,12 @@ AI Music Pro is an advanced music generation tool that extends beyond basic AI M
 
 ### Current Token Rates
 
-<div id="ai-music-pro-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
+**Token Type**: Minute Credits  
+**Rate**: 5.0 tokens per minute of generated music (default rate applied to base entity cost)
 
 ### How Tokens Work
 
-AI Music Pro operations consume tokens based on the duration of generated audio, providing precise billing aligned with actual output length.
+AI Music Pro operations consume **MINUTE credits** based on the duration of generated audio. The system uses a fixed token rate that's applied to the base cost of the ElevenLabs AI Music Pro entity.
 
 ### How Tokens Are Calculated:
 - **Duration-Based Billing**: Token consumption is calculated based on the length of generated music in minutes
