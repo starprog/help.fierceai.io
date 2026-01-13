@@ -64,29 +64,96 @@ AI Realtime Voice Chat provides a hands-free, conversational AI experience power
 
 ## Token Usage
 
-AI Realtime Voice Chat uses **OpenAI's GPT-4o Realtime Preview** model with word-based token calculation:
+AI Realtime Voice Chat uses multiple services that each consume tokens. Understanding these will help you manage your token usage effectively.
 
-<div id="ai-realtime-voice-chat-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Token Rate</h4>
-  <p style="font-size: 1.2em; color: #333; font-weight: 600;">Loading...</p>
+### Services Used
+
+AI Realtime Voice Chat requires **3 different token types** depending on features used:
+
+#### 1. GPT-4o Realtime Preview (Required - Always Used)
+
+<div id="gpt4o-realtime-rate-info" style="padding: 15px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 15px 0;">
+  <h4 style="margin-top: 0;">🎙️ Voice Conversation Rate</h4>
+  <p style="font-size: 1.1em; color: #333; font-weight: 600;">Loading...</p>
   <p style="color: #666;">Fetching current rate from API...</p>
 </div>
 
-**How Token Calculation Works:**
-- Tokens are counted based on the **AI's spoken response words**
-- Each word in the AI's response consumes tokens according to the rate above
+**What it does:**
+- Powers the real-time voice conversation
+- Speech-to-speech processing
+- Natural dialogue flow
+
+**How it's charged:**
+- Counted based on the **AI's spoken response words**
 - Your speech input does **not** directly consume tokens (only AI responses)
-- Longer AI responses will use more tokens
-
-**Example Calculation:**
-If the AI responds with a 100-word answer at 1.0 tokens/word:
-- **Tokens consumed**: 100 × 1.0 = **100 tokens**
-
-**Important Notes:**
-- Only the AI's response text is counted, not your questions
 - Real-time transcription is included (no separate charge)
 - Voice synthesis (text-to-speech) is included
-- The rate is dynamically loaded from your Token Management settings
+
+**Example:** If AI responds with 100 words at 1.0 tokens/word = **100 tokens**
+
+---
+
+#### 2. GPT-4 Turbo Preview (Optional - Used for Function Calling)
+
+<div id="gpt4-turbo-rate-info" style="padding: 15px; border: 2px solid #FF9800; border-radius: 8px; background: #fff3e0; margin: 15px 0;">
+  <h4 style="margin-top: 0;">🧠 Function Calling Rate</h4>
+  <p style="font-size: 1.1em; color: #333; font-weight: 600;">Loading...</p>
+  <p style="color: #666;">Fetching current rate from API...</p>
+</div>
+
+**What it does:**
+- Decides when to search knowledge base or web
+- Function calling decision maker
+- Analyzes your question to determine if search is needed
+
+**When it's used:**
+- Only when you have knowledge base or Real-Time Data enabled
+- Each time AI needs to decide whether to call a function
+- Processes your query to determine search intent
+
+**How it's charged:**
+- Based on words processed for function calling decisions
+- Typically lower usage than main conversation
+- Only active when advanced features are enabled
+
+---
+
+#### 3. Serper (Optional - Real-Time Web Search)
+
+<div id="realtime-web-search-rate-info" style="padding: 15px; border: 2px solid #4CAF50; border-radius: 8px; background: #e8f5e9; margin: 15px 0;">
+  <h4 style="margin-top: 0;">🌐 Web Search Rate</h4>
+  <p style="font-size: 1.1em; color: #333; font-weight: 600;">Loading...</p>
+  <p style="color: #666;">Fetching current rate from API...</p>
+</div>
+
+**What it does:**
+- Searches the internet for current information
+- Provides real-time news, events, and data
+- Accesses information beyond the AI's training data
+
+**When it's used:**
+- Only when **Real-Time Data toggle is ON**
+- When you ask about current events, news, or recent information
+- AI automatically determines when web search is needed
+
+**How it's charged:**
+- Fixed rate per search query (not per word)
+- Charged from separate SERPER credit pool
+- System checks SERPER balance before enabling toggle
+
+**Example:** Each web search = **100 × feature rate tokens**
+
+---
+
+### Token Usage Summary
+
+| Service | When Used | Charged On | Required |
+|---------|-----------|------------|----------|
+| **GPT-4o Realtime Preview** | Every conversation | AI response words | ✅ Yes |
+| **GPT-4 Turbo Preview** | Function calling decisions | Words processed | ⚠️ If using advanced features |
+| **Serper (Web Search)** | Real-Time Data searches | Per search query | ⚠️ If Real-Time Data enabled |
+
+> 💡 **Tip**: For basic voice conversations, you only need GPT-4o Realtime Preview tokens. Advanced features (web search) require additional token types.
 
 ---
 
@@ -117,14 +184,39 @@ To use AI Realtime Voice Chat, you need to purchase tokens from the AI Store.
 
 ### Which Tokens to Buy
 
-For AI Realtime Voice Chat, you need:
+For AI Realtime Voice Chat, you need different token types depending on features you want to use:
+
+#### Basic Voice Chat (Required)
 
 ✅ **GPT-4o Realtime Preview** tokens
 - Used for: Real-time voice conversations
-- Word-based billing (counted from AI responses)
-- Same tokens used by: Real-time audio features
+- Required for: All voice chat sessions
+- Billing: Word-based (AI responses)
 
-> **Note**: This is a single-token feature - you only need GPT-4o Realtime Preview tokens. Unlike AI Voice Bots which require two types (voice + embeddings), Realtime Voice Chat uses one model for everything.
+#### Advanced Features (Optional)
+
+⚠️ **GPT-4 Turbo Preview** tokens  
+- Used for: Function calling (knowledge base & web search decisions)
+- Required for: Knowledge base searches, Real-Time Data toggle
+- Billing: Word-based (query processing)
+
+⚠️ **SERPER** credits
+- Used for: Real-time web searches
+- Required for: Real-Time Data toggle (web search)
+- Billing: Per search query (100 × rate)
+
+#### Recommended Purchase Strategy
+
+**For Basic Use:**
+- Buy GPT-4o Realtime Preview tokens only
+- Perfect for standard voice conversations
+
+**For Advanced Use (Web Search):**
+- Buy GPT-4o Realtime Preview tokens (main conversation)
+- Buy GPT-4 Turbo Preview tokens (function calling)
+- Buy SERPER credits (web search execution)
+
+> **Note**: Unlike AI Voice Bots which require voice + embeddings, Realtime Voice Chat only requires GPT-4o Realtime tokens for basic use. Additional tokens are only needed when enabling advanced features like Real-Time Data (web search).
 
 ---
 

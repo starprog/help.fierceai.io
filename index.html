@@ -534,10 +534,20 @@
             featureKey: 'ai_realtime_image',
             divId: 'ai-realtime-image-rate-info'
           },
-          'ai-tools/ai-realtime-voice-chat': {
-            featureKey: 'ai_realtime_voice_chat',
-            divId: 'ai-realtime-voice-chat-rate-info'
-          },
+          'ai-tools/ai-realtime-voice-chat': [
+            {
+              entityId: 'gpt_4o_realtime',
+              divId: 'gpt4o-realtime-rate-info'
+            },
+            {
+              entityId: 'gpt_4_turbo',
+              divId: 'gpt4-turbo-rate-info'
+            },
+            {
+              featureKey: 'realtime_web_search',
+              divId: 'realtime-web-search-rate-info'
+            }
+          ],
           'ai-tools/ai-rewriter': {
             featureKey: 'ai_rewriter',
             divId: 'ai-rewriter-rate-info'
@@ -678,13 +688,18 @@
             const rateInfoDiv = document.getElementById(config.divId);
             if (!rateInfoDiv) return;
             
+            // Determine API endpoint based on config type
+            const apiUrl = config.entityId 
+              ? `https://fierceai.io/api/entity-rates/${config.entityId}`
+              : `https://fierceai.io/api/feature-rates/${config.featureKey}`;
+            
             // Fetch rate from API
-            fetch('https://fierceai.io/api/feature-rates/' + config.featureKey)
+            fetch(apiUrl)
               .then(response => response.json())
               .then(result => {
                 if (result.success && result.data) {
                   const data = result.data;
-                  const rate = parseFloat(data.tokens_per_unit);
+                  const rate = parseFloat(data.tokens_per_unit || data.credit_index || 1.0);
                   
                   let bgColor = '#f5f5f5';
                   let borderColor = '#2196F3';
@@ -705,26 +720,31 @@
                   
                   // Format rate display based on token type
                   let tokenTypeLabel = 'tokens per word';
-                  if (data.token_type === 'IMAGE') {
+                  const tokenType = (data.token_type || data.type || 'WORD').toUpperCase();
+                  
+                  if (tokenType === 'IMAGE') {
                     tokenTypeLabel = 'tokens per image';
-                  } else if (data.token_type === 'CHARACTER') {
+                  } else if (tokenType === 'CHARACTER') {
                     tokenTypeLabel = 'tokens per character';
-                  } else if (data.token_type === 'VIDEO') {
+                  } else if (tokenType === 'VIDEO') {
                     tokenTypeLabel = 'tokens per video';
-                  } else if (data.token_type === 'PRESENTATION') {
+                  } else if (tokenType === 'PRESENTATION') {
                     tokenTypeLabel = 'tokens per presentation';
-                  } else if (data.token_type === 'WORD') {
+                  } else if (tokenType === 'WORD') {
                     tokenTypeLabel = 'tokens per word';
                   }
                   
+                  const displayName = data.feature_name || data.name || config.entityId || config.featureKey;
+                  const description = data.rate_description || data.description || 'Dynamic rate loaded from API';
+                  
                   rateInfoDiv.innerHTML = `
-                    <h4 style="margin-top: 0;">${icon} ${data.feature_name}</h4>
+                    <h4 style="margin-top: 0;">${icon} ${displayName}</h4>
                     <p style="font-size: 1.2em; color: #333; font-weight: 600; margin: 10px 0;">
                       ${rate.toFixed(2)} ${tokenTypeLabel}
                     </p>
-                    <p style="color: #666; margin: 5px 0;">${data.rate_description}</p>
+                    <p style="color: #666; margin: 5px 0;">${description}</p>
                     <p style="color: #888; font-size: 0.9em; margin-top: 10px;">
-                      Token Type: <strong>${data.token_type.toUpperCase()}</strong>
+                      Token Type: <strong>${tokenType}</strong>
                     </p>
                   `;
                 } else {
