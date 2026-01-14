@@ -1,25 +1,109 @@
 # AI Avatar
 
+## Overview
+
 Create studio-quality videos with AI avatars and voiceovers in 130+ languages. Transform your text into professional video presentations using photorealistic AI avatars, making content creation faster and more engaging than ever.
 
-<div id="ai-avatar-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+## What Is AI Avatar?
+
+AI Avatar technology allows you to create professional video content using photorealistic artificial intelligence avatars. These digital presenters can deliver your script in multiple languages with natural speech patterns, gestures, and expressions, eliminating the need for traditional video production. This tool can:
+
+- **Generate Professional Videos**: Create studio-quality videos without cameras or studios
+- **Multilingual Support**: Deliver content in 130+ languages and accents
+- **100+ AI Avatars**: Choose from diverse, photorealistic presenters
+- **Rapid Production**: Generate videos in 5-10 minutes
+- **Natural Voice Synthesis**: Human-like speech with proper intonation and pacing
+
+## Token Usage
+
+Our AI Avatar system uses a video-based token system for each video generated.
+
+<div id="ai-avatar-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <h4 style="margin-top: 0; color: #2196F3;">📊 Current Token Rate</h4>
+  <p><strong>Rate:</strong> <span style="color: #666;">Loading...</span></p>
+  <p style="color: #666; font-size: 14px; margin-bottom: 0;">Dynamically loaded from system settings.</p>
 </div>
 
-## What is AI Avatar?
+### How Token Consumption Works
 
-AI Avatar technology allows you to create professional video content using photorealistic artificial intelligence avatars. These digital presenters can deliver your script in multiple languages with natural speech patterns, gestures, and expressions, eliminating the need for traditional video production.
+Tokens are consumed on a per-video basis:
+
+```
+Tokens Used = Number of videos generated × Feature rate
+```
+
+**Example**: If you generate 3 videos and the feature rate is 100 tokens per video, you'll be charged 300 tokens total.
+
+### Token Consumption Examples
+
+| Use Case | Number of Videos | Approximate Tokens |
+|----------|-----------------|-------------------|
+| Single video | 1 video | 100 tokens |
+| Training series | 5 videos | 500 tokens |
+| Weekly content | 10 videos | 1,000 tokens |
+| Monthly content | 20 videos | 2,000 tokens |
+
+*Actual rates are displayed dynamically above and may vary based on current API pricing.*
+
+## Purchasing Tokens
+
+To use AI Avatar, you need to purchase tokens from the AI Store.
+
+### How to Purchase
+
+1. Go to **Dashboard → Token Management → Store**
+2. Browse available token packages for video generation
+3. Select the package that meets your needs
+4. Complete the purchase
+5. Your tokens will be added immediately to your balance
+
+## Creating Your First AI Avatar Video
+
+### Step 1: Access the Tool
+
+1. Log in to your FierceAI dashboard
+2. Navigate to **AI Tools** > **AI Avatar**
+3. Click the **Create Video** button
+
+### Step 2: Write Your Script
+
+1. Enter your video script in the text editor
+2. Keep scripts between 500-2,000 characters for optimal results
+3. Use clear, conversational language
+4. Include punctuation for natural speech pacing
+5. Maximum character limit: 5,000 characters
+
+### Step 3: Select Your Avatar
+
+1. Browse the avatar library (100+ options)
+2. Choose an avatar that matches your content tone
+3. Consider demographics and professional appearance
+4. Preview avatar before selection
+
+### Step 4: Customize Settings
+
+1. **Background**: Choose from professional studio backgrounds
+2. **Video Style**: Select rectangular, square, or portrait orientation
+3. **Positioning**: Set avatar placement (left, center, right)
+4. **Language**: Select from 130+ supported languages
+
+### Step 5: Generate & Download
+
+1. Review your settings and script
+2. Click **Generate Video**
+3. Wait 5-15 minutes for processing
+4. Download your HD video in MP4 format
+5. Share or upload to your platforms
 
 ## How It Works
 
 ### Video Creation Process
 
-1. **Script Input**: Write or paste your video script (supports up to 5,000 characters)
-2. **Avatar Selection**: Choose from dozens of professional AI avatars with diverse appearances
-3. **Customization**: Select backgrounds, video styles, and positioning options
-4. **Voice Generation**: AI creates natural speech in your chosen language
-5. **Video Synthesis**: Professional video is generated and delivered
+- **Script Input**: Write or paste your video script (supports up to 5,000 characters)
+- **Avatar Selection**: Choose from dozens of professional AI avatars with diverse appearances
+- **Customization**: Select backgrounds, video styles, and positioning options
+- **Voice Generation**: AI creates natural speech in your chosen language
+- **Video Synthesis**: Professional video is generated and delivered
 
 ### API Integration
 
@@ -28,6 +112,7 @@ AI Avatar technology allows you to create professional video content using photo
 - **Quality**: Studio-grade video output with professional lighting
 - **Languages**: Support for 130+ languages and accents
 - **Speed**: Typical generation time of 5-10 minutes per video
+
 
 ## Features
 
@@ -84,20 +169,7 @@ AI Avatar technology allows you to create professional video content using photo
 
 ## Token Usage
 
-Our AI Avatar system uses a video-based token system:
-
-- **Billing Method**: Per video generated
-- **Token Type**: VIDEO tokens
-- **Rate**: Dynamic pricing based on current API costs
-- **Calculation**: Tokens = Number of videos × Rate per video
-
-### Usage Examples
-
-- **Single Video**: ~100 tokens
-- **Training Series** (5 videos): ~500 tokens
-- **Monthly Content** (20 videos): ~2,000 tokens
-
-*Actual rates may vary based on current API pricing and are displayed in real-time above.*
+Our AI Avatar system uses a video-based token system for each video generated.
 
 ## Best Practices
 
@@ -122,15 +194,95 @@ Our AI Avatar system uses a video-based token system:
 3. **Quality Review**: Preview generated content before publishing
 4. **Version Control**: Keep script versions for updates and revisions
 
+## Token Management
+
+### Checking Your Balance
+
+View your current token balance:
+1. Go to **Dashboard → Token Management**
+2. Check your balance for video generation tokens
+3. Monitor usage in real-time
+4. View historical usage patterns
+
+### When You Run Low
+
+**Low Token Warning:**
+- AI Avatar stops functioning when tokens are depleted
+- Error message: "You have no credits left"
+- Solution: Purchase more tokens from the AI Store
+
+### Usage Analytics
+
+Track your token consumption:
+- **Per Video**: See tokens used for each video generation
+- **By Time**: Monthly/weekly usage trends
+- **By Project**: Organize usage by content series
+- **Cumulative**: Total historical usage
+
 ## Getting Started
 
-1. **Access the Tool**: Navigate to your AI Avatar dashboard
-2. **Create New Video**: Click the "Create Video" button
-3. **Write Your Script**: Enter your video content and description
-4. **Select Avatar**: Choose from the professional avatar library
-5. **Customize Settings**: Pick background, style, and positioning
-6. **Generate Video**: Submit for processing and await completion
-7. **Download & Share**: Access your generated video for distribution
+This section has been moved above. See "Creating Your First AI Avatar Video" for the step-by-step guide.
+
+## Troubleshooting
+
+### Video Generation Failed
+
+**Possible Causes:**
+- ❌ Insufficient token balance
+- ❌ Script exceeds character limit
+- ❌ Invalid characters or formatting
+- ❌ API service temporarily unavailable
+
+**Solutions:**
+- ✅ Check token balance at **Dashboard → Token Management**
+- ✅ Reduce script length to under 5,000 characters
+- ✅ Remove special characters or unusual formatting
+- ✅ Try again in a few minutes
+
+### "You have no credits left" Error
+
+**Solution:**
+- Check token balance at **Dashboard → Token Management**
+- Purchase tokens for video generation from the **AI Store**
+- Verify your payment method is valid
+
+### Poor Video Quality or Avatar Issues
+
+**Possible Causes:**
+- ❌ Script not optimized for speech synthesis
+- ❌ Inappropriate avatar selection
+- ❌ Background doesn't match content
+
+**Solutions:**
+- ✅ Use clear, conversational language in scripts
+- ✅ Include proper punctuation for natural pacing
+- ✅ Choose avatars that match your content tone
+- ✅ Select professional backgrounds appropriate for your message
+
+### Generation Takes Too Long
+
+**Possible Causes:**
+- ❌ Server load during peak hours
+- ❌ Long or complex scripts
+- ❌ High-quality processing requirements
+
+**Solutions:**
+- ✅ Typical generation time is 5-15 minutes
+- ✅ Longer scripts may take up to 20 minutes
+- ✅ Check your account dashboard for generation status
+- ✅ Contact support if processing exceeds 30 minutes
+
+### Audio Sync Issues
+
+**Possible Causes:**
+- ❌ Complex punctuation or formatting
+- ❌ Unusual pronunciation requirements
+
+**Solutions:**
+- ✅ Simplify script formatting
+- ✅ Spell out complex terms phonetically
+- ✅ Use standard punctuation for pauses
+- ✅ Regenerate video if issues persist
 
 ## Technical Specifications
 
@@ -173,12 +325,27 @@ Our AI Avatar system uses a video-based token system:
 
 ## Support
 
-Need help with AI Avatar? Our support team provides:
+Need help with AI Avatar?
 
-- Technical assistance with video generation and troubleshooting
-- Guidance on avatar selection and script optimization
-- Best practices for different content types and audiences
-- Account management and billing questions
-- API integration support for developers
+- 📚 [FAQ](../support/faq.md)
+- 💬 [Contact Support](../support/contact.md)
+- 🐛 [Report Issues](../troubleshooting/common-issues.md)
+- 👥 [Community Forum](../support/community.md)
 
-Our AI Avatar platform empowers you to create professional video content quickly and efficiently, enabling consistent communication and engagement across all your digital channels.
+## Pricing Information
+
+For current pricing, token packages, and subscription plans, please visit our [Pricing & Plans](../pricing-and-plans.md) page.
+
+## Related Topics
+
+- [AI Video Pro](./ai-video-pro.md) - Advanced video generation
+- [AI Speech](./ai-speech.md) - Text-to-speech synthesis
+- [AI Voiceover](./ai-voiceover.md) - Professional voiceover generation
+- [Token Management](../dashboard/token-management.md)
+- [Best Practices](../tips/best-practices.md)
+
+---
+
+**Last Updated**: January 2025
+
+Have questions? [Contact our support team](../support/contact.md) for assistance.

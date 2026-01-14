@@ -2,7 +2,7 @@
 
 Get started with FierceAI in just 5 minutes! Follow this step-by-step guide to create your first AI-generated content.
 
-## Step 1: Access Your Dashboard
+## 1️⃣ Step 1: Access Your Dashboard
 
 After logging in, you'll see your main dashboard with these key areas:
 
@@ -13,7 +13,7 @@ After logging in, you'll see your main dashboard with these key areas:
 
 ![Dashboard Overview](../images/dashboard-overview.svg)
 
-## Step 2: Choose Your Tool
+## 2️⃣ Step 2: Choose Your Tool
 
 ### 🖊️ AI Writer
 Perfect for articles, blog posts, marketing copy, and any text content.
@@ -24,7 +24,7 @@ Create stunning visuals, artwork, logos, and graphics.
 ### 💬 Chat Assistant
 Get instant help, brainstorm ideas, or have conversations with AI.
 
-## Step 3: Create Your First Content
+## 3️⃣ Step 3: Create Your First Content
 
 ### Using the AI Writer:
 
@@ -43,13 +43,13 @@ Get instant help, brainstorm ideas, or have conversations with AI.
 4. Click **"Generate Image"**
 5. Download your creation
 
-## Step 4: Save and Manage
+## 4️⃣ Step 4: Save and Manage
 
 - All your content is automatically saved to your account
 - Access previous generations from the **"My Content"** section
 - Organize your work with folders and tags
 
-## Next Steps
+## 👞 Next Steps
 
 ✅ **Explore Templates** - Browse our template library for inspiration
 
@@ -57,7 +57,7 @@ Get instant help, brainstorm ideas, or have conversations with AI.
 
 ✅ **Join the Community** - Connect with other FierceAI users
 
-## Need Help?
+## ❔ Need Help?
 
 If you get stuck, check out:
 - [❓ FAQ](../support/faq.md)

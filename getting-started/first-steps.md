@@ -26,7 +26,7 @@ Navigate to your [Dashboard](https://fierceai.io/dashboard) to see all available
 
 **Monitor Usage:**
 - Check your remaining credits in the dashboard header
-- View detailed usage in [Usage Analytics](https://fierceai.io/dashboard/user/usage)
+- View detailed usage in [Token Management Dashboard](https://fierceai.io/dashboard/user/token-management/dashboard)
 - Set up low-credit notifications
 
 ### 3. Explore AI Tools
@@ -56,7 +56,7 @@ Navigate to your [Dashboard](https://fierceai.io/dashboard) to see all available
 **Choose Your Path:**
 
 **Option A: Use AI Writer**
-1. Go to [AI Writer](https://fierceai.io/dashboard/user/openai/generator/ai-article-wizard-generator)
+1. Go to [AI Writer](https://fierceai.io/dashboard/user/openai)
 2. Select a template or start from scratch
 3. Enter your topic or instructions
 4. Click "Generate" and review results
@@ -64,14 +64,14 @@ Navigate to your [Dashboard](https://fierceai.io/dashboard) to see all available
 6. Save to [My Documents](https://fierceai.io/dashboard/user/openai/documents/all)
 
 **Option B: Generate Images**
-1. Go to [AI Image Generator](https://fierceai.io/dashboard/user/openai/generator/ai-image-generator)
+1. Go to [AI Image Generator](https://fierceai.io/dashboard/user/openai/generator/ai_image_generator)
 2. Describe the image you want
 3. Choose style and settings
 4. Click "Generate"
 5. Download or save to Content Manager
 
 **Option C: Chat with AI**
-1. Go to [AI Chat](https://fierceai.io/dashboard/user/openai/chat)
+1. Go to [AI Chat](https://fierceai.io/dashboard/user/openai/chat/ai-chat)
 2. Start a new conversation
 3. Ask questions or request assistance
 4. Save important responses

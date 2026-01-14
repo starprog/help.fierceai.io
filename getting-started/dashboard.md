@@ -1,10 +1,10 @@
 # Dashboard
 
-## Overview
+## 🈂️ Overview
 
 The Dashboard is your central command center in FierceAI. It provides a comprehensive view of your account, quick access to AI tools, usage statistics, and personalized recommendations to help you maximize productivity.
 
-## Key Features
+## 🔑 Key Features
 
 ### 1. AI Assistant Search
 
@@ -32,7 +32,7 @@ The dashboard includes filter tabs to help you organize your workspace:
 
 ---
 
-## Dashboard Sections
+## 💨 Dashboard Sections
 
 ### Your Plan & Credits
 
@@ -63,15 +63,16 @@ This section displays your current subscription status and remaining token balan
 
 If you're on a regular plan, you'll see a highlighted card showcasing premium benefits:
 
-#### Premium Features Include:
+<div id="premium-features-loading" style="background: #f8f9ff; border: 2px solid #667eea; border-radius: 12px; padding: 20px; margin: 20px 0;">
+  <h4 style="margin-top: 0; color: #667eea;">🔄 Loading Premium Features...</h4>
+  <p style="color: #666; margin-bottom: 0;">
+    Fetching the latest premium features and benefits...
+  </p>
+</div>
 
-- ✓ Shop our AI store to purchase AI tokens
-- ✓ Access to All Templates
-- ✓ External Chatbots
-- ✓ o1-mini and DeepSeek R1 models
-- ✓ Premium Support
-
-Click **"Upgrade Your Plan"** to unlock these advanced capabilities.
+<div id="premium-features-container" style="display: none;">
+  <!-- Dynamic premium features will be loaded here -->
+</div>
 
 ---
 
@@ -196,7 +197,7 @@ Need help? Access our support system:
 
 ---
 
-## Navigation Tips
+## 🛞 Navigation Tips
 
 ### Quick Actions:
 
@@ -223,7 +224,7 @@ The dashboard is fully responsive and optimized for:
 
 ---
 
-## Best Practices
+## 🥇 Best Practices
 
 1. **Check Credits Regularly** - Monitor your token balance to avoid running out mid-project
 2. **Explore New Features** - Use the search bar to discover AI tools you haven't tried
@@ -233,7 +234,7 @@ The dashboard is fully responsive and optimized for:
 
 ---
 
-## Frequently Asked Questions
+## ❓ Frequently Asked Questions
 
 **Q: How often do credits refill?**  
 A: Credits automatically refill on your subscription renewal date, shown in the "Your Plan" section.
@@ -252,7 +253,7 @@ A: Click "View All" in the "Recently Launched" section or navigate to Documents 
 
 ---
 
-## Related Resources
+## 🔗 Related Resources
 
 - [Subscription Plans](/account/subscription.md) - Learn about plan tiers
 - [AI Templates](/ai-tools/) - Explore all available tools

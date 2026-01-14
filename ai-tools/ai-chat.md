@@ -18,14 +18,32 @@ AI Chat provides a versatile conversational AI interface that adapts to your nee
 
 ---
 
+## AI Models Used
+
+AI Chat provides access to multiple cutting-edge AI models, giving you flexibility to choose the best model for your task.
+
+### Available Models
+- **GPT-4 & GPT-4 Turbo**: OpenAI's most advanced models
+- **Claude 3.5**: Anthropic's thoughtful AI assistant
+- **Gemini Pro**: Google's powerful multimodal AI
+- **Model Switching**: Change models mid-conversation
+- **Automatic Selection**: System chooses optimal model for your query
+
+The **system-wide default chat model** is configured by administrators. The current default model is:
+
+**<span id="ai-engine-word-model-display">Loading...</span>**
+
+> **Note**: The AI model is configured at the system level by administrators. Individual users cannot change the default model, but you can select different models within the chat interface.
+
+---
+
 ## Key Features
 
 ### Multi-Model Support
-- **GPT-4 & GPT-4 Turbo**: OpenAI's most advanced models
-- **Claude**: Anthropic's thoughtful AI assistant
-- **Gemini**: Google's powerful multimodal AI
-- **Model Switching**: Change models mid-conversation
-- **Automatic Selection**: System chooses optimal model for your query
+- Access to GPT-4, Claude, Gemini, and other leading AI models
+- Switch between models mid-conversation
+- Compare responses from different models
+- System automatically selects optimal model when not specified
 
 ### Intelligent Conversations
 - **Context Memory**: AI remembers your entire conversation
@@ -104,32 +122,68 @@ AI responses support rich formatting:
 
 ## Token Usage
 
+AI Chat uses a word-based token calculation system. Tokens are consumed based on the AI's response length.
+
 ### Current Token Rates
 
-<div id="ai-chat-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+<div id="ai-chat-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); margin: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <h4 style="margin-top: 0; color: #2196F3;">📊 Current Token Rate</h4>
+  <p><strong>Rate:</strong> <span style="color: #666;">Loading...</span></p>
+  <p style="color: #666; font-size: 14px; margin-bottom: 0;">Dynamically loaded from system settings.</p>
 </div>
 
 ### How Tokens Work
 
-AI Chat uses a word-based token calculation system. Tokens are consumed based on the AI's response length:
-
-**Token Calculation:**
-- Tokens are counted based on the AI's text response
+Tokens are counted based on the AI's text response:
 - Each word in the AI's response consumes tokens
 - Your input messages do not directly consume tokens
 - Longer, more detailed responses use more tokens
 - Code blocks and technical content may use more tokens
 
+### Token Calculation
+
+```
+Tokens Used = (Number of words in AI response) × (Feature rate)
+```
+
 **Example:**
 If the AI responds with a 200-word answer and your feature rate is 1.0, you'll be charged 200 tokens.
 
-**Token Efficiency Tips:**
+### Token Consumption Examples
+
+| Use Case | Typical Response | Approximate Tokens |
+|----------|--------------|-------------------|
+| Quick answer | 50-100 words | 50-100 tokens |
+| Detailed explanation | 200-400 words | 200-400 tokens |
+| Long-form content | 500-1000 words | 500-1000 tokens |
+| Code generation | 200-500 words | 200-500 tokens |
+
+### Token Efficiency Tips
 - Ask focused, specific questions for concise answers
 - Request summaries instead of full explanations when appropriate
 - Use "brief" or "concise" in your prompts
 - Break complex topics into multiple shorter questions
+
+---
+
+## Purchasing Tokens
+
+To use AI Chat, you need to purchase tokens from the AI Store.
+
+### How to Purchase
+
+1. Go to **Dashboard → Token Management → Store**
+2. Browse available token packages for chat models
+3. Select the package that meets your needs
+4. Complete the purchase
+5. Your tokens will be added immediately to your balance
+
+### Checking Your Balance
+
+View your current token balance:
+1. Go to **Dashboard → Token Management**
+2. Check your balance for the chat model(s) you're using
+3. Monitor usage in real-time as you chat
 
 ---
 
@@ -349,6 +403,39 @@ If the AI responds with a 200-word answer and your feature rate is 1.0, you'll b
 
 ---
 
+## Token Management
+
+### Checking Your Balance
+
+View your current token balance at any time:
+1. Go to **Dashboard → Token Management**
+2. Check your balance for each AI model
+3. Monitor usage in real-time
+4. View historical usage patterns
+
+### When You Run Low
+
+**Low Token Warning:**
+- AI Chat stops functioning when tokens are depleted
+- Error message: "You have no credits left"
+- Solution: Purchase more tokens from the AI Store
+
+### Usage Analytics
+
+Track your token consumption:
+- **Per Conversation**: See tokens used in each chat session
+- **By Model**: Compare usage across different AI models
+- **By Time**: Monthly/weekly usage trends
+- **Cumulative**: Total historical usage
+
+### Smart Token Management
+- Set up low balance alerts
+- Purchase token packages in advance
+- Monitor usage patterns to optimize spending
+- Use appropriate models for each task
+
+---
+
 ## Troubleshooting
 
 ### Response Issues
@@ -392,7 +479,14 @@ If the AI responds with a 200-word answer and your feature rate is 1.0, you'll b
 - Review your prompts for unnecessary length
 - Check if you're requesting very detailed responses
 - Use chat categories optimized for your task
-- Monitor token usage in account settings
+- Monitor token usage in **Dashboard → Token Management**
+- Request concise responses when appropriate
+
+**"You have no credits left" Error**
+- Check token balance at **Dashboard → Token Management**
+- Purchase tokens for the specific model(s) you're using
+- Visit the **AI Store** for token packages
+- Verify your payment method is valid
 
 **Unexpected Token Usage**
 - Long AI responses consume more tokens
@@ -464,25 +558,26 @@ A: Yes, use the share button to generate a shareable link to your conversation.
 
 ---
 
-## Related Features
-
-- **[AI Chat Pro](ai-tools/ai-chat-pro.md)** - Advanced chat with enhanced features
-- **[AI Bots](ai-tools/ai-bots.md)** - Custom AI chatbots with training
-- **[AI Voice Bots](ai-tools/ai-voice-bots.md)** - Voice-based AI conversations
-- **[AI Realtime Voice Chat](ai-tools/ai-realtime-voice-chat.md)** - Real-time voice dialogue
-- **[Chat Settings](ai-tools/chat-settings.md)** - Configure chat behavior and categories
-
----
-
 ## Support
 
 Need help with AI Chat? We're here to assist:
 
-- **Email**: support@fierceai.io
-- **Live Chat**: Available in your dashboard
-- **Documentation**: Comprehensive guides and tutorials
-- **Community**: Join our forum for tips and discussions
+- 📚 [FAQ](../support/faq.md)
+- 💬 [Contact Support](../support/contact.md)
+- 🐛 [Report Issues](../troubleshooting/common-issues.md)
+- 📖 [Documentation](../index.md)
+
+## Related Topics
+
+- [AI Chat Pro](./ai-chat-pro.md) - Advanced chat with enhanced features
+- [AI Bots](./ai-bots.md) - Custom AI chatbots with training
+- [AI Voice Bots](./ai-voice-bots.md) - Voice-based AI conversations
+- [AI Realtime Voice Chat](./ai-realtime-voice-chat.md) - Real-time voice dialogue
+- [Token Management](../dashboard/token-management.md)
+- [Pricing & Plans](../pricing-and-plans.md)
 
 ---
 
-*Last Updated: December 2025*
+*Last Updated: January 2025*
+
+Have questions? [Contact our support team](../support/contact.md) for assistance.

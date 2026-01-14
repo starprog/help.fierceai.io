@@ -14,12 +14,11 @@
 * [**📊 Dashboard**](dashboard/)
   * [Overview](dashboard/overview.md)
   * [Token Management](dashboard/token-management.md)
-* [**📧 AcceleMail Lite**](ai-tools/accelemaillite.md)
-* [**📱 AccelePosts Lite**](social-media/acceleposts.md)
-* [**🏢 Business Center**](ai-tools/business-center.md)
+* [**📧 AcceleMail Lite**](ai-tools/accelemaillite.md)<span style="color: #ff9800; font-size: 0.85em;">Coming Soon</span>
+* [**📱 AccelePosts Lite**](social-media/acceleposts.md) 
+* [**🏢 Business Center**](ai-tools/business-center.md) <span style="color: #ff9800; font-size: 0.85em;">Coming Soon</span>
 * [**AI Tools**](ai-tools/)
-  * [AI Article Wizard](ai-tools/ai-article-wizard.md)
-  * [AI Avatar](ai-tools/ai-avatar.md)
+  * [AI Article Wizard](ai-tools/ai-article-wizard.md)  
   * [AI Bot Contacts](ai-tools/ai-bot-contacts.md)
   * [AI Bot Knowledge Base](ai-tools/ai-bot-knowledge-base.md)
   * [AI Bots](ai-tools/ai-bots.md)

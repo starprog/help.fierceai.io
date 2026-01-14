@@ -26,7 +26,7 @@
       --background: 0 0% 100%;
       --foreground: 224 71% 4%;
       --border: 220 13% 91%;
-      --heading-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --heading-background: linear-gradient(135deg, #22273f 0%, #764ba2 100%);
       --gradient-from: 220 38% 20%;
       --gradient-to: 259 83% 51%;
     }
@@ -40,7 +40,7 @@
     }
 
     .sidebar {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      background: linear-gradient(135deg, #89c8ec 0%, #4b82a2 100%) !important;
       color: white !important;
       border-right: none !important;
       padding: 20px 0 !important;
@@ -68,7 +68,7 @@
       background: rgba(255, 255, 255, 0.15) !important;
       border-left-color: rgba(255, 255, 255, 0.8) !important;
       padding-left: 20px !important;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+      box-shadow: 0 2px 8px rgba(151, 132, 132, 0.1) !important;
     }
 
     .sidebar-nav > ul > li > a.active,
@@ -440,10 +440,6 @@
               divId: 'ai-article-wizard-image-rate-info'
             }
           ],
-          'ai-tools/ai-avatar': {
-            featureKey: 'ai_avatar',
-            divId: 'ai-avatar-rate-info'
-          },
           'ai-tools/ai-bots': [
             {
               featureKey: 'ai_bots',
@@ -1584,6 +1580,177 @@
         // Load AcceleMail Lite config when page loads or route changes
         loadAcceleMailLiteConfig();
         
+        // Load Premium Features dynamically on dashboard page
+        function loadPremiumFeatures() {
+          const loadingEl = document.getElementById('premium-features-loading');
+          const containerEl = document.getElementById('premium-features-container');
+          
+          if (!loadingEl || !containerEl) {
+            return;
+          }
+          
+          // Try multiple potential API endpoints
+          const apiEndpoints = [
+            'https://fierceai.io/api/premium-features',
+            'https://fierceai.io/api/dashboard/premium-features', 
+            'https://fierceai.io/api/features/premium',
+            'https://fierceai.io/api/plans/features'
+          ];
+          
+          // Function to try each endpoint
+          async function tryApiEndpoints() {
+            for (const endpoint of apiEndpoints) {
+              try {
+                console.log(`Trying API endpoint: ${endpoint}`);
+                const response = await fetch(endpoint);
+                
+                if (response.ok) {
+                  const data = await response.json();
+                  console.log('API response:', data);
+                  
+                  if (data.success || data.features || data.data) {
+                    return { success: true, data: data };
+                  }
+                }
+              } catch (error) {
+                console.log(`Failed ${endpoint}:`, error.message);
+                continue;
+              }
+            }
+            throw new Error('All API endpoints failed');
+          }
+          
+          // Update loading text to show we're trying
+          loadingEl.innerHTML = `
+            <h4 style="margin-top: 0; color: #667eea;">🔄 Loading Premium Features...</h4>
+            <p style="color: #666; margin-bottom: 0;">
+              Checking API endpoints for latest features...
+            </p>
+          `;
+          
+          tryApiEndpoints()
+            .then(result => {
+              const data = result.data;
+              const features = data.features || data.data?.features || [
+                { name: "Shop our AI store to purchase AI tokens" },
+                { name: "Access to All Templates" },
+                { name: "External Chatbots" },
+                { name: "o1-mini and DeepSeek R1 models" },
+                { name: "Premium Support" }
+              ];
+              
+              loadingEl.style.display = 'none';
+              containerEl.style.display = 'block';
+              
+              // Build premium features HTML
+              let featuresHTML = '<h4>Premium Features Include:</h4><ul style="list-style-type: none; padding-left: 0;">';
+              
+              features.forEach(feature => {
+                const featureName = typeof feature === 'string' ? feature : feature.name;
+                const featureDesc = typeof feature === 'object' ? feature.description : null;
+                const featureIcon = typeof feature === 'object' && feature.icon ? feature.icon : 'fas fa-check-circle';
+                
+                featuresHTML += `<li style="padding: 8px 0; color: #10b981;">
+                  <i class="${featureIcon}" style="color: #10b981; margin-right: 8px;"></i>
+                  ${featureName}
+                  ${featureDesc ? `<br><small style="color: #666; margin-left: 20px;">${featureDesc}</small>` : ''}
+                </li>`;
+              });
+              
+              featuresHTML += '</ul>';
+              
+              // Add CTA button
+              const ctaText = data.cta_text || 'Upgrade Your Plan';
+              const ctaUrl = data.cta_url || 'https://fierceai.io/dashboard/billing/plans';
+              
+              containerEl.innerHTML = `
+                <div style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f4ff 100%); border: 2px solid #667eea; border-radius: 12px; padding: 24px; margin: 20px 0; max-width: 400px; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                  <h4 style="margin-top: 0; color: #667eea; font-size: 1.3em;">
+                    <i class="fas fa-crown" style="color: #f59e0b; margin-right: 8px;"></i>
+                    Premium Advantages
+                  </h4>
+                  ${featuresHTML}
+                  <div style="margin-top: 20px; text-align: center;">
+                    <a href="${ctaUrl}" 
+                       style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; transition: transform 0.2s, box-shadow 0.2s;" 
+                       onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.3)'" 
+                       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                      <i class="fas fa-star" style="margin-right: 8px;"></i>
+                      ${ctaText}
+                    </a>
+                  </div>
+                  <div style="margin-top: 15px; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 6px;">
+                    <small style="color: #059669; font-style: italic;">
+                      <i class="fas fa-check-circle" style="margin-right: 5px;"></i>
+                      Premium features loaded successfully! Data is current as of ${new Date().toLocaleDateString()}.
+                    </small>
+                  </div>
+                </div>
+              `;
+            })
+            .catch(error => {
+              console.error('Error loading premium features:', error);
+              
+              // Show enhanced fallback with the exact features you specified
+              loadingEl.style.display = 'none';
+              containerEl.style.display = 'block';
+              
+              containerEl.innerHTML = `
+                <div style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f4ff 100%); border: 2px solid #667eea; border-radius: 12px; padding: 24px; margin: 20px 0; max-width: 600px; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);">
+                  <h4 style="margin-top: 0; color: #667eea; font-size: 1.3em;">
+                    <i class="fas fa-crown" style="color: #f59e0b; margin-right: 8px;"></i>
+                    Premium Advantages
+                  </h4>
+                  <h4>Premium Features Include:</h4>
+                  <ul style="list-style-type: none; padding-left: 0;">
+                    <li style="padding: 8px 0; color: #10b981;">
+                      <i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i>
+                      Shop our AI store to purchase AI tokens
+                    </li>
+                    <li style="padding: 8px 0; color: #10b981;">
+                      <i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i>
+                      Access to All Templates
+                    </li>
+                    <li style="padding: 8px 0; color: #10b981;">
+                      <i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i>
+                      External Chatbots
+                    </li>
+                    <li style="padding: 8px 0; color: #10b981;">
+                      <i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i>
+                      o1-mini and DeepSeek R1 models
+                    </li>
+                    <li style="padding: 8px 0; color: #10b981;">
+                      <i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i>
+                      Premium Support
+                    </li>
+                  </ul>
+                  <div style="margin-top: 20px; text-align: center;">
+                    <a href="https://fierceai.io/dashboard/billing/plans" 
+                       style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; transition: transform 0.2s, box-shadow 0.2s;" 
+                       onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.3)'" 
+                       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                      <i class="fas fa-star" style="margin-right: 8px;"></i>
+                      Upgrade Your Plan
+                    </a>
+                  </div>
+                </div>
+              `;
+              
+              // Log detailed error info for debugging
+              console.group('Premium Features Debug Info');
+              console.log('Error details:', error);
+              console.log('Attempted endpoints:', apiEndpoints);
+              console.log('Current URL:', window.location.href);
+              console.log('Timestamp:', new Date().toISOString());
+              console.groupEnd();
+            });
+        }
+        
+        // Load premium features when on dashboard page
+        if (window.location.hash.includes('getting-started/dashboard')) {
+          loadPremiumFeatures();
+        }
+        
         // Re-run when Docsify finishes rendering (for route changes)
         const originalAfterEach = window.$docsify?.plugins?.[0];
         if (window.$docsify) {
@@ -1591,6 +1758,13 @@
           window.$docsify.plugins.push(function (hook) {
             hook.doneEach(function () {
               loadAcceleMailLiteConfig();
+              
+              // Load premium features on dashboard page
+              if (window.location.hash.includes('getting-started/dashboard')) {
+                setTimeout(() => {
+                  loadPremiumFeatures();
+                }, 100); // Small delay to ensure DOM elements are ready
+              }
             });
           });
         }

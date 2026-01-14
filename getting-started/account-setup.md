@@ -2,14 +2,14 @@
 
 Setting up your FierceAI account is quick and easy.
 
-## Creating Your Account
+## 🌟 Creating Your Account
 
 1. **Visit the Registration Page** - Go to the FierceAI signup page
 2. **Enter Your Details** - Provide your email, password, and basic information
 3. **Verify Your Email** - Check your inbox and click the verification link
 4. **Choose Your Plan** - Select the plan that fits your needs
 
-## Initial Configuration
+## 👍 Initial Configuration
 
 After creating your account:
 
@@ -18,17 +18,12 @@ After creating your account:
 - Set your display name
 - Configure notification preferences
 
-### API Access
-- Generate your first API key
-- Set usage limits
-- Configure webhooks (optional)
-
 ### Billing Information
-- Add payment method for paid plans
+- Add payment method for paid plans on checkout
 - Set billing preferences
 - Review usage limits
 
-## Next Steps
+## 🎯 Next Steps
 
 Once your account is set up:
 1. [Take the Quick Tutorial](tutorial.md)
