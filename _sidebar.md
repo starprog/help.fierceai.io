@@ -5,6 +5,7 @@
   * [Dashboard](getting-started/dashboard.md)
   * [First Steps](getting-started/first-steps.md)
   * [Quick Start Guide](getting-started/quick-start.md)
+  * [Understanding Subscription Types](getting-started/subscription-types.md)
   * [Team Members](getting-started/team-members.md)
   * [Integrations](getting-started/integrations.md)
   * [Affiliates Program](getting-started/affiliates.md)

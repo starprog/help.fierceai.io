@@ -2,6 +2,8 @@
 
 Choose the plan that's right for you. All plans include access to powerful AI tools and features.
 
+> **Need help understanding our plan types?** Check out our [Subscription Types Guide](getting-started/subscription-types.md) to learn about Monthly, Yearly, Lifetime, and Token Packs.
+
 ---
 
 ## 💰 Current Pricing
@@ -47,6 +49,9 @@ Choose the plan that's right for you. All plans include access to powerful AI to
   background: #ffffff;
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .pricing-card:hover {
@@ -113,6 +118,7 @@ Choose the plan that's right for you. All plans include access to powerful AI to
   list-style: none;
   padding: 0;
   margin: 20px 0;
+  flex-grow: 1;
 }
 
 .plan-features li {
@@ -141,6 +147,7 @@ Choose the plan that's right for you. All plans include access to powerful AI to
   text-align: left;
   font-size: 14px;
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 .plan-features-html strong {
@@ -185,7 +192,7 @@ Choose the plan that's right for you. All plans include access to powerful AI to
   text-decoration: none;
   font-weight: 600;
   transition: background 0.3s ease;
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 .plan-cta:hover {
