@@ -127,35 +127,58 @@ AI File Chat transforms static documents into interactive conversations. Instead
 
 ### Current Token Rates
 
+AI File Chat requires credits for **two separate operations**:
+
+#### 1. Chat/Conversation Tokens
+
 <div id="ai-file-chat-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+  <h4 style="margin-top: 0;">💬 Chat Model - Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information for chat responses.</p>
 </div>
+
+Used when the AI generates responses to your questions about the uploaded file. This covers the GPT model usage for understanding your questions and generating intelligent answers.
+
+#### 2. Document Processing Tokens
+
+<div id="ai-file-chat-embeddings-rate-info" style="padding: 20px; border: 2px solid #9C27B0; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📄 Embeddings Model - Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information for document processing.</p>
+</div>
+
+Used when uploading and processing documents. This converts your PDFs and files into searchable content that the AI can analyze. Uses the text-embedding-ada-002 model for creating embeddings.
 
 ### How Tokens Work
 
-AI File Chat uses a word-based token calculation system. Tokens are consumed based on the AI's response length:
+AI File Chat uses a dual-token system to provide accurate and efficient document analysis:
 
-**Token Calculation:**
-- Tokens are counted based on the AI's text response
-- Each word in the AI's response consumes tokens
-- Document upload and processing do not consume tokens
-- Your questions do not directly consume tokens
-- Longer, more detailed responses use more tokens
+**Chat Tokens (Responses):**
+- Consumed when the AI generates responses to your questions
+- Based on the length of the AI's text response
+- Each word in the AI's response consumes tokens according to the chat rate
+- Your questions do not directly consume these tokens
 
-**Example:**
-If the AI provides a 150-word summary of your document and your feature rate is 1.0, you'll be charged 150 tokens.
+**Embedding Tokens (Processing):**
+- Consumed when uploading and processing new documents
+- Based on the document size and content length
+- One-time cost per document upload
+- Allows the AI to understand and search your document content
+- Not consumed during conversation after initial upload
 
-**Token Efficiency:**
+**Token Calculation Examples:**
+
+*Chat Example:*
+If the AI provides a 150-word summary and your chat rate is 2.0 tokens per word, you'll be charged 300 tokens.
+
+*Processing Example:*
+If you upload a 5-page PDF (approximately 2,500 words) and your embedding rate is 1.0 tokens per word, you'll be charged 2,500 tokens for the initial processing.
+
+**Token Efficiency Tips:**
 - Ask for concise summaries instead of full document rewrites
 - Request specific information rather than broad overviews
 - Use bullet points or tables for structured data
 - Break large requests into smaller, focused questions
-
-**Initial Upload:**
-- Document upload and initial processing: **No tokens charged**
-- Only AI responses during conversation consume tokens
-- You can upload documents freely and decide what to ask
+- Upload documents only once - the AI remembers them for the entire conversation
+- Multiple questions about the same document only consume chat tokens, not processing tokens again
 
 ---
 
