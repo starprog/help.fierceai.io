@@ -29,14 +29,16 @@ FierceAI offers different subscription models to fit your needs and budget. Here
 
 **How it works:**
 - You pay once per year (typically at a discount vs. monthly)
-- Your credits refresh annually
-- Subscription continues until you cancel
+- You receive **all your credits upfront** for the entire year
+- No monthly credit refreshes - you manage your yearly allocation
+- Subscription renews annually (you pay again next year)
 - Save money compared to paying monthly
 
 **Best for:**
 - Long-term users who want the best value
 - Businesses with predictable annual budgets
 - Users committed to using FierceAI regularly
+- Those who prefer managing credits over a longer period
 
 **💡 Tip:** Yearly plans usually offer 20-40% savings compared to monthly plans!
 
@@ -138,7 +140,7 @@ FierceAI offers different subscription models to fit your needs and budget. Here
 | Plan Type | Payment Frequency | Credits Renew? | Auto-Billing? | Best For |
 |-----------|------------------|----------------|---------------|----------|
 | **Monthly** | Every month | ✅ Monthly | ✅ Yes | Flexibility & testing |
-| **Yearly** | Once per year | ✅ Yearly | ✅ Yes | Best value & savings |
+| **Yearly** | Once per year | ⚡ All upfront | ✅ Yes | Best value & savings |
 | **Lifetime** | **One-time only** | Once | ❌ No | Avoid recurring bills |
 | **Lifetime + Monthly** | **One-time only** | ✅ Monthly | ❌ No payment | AppSumo-style deals |
 | **Lifetime + Yearly** | **One-time only** | ✅ Yearly | ❌ No payment | Annual refresh deals |
@@ -150,10 +152,16 @@ FierceAI offers different subscription models to fit your needs and budget. Here
 
 ### What does "credit renewal" mean?
 
-**For Monthly/Yearly Plans:**
-- Your credits reset on your billing date
+**For Monthly Plans:**
+- Your credits reset on your billing date each month
 - Unused credits typically don't roll over (check your specific plan)
 - You're billed when credits renew
+
+**For Yearly Plans:**
+- You receive all credits upfront when you subscribe or renew
+- Manage your entire year's allocation as you need
+- Credits reset only when your annual subscription renews
+- You're billed once per year
 
 **For Lifetime Plans:**
 - **Standard Lifetime:** Credits granted once or never reset
