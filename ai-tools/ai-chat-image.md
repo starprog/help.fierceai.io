@@ -133,21 +133,53 @@ Great: "I'd like a peaceful mountain landscape at sunset, with vibrant purple an
 
 ### Current Token Rates
 
+AI Chat Image uses **two types of tokens** for different operations:
+
+#### 1. Chat Model Tokens (GPT-4o)
 <div id="ai-chat-image-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <h4 style="margin-top: 0;">📊 Loading current chat rates...</h4>
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
+**Chat Model Usage:**
+- Powers conversation understanding and responses
+- Consumes tokens per word in AI responses
+- Used for understanding your image descriptions
+- Rate applied to response length
+
+#### 2. Image Generation Tokens (DALL-E 3)
+<div id="ai-chat-image-generation-rate-info" style="padding: 20px; border: 2px solid #9C27B0; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">🎨 Loading current image generation rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
+**Image Generation Usage:**
+- Powers actual image creation
+- Consumes tokens per generated image
+- Only charged on successful generation
+- Failed generations don't consume tokens
+
 ### How Tokens Work
 
-AI Chat Image uses an image-based token calculation system. Tokens are consumed per generated image:
+AI Chat Image uses **dual-token calculation** with two separate features:
 
-**Token Calculation:**
-- Each generated image consumes tokens based on your feature rate
-- Standard rate: 1.0 tokens per image
-- Your conversation messages do not consume tokens
-- Only successful image generation consumes tokens
-- Failed generations do not charge tokens
+**Chat Tokens (Word-based):**
+- Consumed for AI conversation responses
+- Based on length of AI's text replies
+- Feature rate multiplier applied to word count
+- Example: 100-word response × rate = total tokens
+
+**Image Generation Tokens (Image-based):**
+- Consumed only when images are generated
+- One token calculation per successful image
+- Feature rate multiplier applied per image
+- Example: 1 image × rate = total tokens
+
+**Important Notes:**
+- Your input messages don't consume chat tokens
+- Only AI responses consume chat tokens
+- Image generation is charged separately
+- Both credit types must be available
 
 **Example:**
 If your feature rate is 1.0, generating one image costs 1 token (plus the underlying AI model credits for image generation).
