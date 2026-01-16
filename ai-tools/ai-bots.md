@@ -36,6 +36,7 @@ AI Bots require **TWO types of credits** to function fully:
 
 <div id="ai-bots-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
   <h4 style="margin-top: 0;">💬 Chat Model Token Rate</h4>
+  <p style="color: #666; margin-bottom: 8px;"><strong>Model:</strong> <span id="ai-engine-word-model-display">gpt-5-nano</span> (Default AI Chat Model)</p>
   <p id="ai-bots-chat-rate"><strong>Current Rate:</strong> <span id="ai-bots-rate-display">Loading...</span> tokens per word</p>
   <p style="color: #666;">Used for generating chatbot responses during conversations.</p>
 </div>
@@ -53,6 +54,7 @@ Tokens Used = Number of Words Generated × Token Rate
 
 <div id="ai-bots-embedding-rate-info" style="padding: 20px; border: 2px solid #FF9800; border-radius: 8px; background: #fff3e0; margin: 20px 0;">
   <h4 style="margin-top: 0;">📚 Embedding Model Token Rate</h4>
+  <p style="color: #e65100; margin-bottom: 8px;"><strong>Model:</strong> text-embedding-3-small (OpenAI)</p>
   <p id="ai-bots-embedding-rate"><strong>Current Rate:</strong> <span id="ai-bots-embedding-rate-display">Loading...</span> tokens per word</p>
   <p style="color: #e65100;">Used for training your chatbot with documents, URLs, and text data.</p>
 </div>
