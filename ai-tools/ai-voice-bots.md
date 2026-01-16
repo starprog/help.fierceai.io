@@ -34,6 +34,7 @@ AI Voice Bots require **TWO types of credits** to function fully:
 
 <div id="ai-voice-bots-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
   <h4 style="margin-top: 0;">🎤 ElevenLabs Voice Generation Rate</h4>
+  <p style="color: #666; margin-bottom: 8px;"><strong>Model:</strong> ElevenLabs Conversational AI (eleven_flash_v2_5)</p>
   <p id="ai-voice-bots-rate"><strong>Current Rate:</strong> <span id="ai-voice-bots-rate-display">Loading...</span> tokens per character</p>
   <p style="color: #666;">Used for generating realistic voice responses during conversations.</p>
 </div>
@@ -57,6 +58,7 @@ Tokens Used = Number of Characters in Response × Token Rate
 
 <div id="ai-voice-bots-embedding-rate-info" style="padding: 20px; border: 2px solid #FF9800; border-radius: 8px; background: #fff3e0; margin: 20px 0;">
   <h4 style="margin-top: 0;">📚 Training & Embedding Model Rate</h4>
+  <p style="color: #e65100; margin-bottom: 8px;"><strong>Model:</strong> text-embedding-3-small (OpenAI)</p>
   <p id="ai-voice-bots-embedding-rate"><strong>Current Rate:</strong> <span id="ai-voice-bots-embedding-rate-display">Loading...</span> tokens per word</p>
   <p style="color: #e65100;">Used for training your voice bot with documents, knowledge bases, and custom data.</p>
 </div>
