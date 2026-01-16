@@ -105,18 +105,57 @@ How does this compare to [another URL]?
 
 ### Current Token Rates
 
+AI Web Chat uses **two types of tokens** for different operations:
+
+#### 1. Chat Model Tokens (GPT-4o)
 <div id="ai-web-chat-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <h4 style="margin-top: 0;">📊 Loading current chat rates...</h4>
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
+**Chat Model Usage:**
+- Powers AI conversation and web page analysis
+- Consumes tokens per word in AI responses
+- Used for analyzing web content and answering questions
+- Rate applied to response length
+
+#### 2. Web Search Tokens (Serper API)
+<div id="realtime-web-search-rate-info" style="padding: 20px; border: 2px solid #9C27B0; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">🔍 Loading current web search rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
+**Web Search Usage:**
+- Powers real-time internet search (when Real-Time Data toggle is enabled)
+- Consumed only when web search is activated
+- Charged per search query
+- Feature rate multiplier applied
+
 ### How Tokens Work
 
-Tokens are consumed based on:
+AI Web Chat uses **dual-token calculation** with two separate features:
 
-1. **Input Tokens**: The web page content that's analyzed plus your messages
-2. **Output Tokens**: The AI's responses to your questions
-3. **Context Tokens**: Previous conversation history that's maintained for context
+**Chat Tokens (Word-based):**
+- Consumed for every AI response
+- Based on web page content analyzed + conversation history + AI response length
+- Input: Web page content + your messages
+- Output: AI's responses to your questions
+- Context: Previous conversation history maintained
+- Feature rate multiplier applied to word count
+- Always consumed for all conversations
+
+**Web Search Tokens (Query-based):**
+- Consumed only when Real-Time Data toggle is enabled
+- One charge per web search query performed
+- Used to find current information beyond the webpage
+- Feature rate multiplier applied per search
+- NOT consumed when Real-Time Data is off
+
+**Important Notes:**
+- Both credit types must be available when using web search
+- Web search is optional - disable toggle to avoid search charges
+- Chat tokens consumed for all AI responses regardless of search
+- Your input messages consume fewer tokens than AI responses
 
 ### Token-Saving Tips
 
