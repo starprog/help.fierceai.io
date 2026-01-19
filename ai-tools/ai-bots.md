@@ -110,15 +110,26 @@ To use AI Bots, you need to purchase tokens from the AI Store.
 
 ### Which Tokens to Buy
 
-For AI Bots, you need:
+> **💡 Important:** Your plan's default AI model depends on your subscription level. Check your [plan details](/#/pricing-and-plans) to see which model your plan uses by default.
 
-✅ **GPT-5-Nano** tokens (Chat Model)
+For AI Bots, you need tokens for:
+
+✅ **Your Plan's Default Chat Model** (varies by plan)
+- **Foundation Plan**: GPT-5 tokens
+- **Growth Plan**: GPT-5-Pro tokens  
+- **Business Plan**: GPT-4o tokens
+- **Enterprise Plan**: GPT-5-Pro tokens
 - Used for: Bot responses during conversations
-- Same tokens used by: AI Writer, AI Web Chat, Content Generation
+- Same model used by: AI Writer, AI Editor, AI Web Chat, and all content generation
 
 ✅ **text-embedding-3-small** tokens (Embedding Model)
 - Used for: Training bot with documents/URLs/text
 - Specific to: AI Bot training and knowledge processing
+
+**How to Check Your Default Model:**
+1. Go to **Dashboard → Pricing & Plans**
+2. Look for "Default AI Model" in your plan details
+3. Purchase tokens for that specific model
 
 ## Creating Your First AI Bot
 
