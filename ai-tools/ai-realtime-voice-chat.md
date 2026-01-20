@@ -118,7 +118,36 @@ AI Realtime Voice Chat requires **3 different token types** depending on feature
 
 ---
 
-#### 3. Serper (Optional - Real-Time Web Search)
+#### 3. Knowledge Base Embeddings (Optional - Used for Knowledge Search)
+
+<div id="realtime-embeddings-rate-info" style="padding: 15px; border: 2px solid #9C27B0; border-radius: 8px; background: #f3e5f5; margin: 15px 0;">
+  <h4 style="margin-top: 0;">📚 Knowledge Base Embeddings Rate</h4>
+  <p style="font-size: 1.1em; color: #333; font-weight: 600;">Loading...</p>
+  <p style="color: #666;">Fetching current rate from API...</p>
+</div>
+
+**What it does:**
+- Creates semantic embeddings for knowledge base search using **text-embedding-ada-002** model
+- Enables AI to search through trained chatbot data
+- Finds relevant information from your custom knowledge base
+
+**When it's used:**
+- Only when you have a chatbot with trained knowledge base
+- When AI determines your question needs knowledge base lookup
+- Automatically triggered for product/service-specific questions
+
+**How it's charged:**
+- Small fixed cost per knowledge base search (~10 words equivalent)
+- Much cheaper than full GPT-4 Turbo conversation
+- Only charged when knowledge base is actually searched
+
+**Model Used:** OpenAI's `text-embedding-ada-002` for semantic similarity matching
+
+**Example:** Each knowledge search = **~10 × feature rate tokens**
+
+---
+
+#### 4. Serper (Optional - Real-Time Web Search)
 
 <div id="realtime-web-search-rate-info" style="padding: 15px; border: 2px solid #4CAF50; border-radius: 8px; background: #e8f5e9; margin: 15px 0;">
   <h4 style="margin-top: 0;">🌐 Web Search Rate</h4>
@@ -151,9 +180,10 @@ AI Realtime Voice Chat requires **3 different token types** depending on feature
 |---------|-----------|------------|----------|
 | **GPT-4o Realtime Preview** | Every conversation | AI response words | ✅ Yes |
 | **GPT-4 Turbo Preview** | Function calling decisions | Words processed | ⚠️ If using advanced features |
+| **Knowledge Base Embeddings** | Knowledge base searches | Per search (~10 words) | ⚠️ If using trained chatbot |
 | **Serper (Web Search)** | Real-Time Data searches | Per search query | ⚠️ If Real-Time Data enabled |
 
-> 💡 **Tip**: For basic voice conversations, you only need GPT-4o Realtime Preview tokens. Advanced features (web search) require additional token types.
+> 💡 **Tip**: For basic voice conversations, you only need GPT-4o Realtime Preview tokens. Advanced features (knowledge base search, web search) require additional token types.
 
 ---
 

@@ -110,26 +110,23 @@ To use AI Bots, you need to purchase tokens from the AI Store.
 
 ### Which Tokens to Buy
 
-> **💡 Important:** Your plan's default AI model depends on your subscription level. Check your [plan details](/#/pricing-and-plans) to see which model your plan uses by default.
+> **💡 Important:** Your plan's default AI model depends on your subscription level. The default model is determined by your plan configuration and may change over time.
 
 For AI Bots, you need tokens for:
 
 ✅ **Your Plan's Default Chat Model** (varies by plan)
-- **Foundation Plan**: GPT-5 tokens
-- **Growth Plan**: GPT-5-Pro tokens  
-- **Business Plan**: GPT-4o tokens
-- **Enterprise Plan**: GPT-5-Pro tokens
-- Used for: Bot responses during conversations
-- Same model used by: AI Writer, AI Editor, AI Web Chat, and all content generation
+- View your default model on your **Dashboard** (displayed in the top section)
+- Used for: Bot responses during conversations  
+- Same model used by: AI Writer, AI Editor, AI Web Chat, and all content generation tools
 
 ✅ **text-embedding-3-small** tokens (Embedding Model)
 - Used for: Training bot with documents/URLs/text
 - Specific to: AI Bot training and knowledge processing
 
 **How to Check Your Default Model:**
-1. Go to **Dashboard → Pricing & Plans**
-2. Look for "Default AI Model" in your plan details
-3. Purchase tokens for that specific model
+1. Go to **Dashboard → Home**
+2. Look for **"Your Default AI Model"** card in the top section
+3. Purchase tokens for that specific model from the [AI Store](/dashboard/user/token-management/store)
 
 ## Creating Your First AI Bot
 
@@ -147,7 +144,7 @@ For AI Bots, you need tokens for:
 - **Bubble Message**: Preview text in the chat bubble
 - **Instructions**: Define your bot's behavior and knowledge
 - **Language**: Select the primary language
-- **AI Model**: Uses the system default (gpt-5-nano)
+- **AI Model**: Uses your plan's default model
 
 ### Step 3: Customize Appearance
 

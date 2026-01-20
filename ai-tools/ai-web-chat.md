@@ -6,6 +6,28 @@ AI Web Chat enables you to have natural conversations about web content. Simply 
 
 ---
 
+## AI Model Used
+
+> **💡 Important:** Your default AI model depends on your subscription plan.
+
+**Default Model by Plan:**
+- **Free Plan**: GPT-4o
+- **Foundation Plan**: GPT-5
+- **Growth Plan**: GPT-5-Pro
+- **Business Plan**: GPT-4o
+- **Enterprise Plan**: GPT-5-Pro
+- **Annual Plans**: Same as monthly equivalent
+- **Lifetime Plans**: Same as monthly equivalent
+
+**How to Check Your Model:**
+1. Go to **Dashboard → Home**
+2. Look for the "Your Default AI Model" card
+3. Purchase tokens for your plan's model from the Token Store
+
+All conversations use your plan's default model, ensuring consistent quality across all AI tools.
+
+---
+
 ## Overview
 
 AI Web Chat combines advanced language models with real-time web scraping to create an intelligent web analysis assistant. Whether you need to:

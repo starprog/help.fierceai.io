@@ -16,17 +16,35 @@ AI Writer is a powerful content creation tool that transforms your ideas into po
 
 ## AI Model Used
 
-AI Writer uses the **system-wide default AI writing model** set by administrators. The current default model is:
+> **💡 Important:** Your default AI model depends on your subscription plan.
 
-**<span id="ai-writer-model-display">Loading...</span>**
+AI Writer uses **your plan's default AI writing model**. The model varies by plan:
 
-This model provides a balance of:
+- **Free Plan**: GPT-4o
+- **Foundation Plan**: GPT-5
+- **Growth Plan**: GPT-5-Pro
+- **Business Plan**: GPT-4o
+- **Enterprise Plan**: GPT-5-Pro
+- **Annual Plans**: Same as monthly equivalent
+- **Lifetime Plans**: Same as monthly equivalent
+
+**How to Check Your Default Model:**
+1. Go to **Dashboard → Home**
+2. Look for the "Your Default AI Model" card
+3. This shows which model your plan uses
+4. Purchase tokens for that specific model
+
+**What This Means:**
+- All AI Writer content is generated using your plan's default model
+- You need to purchase tokens for your plan's specific model
+- Different plans use different models for cost and performance optimization
+- Your model is automatically applied to all AI content generation
+
+**Model Capabilities:**
 - ⚡ Fast content generation
-- 💰 Cost-effective token usage
+- 💰 Optimized for your plan tier
 - 🧠 Creative and coherent writing
 - 🌐 Multi-language support
-
-> **Note**: The AI model is configured at the system level by administrators. Individual users cannot change this setting.
 
 ## Token Usage
 

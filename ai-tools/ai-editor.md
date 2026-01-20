@@ -36,6 +36,27 @@ AI Editor is your advanced content management and editing interface within Fierc
 - **Copy to Clipboard**: Quick sharing with one click
 - **Template Sharing**: Save custom templates for reuse
 
+## AI Model Used
+
+> **💡 Important:** Your default AI model depends on your subscription plan.
+
+AI Editor uses **your plan's default AI model** for all editing operations:
+
+- **Free Plan**: GPT-4o
+- **Foundation Plan**: GPT-5
+- **Growth Plan**: GPT-5-Pro
+- **Business Plan**: GPT-4o
+- **Enterprise Plan**: GPT-5-Pro
+- **Annual Plans**: Same as monthly equivalent
+- **Lifetime Plans**: Same as monthly equivalent
+
+**How to Check Your Default Model:**
+1. Go to **Dashboard → Home**
+2. Look for the "Your Default AI Model" card
+3. Purchase tokens for that specific model from the Token Store
+
+All AI Editor functions use the same model as AI Writer, AI Chat, and other content generation tools.
+
 ## Token Usage
 
 <div id="ai-editor-rate-info">Loading token rate information...</div>
