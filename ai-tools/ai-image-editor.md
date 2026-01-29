@@ -17,19 +17,6 @@ The AI Image Editor uses a **two-tier pricing system**:
 
 These tools perform specific image editing operations. Each consumes IMAGE tokens based on its individual rate.
 
-### Merge Face
-
-<div id="image-editor-merge-face-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
-
-**API**: <span id="provider-merge-face">Loading...</span>  
-**Use Case**: Replace faces in source images with a target face image.  
-**Example**: Swap a person's face in a photo with another person's face while maintaining natural lighting and angles.
-
----
-
 ### Face Swap
 
 <div id="image-editor-face-swap-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
