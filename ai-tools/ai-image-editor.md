@@ -30,6 +30,32 @@ These tools perform specific image editing operations. Each consumes IMAGE token
 
 ---
 
+### Face Swap
+
+<div id="image-editor-face-swap-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
+**API**: <span id="provider-face-swap">Loading...</span>  
+**Use Case**: Advanced face swapping with precise facial feature alignment and natural blending.  
+**Example**: Seamlessly transfer a face from one image to another while preserving facial expressions, skin tone, and lighting conditions.
+
+---
+
+### Clothing Swap
+
+<div id="image-editor-clothing-swap-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+
+**API**: <span id="provider-clothing-swap">Loading...</span>  
+**Use Case**: Transfer clothing and outfits from one image to a person in another image.  
+**Example**: Try different outfits on models, create fashion mockups, or visualize clothing on different body types while maintaining natural fit and appearance.
+
+---
+
 ### Generative Fill
 
 <div id="image-editor-generative-fill-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
@@ -173,30 +199,6 @@ These tools perform specific image editing operations. Each consumes IMAGE token
 
 ---
 
-### Nano Banana Edit
-
-<div id="image-editor-nano-banana-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
-**Provider**: Banana  
-**Capabilities**: Fast, efficient image editing optimized for quick iterations.  
-**Best For**: Rapid prototyping and batch editing operations.
-
----
-
-### Nano Banana Pro Edit
-
-<div id="image-editor-nano-banana-pro-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
-**Provider**: Banana  
-**Capabilities**: Enhanced version with better quality and more advanced features.  
-**Best For**: Production-quality edits requiring higher fidelity.
-
----
-
 ## AI Generation Models
 
 When creating new images or using tools that support multiple models, the model you select determines the token rate.
@@ -255,6 +257,30 @@ When creating new images or using tools that support multiple models, the model 
 **Provider**: Seedream  
 **Capabilities**: Advanced AI model optimized for creative image generation with balanced quality and performance.  
 **Best For**: Artistic content, creative designs, and stylized imagery.
+
+---
+
+### Nano Banana Edit
+
+<div id="image-editor-nano-banana-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+**Provider**: Banana  
+**Capabilities**: Fast, efficient image editing and generation optimized for quick iterations.  
+**Best For**: Rapid prototyping, batch editing operations, and general-purpose image generation tasks.
+
+---
+
+### Nano Banana Pro Edit
+
+<div id="image-editor-nano-banana-pro-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
+  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
+</div>
+**Provider**: Banana  
+**Capabilities**: Enhanced professional-grade version with superior quality and advanced editing/generation features.  
+**Best For**: Production-quality edits, professional workflows, and high-fidelity image generation requiring better results.
 
 ---
 
