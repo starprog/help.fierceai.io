@@ -247,7 +247,7 @@ When creating new images or using tools that support multiple models, the model 
 
 ---
 
-### Nano Banana Edit
+### Nano Banana
 
 <div id="image-editor-nano-banana-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
   <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
@@ -259,7 +259,7 @@ When creating new images or using tools that support multiple models, the model 
 
 ---
 
-### Nano Banana Pro Edit
+### Nano Banana Pro
 
 <div id="image-editor-nano-banana-pro-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
   <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
@@ -268,30 +268,6 @@ When creating new images or using tools that support multiple models, the model 
 **Provider**: Banana  
 **Capabilities**: Enhanced professional-grade version with superior quality and advanced editing/generation features.  
 **Best For**: Production-quality edits, professional workflows, and high-fidelity image generation requiring better results.
-
----
-
-### Nano Banana
-
-<div id="image-gen-nano-banana-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
-**Provider**: Banana  
-**Capabilities**: Standard image generation and AI model capabilities.  
-**Best For**: General-purpose image generation and basic AI model tasks.
-
----
-
-### Nano Banana Pro
-
-<div id="image-gen-nano-banana-pro-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
-**Provider**: Banana  
-**Capabilities**: Enhanced professional-grade image generation with advanced AI features.  
-**Best For**: High-quality image generation and professional AI model workflows.
 
 ---
 
