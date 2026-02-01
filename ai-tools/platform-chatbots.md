@@ -1,6 +1,6 @@
-# Chat Settings
+# Platform Chat Bots
 
-FierceAI's Chat Settings provide a comprehensive system for organizing chat interactions, managing templates, and training custom chatbots on your own data. These features allow you to create tailored AI experiences that can be integrated across the Fierce Ecosystem (AccelePosts, AcceleMail, etc.).
+FierceAI's Platform Chat Bots provide a comprehensive system for organizing chat interactions, managing templates, and training custom chatbots on your own data. These features allow you to create tailored AI experiences that can be integrated across the Fierce Ecosystem (AccelePosts, AcceleMail, etc.).
 
 ---
 
@@ -105,21 +105,75 @@ Trained chatbots can be accessed via REST API, allowing integration with:
 - **FierceFiles**: Document analysis and summarization
 - **Custom Applications**: Build your own integrations using our API
 
-### Token Usage:
+## Token Usage
 
-Chatbot training consumes tokens based on the amount of text processed:
-- Q&A pairs are counted by total word count (question + answer)
-- Text content is counted by word count
-- PDF content is extracted and counted by word count
-- Website content is crawled, extracted, and counted by word count
+Platform Chat Bots require **THREE types of credits** depending on functionality:
 
-**Training Cost**: Approximately 1-2 tokens per word processed (varies by content complexity)
+### 1. Chat Model Tokens (For Responses)
 
----
+<div id="platform-chat-bots-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">💬 Response Generation Rate</h4>
+  <p style="color: #666; margin-bottom: 8px;"><strong>Model:</strong> Uses your trained chatbot's configuration</p>
+  <p id="platform-chat-bots-rate"><strong>Current Rate:</strong> <span id="platform-chat-bots-rate-display">Loading...</span> tokens per word</p>
+  <p style="color: #666;">Used for generating chatbot responses during conversations.</p>
+</div>
 
-## Usage Examples
+**Chat tokens** are consumed every time your Platform Chatbot generates a response to user questions. The token consumption is calculated as:
 
-### Example 1: Customer Support Chatbot
+```
+Tokens Used = Number of Words Generated × Token Rate
+```
+
+**Example**: If your bot generates a 200-word response at the current rate:
+- **Tokens consumed**: 200 × (current rate) = calculated dynamically
+
+### 2. Embedding Tokens (For Training)
+
+<div id="platform-chat-bots-embedding-rate-info" style="padding: 20px; border: 2px solid #FF9800; border-radius: 8px; background: #fff3e0; margin: 20px 0;">
+  <h4 style="margin-top: 0;">📚 Document Training Rate</h4>
+  <p style="color: #e65100; margin-bottom: 8px;"><strong>Purpose:</strong> Document Training & Embeddings</p>
+  <p id="platform-chat-bots-embedding-rate"><strong>Current Rate:</strong> <span id="platform-chat-bots-embedding-rate-display">Loading...</span> tokens per word</p>
+  <p style="color: #e65100;">Used for training your chatbot with documents, URLs, and text data.</p>
+</div>
+
+**Embedding tokens** are consumed when you train your Platform Chatbot with:
+- 📄 Q&A pairs (question + answer word count)
+- 📝 Text content
+- 📑 PDF documents
+- 🌐 Website content (crawled and extracted)
+- 📂 Document uploads
+
+These tokens process and vectorize your content so the bot can understand and reference it during conversations.
+
+**Example**: Training with 1,000 words at the current embedding rate:
+- **Tokens consumed**: 1,000 × (current rate) = calculated dynamically
+
+### 3. Image Generation Tokens
+
+<div id="platform-chat-bots-image-rate-info" style="padding: 20px; border: 2px solid #9C27B0; border-radius: 8px; background: #f3e5f5; margin: 20px 0;">
+  <h4 style="margin-top: 0;">🎨 Image Generation Rate</h4>
+  <p style="color: #6a1b9a; margin-bottom: 8px;"><strong>Model:</strong> GPT-Image-1 (stored in your Content Manager)</p>
+  <p id="platform-chat-bots-image-rate"><strong>Current Rate:</strong> <span id="platform-chat-bots-image-rate-display">Loading...</span> tokens per image</p>
+  <p style="color: #6a1b9a;">Used when chatbot generates images through function calls.</p>
+</div>
+
+**Image tokens** are consumed when your Platform Chatbot generates images through AI:
+- 🖼️ Image generation via chatbot function calls
+- 🎨 Stored automatically in your Content Manager
+- 📊 Billed separately from text responses
+
+**Example**: Generating 1 image at the current rate:
+- **Tokens consumed**: 1 × (current rate) = calculated dynamically
+
+### Why Three Types?
+
+Platform Chat Bots use different AI models for different purposes:
+
+| Purpose | Token Type | When Used |
+|---------|------------|-----------|
+| **Conversations** | WORD Tokens | Every time bot responds to users |
+| **Training** | WORD Tokens | When adding documents/URLs/text/Q&A pairs |
+| **Image Generation** | IMAGE Tokens | When bot generates images |
 **Scenario**: E-commerce company wants automated customer support
 
 **Training Data**:
@@ -188,7 +242,7 @@ Chatbot training consumes tokens based on the amount of text processed:
 
 ## Cross-Platform Integration
 
-All Chat Settings features are accessible across the Fierce Ecosystem:
+All Platform Chat Bots features are accessible across the Fierce Ecosystem:
 
 - **AccelePosts**: Use trained chatbots for social media content suggestions
 - **AcceleMail**: Leverage chat templates for email campaign generation
