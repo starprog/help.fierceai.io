@@ -24,7 +24,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-face-swap">Loading...</span>  
+**AI Generator**: <span id="provider-face-swap">Loading...</span>  
 **Use Case**: Advanced face swapping with precise facial feature alignment and natural blending.  
 **Example**: Seamlessly transfer a face from one image to another while preserving facial expressions, skin tone, and lighting conditions.
 
@@ -37,7 +37,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-clothing-swap">Loading...</span>  
+**AI Generator**: <span id="provider-clothing-swap">Loading...</span>  
 **Use Case**: Transfer clothing and outfits from one image to a person in another image.  
 **Example**: Try different outfits on models, create fashion mockups, or visualize clothing on different body types while maintaining natural fit and appearance.
 
@@ -50,7 +50,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-generative-fill">Loading...</span>  
+**AI Generator**: <span id="provider-generative-fill">Loading...</span>  
 **Use Case**: Fill missing or damaged parts of images with AI-generated content that matches the surrounding area.  
 **Example**: Remove unwanted objects and let AI intelligently fill the space, or extend image borders naturally.
 
@@ -63,7 +63,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-reimagine">Loading...</span>  
+**AI Generator**: <span id="provider-reimagine">Loading...</span>  
 **Use Case**: Transform existing images with creative AI-driven variations while maintaining the core concept.  
 **Example**: Take a photo and generate artistic variations with different styles, lighting, or interpretations.
 
@@ -76,7 +76,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-remove-background">Loading...</span>  
+**AI Generator**: <span id="provider-remove-background">Loading...</span>  
 **Use Case**: Instantly remove backgrounds to create transparent PNG images.  
 **Example**: Extract product photos from their backgrounds for e-commerce listings or create profile cutouts.
 
@@ -89,7 +89,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-cleanup">Loading...</span>  
+**AI Generator**: <span id="provider-cleanup">Loading...</span>  
 **Use Case**: Remove unwanted objects, blemishes, or imperfections from images.  
 **Example**: Erase text watermarks, remove photo bombers, or clean up distracting background elements.
 
@@ -102,7 +102,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-upscale">Loading...</span>  
+**AI Generator**: <span id="provider-upscale">Loading...</span>  
 **Use Case**: Enhance image resolution up to 4x without losing detail or introducing artifacts.  
 **Example**: Convert low-resolution images into high-quality prints or enlarge thumbnails for full-size use.
 
@@ -115,7 +115,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-replace-background">Loading...</span>  
+**AI Generator**: <span id="provider-replace-background">Loading...</span>  
 **Use Case**: Change or replace image backgrounds with AI-generated or custom environments.  
 **Example**: Place products in professional studio settings or change portrait backgrounds from indoor to outdoor scenes.
 
@@ -128,7 +128,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-sketch-to-image">Loading...</span>  
+**AI Generator**: <span id="provider-sketch-to-image">Loading...</span>  
 **Use Case**: Transform simple sketches or line drawings into detailed, realistic images.  
 **Example**: Convert rough product sketches into photorealistic renderings or turn doodles into artwork.
 
@@ -141,7 +141,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-remove-text">Loading...</span>  
+**AI Generator**: <span id="provider-remove-text">Loading...</span>  
 **Use Case**: Eliminate unwanted text overlays, captions, or watermarks while preserving the underlying image.  
 **Example**: Remove date stamps from photos, erase text from memes, or clean up signage in architectural photos.
 
@@ -154,7 +154,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-inpainting">Loading...</span>  
+**AI Generator**: <span id="provider-inpainting">Loading...</span>  
 **Use Case**: Selectively edit specific regions of images by adding, removing, or modifying elements with AI assistance.  
 **Example**: Change clothing colors, add accessories, or modify specific objects while keeping the rest untouched.
 
@@ -167,7 +167,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-style-transfer">Loading...</span>  
+**AI Generator**: <span id="provider-style-transfer">Loading...</span>  
 **Use Case**: Apply artistic styles from reference images to your photos for consistent visual aesthetics.  
 **Example**: Make photos look like oil paintings, apply Instagram-style filters, or match brand visual guidelines.
 
@@ -180,7 +180,7 @@ These tools perform specific image editing operations. Each consumes IMAGE token
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
 
-**API**: <span id="provider-image-relight">Loading...</span>  
+**AI Generator**: <span id="provider-image-relight">Loading...</span>  
 **Use Case**: Intelligently adjust lighting, shadows, and highlights to improve or completely change image illumination.  
 **Example**: Fix underexposed photos, create dramatic lighting effects, or match lighting across product images.
 
@@ -196,7 +196,7 @@ When creating new images or using tools that support multiple models, the model 
   <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
-**Provider**: OpenAI  
+**AI Generator**: OpenAI  
 **Capabilities**: High-quality image generation from text prompts with excellent prompt understanding.  
 **Best For**: Creative concept art, illustrations, and abstract designs.
 
@@ -208,7 +208,7 @@ When creating new images or using tools that support multiple models, the model 
   <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
-**Provider**: Flux  
+**AI Generator**: Flux  
 **Capabilities**: Premium image generation with exceptional quality and detail.  
 **Best For**: Professional-grade images, complex scenes, and photorealistic results.
 
@@ -220,7 +220,7 @@ When creating new images or using tools that support multiple models, the model 
   <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
-**Provider**: Flux  
+**AI Generator**: Flux  
 **Capabilities**: Advanced contextual image generation with superior scene understanding and composition.  
 **Use Cases**:
 - **Text-to-Image**: Generate high-quality images from text descriptions within the editor
@@ -241,7 +241,7 @@ When creating new images or using tools that support multiple models, the model 
   <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
-**Provider**: Banana  
+**AI Generator**: Banana  
 **Capabilities**: Fast, efficient image editing and generation optimized for quick iterations.  
 **Best For**: Rapid prototyping, batch editing operations, and general-purpose image generation tasks.
 
@@ -253,7 +253,7 @@ When creating new images or using tools that support multiple models, the model 
   <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
   <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
 </div>
-**Provider**: Banana  
+**AI Generator**: Banana  
 **Capabilities**: Enhanced professional-grade version with superior quality and advanced editing/generation features.  
 **Best For**: Production-quality edits, professional workflows, and high-fidelity image generation requiring better results.
 

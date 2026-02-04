@@ -1610,6 +1610,76 @@
         // Load AcceleMail Lite config when page loads or route changes
         loadAcceleMailLiteConfig();
         
+        // Load AI Image Editor provider names
+        function loadImageEditorProviders() {
+          // Map of tool action keys to span element IDs
+          const providerMapping = {
+            'face_swap': 'provider-face-swap',
+            'clothing_swap': 'provider-clothing-swap',
+            'generative_fill': 'provider-generative-fill',
+            'reimagine': 'provider-reimagine',
+            'remove_background': 'provider-remove-background',
+            'cleanup': 'provider-cleanup',
+            'upscale': 'provider-upscale',
+            'replace_background': 'provider-replace-background',
+            'sketch_to_image': 'provider-sketch-to-image',
+            'remove_text': 'provider-remove-text',
+            'inpainting': 'provider-inpainting',
+            'style_transfer': 'provider-style-transfer',
+            'image_relight': 'provider-image-relight'
+          };
+          
+          // Check if any provider spans exist on the current page
+          const hasProviderElements = Object.values(providerMapping).some(id => document.getElementById(id));
+          if (!hasProviderElements) {
+            return;
+          }
+
+          // Determine API base URL (use current origin for help site)
+          const apiBaseUrl = window.location.hostname.includes('help.fierceai.io') 
+            ? 'https://fierceai.io' 
+            : window.location.origin;
+
+          fetch(`${apiBaseUrl}/api/image-editor-providers`)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+              }
+              return response.json();
+            })
+            .then(data => {
+              if (data.success && data.data) {
+                // Update each provider span element
+                Object.entries(providerMapping).forEach(([toolKey, spanId]) => {
+                  const spanElement = document.getElementById(spanId);
+                  if (spanElement && data.data[toolKey]) {
+                    spanElement.textContent = data.data[toolKey].provider;
+                    spanElement.style.color = '#10b981';
+                    spanElement.style.fontWeight = '600';
+                  }
+                });
+                
+                console.log('AI Image Editor providers loaded successfully');
+              }
+            })
+            .catch(error => {
+              console.error('Error loading AI Image Editor providers:', error);
+              
+              // Set fallback text for failed loads
+              Object.values(providerMapping).forEach(spanId => {
+                const spanElement = document.getElementById(spanId);
+                if (spanElement && spanElement.textContent === 'Loading...') {
+                  spanElement.textContent = 'Configuration unavailable';
+                  spanElement.style.color = '#dc2626';
+                  spanElement.style.fontStyle = 'italic';
+                }
+              });
+            });
+        }
+
+        // Load image editor providers on page load
+        loadImageEditorProviders();
+        
         // Load Premium Features dynamically on dashboard page
         function loadPremiumFeatures() {
           const loadingEl = document.getElementById('premium-features-loading');
@@ -1788,6 +1858,7 @@
           window.$docsify.plugins.push(function (hook) {
             hook.doneEach(function () {
               loadAcceleMailLiteConfig();
+              loadImageEditorProviders();
               
               // Load premium features on dashboard page
               if (window.location.hash.includes('getting-started/dashboard')) {
