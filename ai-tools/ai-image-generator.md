@@ -14,7 +14,6 @@ The AI Image Generator provides access to 8 different AI models, each with uniqu
 - **Nano Banana**: Fast, efficient image generation
 - **Nano Banana Pro**: Enhanced version with improved quality
 - **Ideogram**: Text-aware image generation for logos and typography
-- **Seedream**: Latest generation image synthesis
 
 ## Token Rates
 
@@ -128,23 +127,18 @@ Different models, resolutions, and quality settings consume different amounts of
 </tr>
 <tr>
 <td>Nano Banana</td>
-<td><span id="image-gen-nano-banana-rate-info">Loading...</span></td>
-<td>image-gen-nano-banana-rate-info</td>
+<td><span id="image_gen_nano_banana-rate-info">Loading...</span></td>
+<td>image_gen_nano_banana-rate-info</td>
 </tr>
 <tr>
 <td>Nano Banana Pro</td>
-<td><span id="image-gen-nano-banana-pro-rate-info">Loading...</span></td>
-<td>image-gen-nano-banana-pro-rate-info</td>
+<td><span id="image_gen_nano_banana_pro-rate-info">Loading...</span></td>
+<td>image_gen_nano_banana_pro-rate-info</td>
 </tr>
 <tr>
 <td>Ideogram</td>
 <td><span id="image-gen-ideogram-rate-info">Loading...</span></td>
 <td>image-gen-ideogram-rate-info</td>
-</tr>
-<tr>
-<td>Seedream</td>
-<td><span id="image-gen-seedream-rate-info">Loading...</span></td>
-<td>image-gen-seedream-rate-info</td>
 </tr>
 </tbody>
 </table>
@@ -163,7 +157,6 @@ Different models, resolutions, and quality settings consume different amounts of
 | Nano Banana | ❌ No | ❌ No | Fixed | Fixed |
 | Nano Banana Pro | ❌ No | ❌ No | Fixed | Fixed |
 | Ideogram | ❌ No | ❌ No | Fixed | Fixed |
-| Seedream | ❌ No | ❌ No | Fixed | Fixed |
 
 ### Model Strengths
 
@@ -209,12 +202,6 @@ Different models, resolutions, and quality settings consume different amounts of
 - ✅ Perfect for logos and typography
 - ✅ Clear, readable text in images
 - ✅ Great for infographics
-
-**Seedream**
-- ✅ Latest generation technology
-- ✅ High-quality outputs
-- ✅ Good detail preservation
-- ✅ Fast rendering
 
 ## Getting Started
 
