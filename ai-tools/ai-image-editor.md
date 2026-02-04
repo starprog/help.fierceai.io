@@ -235,18 +235,6 @@ When creating new images or using tools that support multiple models, the model 
 
 ---
 
-### Seedream v4
-
-<div id="image-editor-seedream-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
-  <h4 style="margin-top: 0;">📊 Loading current rates...</h4>
-  <p style="color: #666;">Please wait while we fetch the latest pricing information.</p>
-</div>
-**Provider**: Seedream  
-**Capabilities**: Advanced AI model optimized for creative image generation with balanced quality and performance.  
-**Best For**: Artistic content, creative designs, and stylized imagery.
-
----
-
 ### Nano Banana
 
 <div id="image-editor-nano-banana-rate-info" style="padding: 20px; border: 2px solid #2196F3; border-radius: 8px; background: #f5f5f5; margin: 20px 0;">
