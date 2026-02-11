@@ -32,6 +32,30 @@ Different models, resolutions, and quality settings consume different amounts of
 </thead>
 <tbody>
 <tr>
+<td>256×256</td>
+<td>Standard</td>
+<td><span id="image-gen-dalle-256x256-standard-rate-info">Loading...</span></td>
+<td>image-gen-dalle-256x256-standard-rate-info</td>
+</tr>
+<tr>
+<td>256×256</td>
+<td>HD</td>
+<td><span id="image-gen-dalle-256x256-hd-rate-info">Loading...</span></td>
+<td>image-gen-dalle-256x256-hd-rate-info</td>
+</tr>
+<tr>
+<td>512×512</td>
+<td>Standard</td>
+<td><span id="image-gen-dalle-512x512-standard-rate-info">Loading...</span></td>
+<td>image-gen-dalle-512x512-standard-rate-info</td>
+</tr>
+<tr>
+<td>512×512</td>
+<td>HD</td>
+<td><span id="image-gen-dalle-512x512-hd-rate-info">Loading...</span></td>
+<td>image-gen-dalle-512x512-hd-rate-info</td>
+</tr>
+<tr>
 <td>1024×1024</td>
 <td>Standard</td>
 <td><span id="image-gen-dalle-1024x1024-standard-rate-info">Loading...</span></td>
@@ -42,30 +66,6 @@ Different models, resolutions, and quality settings consume different amounts of
 <td>HD</td>
 <td><span id="image-gen-dalle-1024x1024-hd-rate-info">Loading...</span></td>
 <td>image-gen-dalle-1024x1024-hd-rate-info</td>
-</tr>
-<tr>
-<td>1024×1792</td>
-<td>Standard</td>
-<td><span id="image-gen-dalle-1024x1792-standard-rate-info">Loading...</span></td>
-<td>image-gen-dalle-1024x1792-standard-rate-info</td>
-</tr>
-<tr>
-<td>1024×1792</td>
-<td>HD</td>
-<td><span id="image-gen-dalle-1024x1792-hd-rate-info">Loading...</span></td>
-<td>image-gen-dalle-1024x1792-hd-rate-info</td>
-</tr>
-<tr>
-<td>1792×1024</td>
-<td>Standard</td>
-<td><span id="image-gen-dalle-1792x1024-standard-rate-info">Loading...</span></td>
-<td>image-gen-dalle-1792x1024-standard-rate-info</td>
-</tr>
-<tr>
-<td>1792×1024</td>
-<td>HD</td>
-<td><span id="image-gen-dalle-1792x1024-hd-rate-info">Loading...</span></td>
-<td>image-gen-dalle-1792x1024-hd-rate-info</td>
 </tr>
 </tbody>
 </table>
