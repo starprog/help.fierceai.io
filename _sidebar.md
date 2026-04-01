@@ -12,6 +12,7 @@
   * [Account Setup](getting-started/account-setup.md)
 * [**💰 Pricing & Plans**](pricing-and-plans.md)
 * [**🛒 AI Store**](ai-tools/ai-store.md)
+  * [External Store Widget](ai-tools/external-store.md)
 * [**📊 Dashboard**](dashboard/)
   * [Overview](dashboard/overview.md)
   * [Token Management](dashboard/token-management.md)
